@@ -1,0 +1,13 @@
+# Specific files
+implementation_plan.md
+
+# Archives
+*.zip
+
+# Datasets and folders
+mitdb-1.0.0/
+data/
+
+# Python cache
+__pycache__/
+*.pyc
