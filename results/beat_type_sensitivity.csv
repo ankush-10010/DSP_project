@@ -1,0 +1,8 @@
+beat_symbol,beat_name,clinical_category,total_beats,true_positives,false_negatives,sensitivity_pct
+N,Normal beat,Normal Sinus,12975,12921,54,99.58
+V,Premature ventricular contraction,Ventricular Ectopic (PVC),503,481,22,95.63
+A,Atrial premature beat,Atrial Ectopic (APC),42,42,0,100.0
+Q,Unclassifiable beat,Unclassifiable,11,7,4,63.64
+F,Fusion of ventricular and normal beat,Fusion Beat,3,3,0,100.0
+a,Aberrated atrial premature beat,Atrial Ectopic (APC),2,2,0,100.0
+j,Junctional escape beat,Escape Beat,1,1,0,100.0
