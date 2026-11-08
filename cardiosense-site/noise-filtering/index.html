@@ -156,62 +156,9 @@
 </div>
 <div class="text-[10px] text-[#666666] tracking-widest hidden sm:block">02_fft_spectrum.png</div>
 </div>
-<!-- Simulated SVG Spectrum -->
-<div class="w-full bg-[#080808] border border-[#1A1A1A] p-3 relative overflow-hidden">
-<div class="absolute right-3 top-3 text-[10px] text-[#444444] font-mono leading-tight pointer-events-none">
-            Fs = 360 Hz<br/>N = 4096<br/>RES = 0.088 Hz
-          </div>
-<svg class="w-full h-56 sm:h-72" preserveaspectratio="none" viewbox="0 0 760 280">
-<!-- Gridlines -->
-<line stroke="#161616" stroke-width="1" x1="40" x2="740" y1="20" y2="20"></line>
-<line stroke="#161616" stroke-width="1" x1="40" x2="740" y1="75" y2="75"></line>
-<line stroke="#161616" stroke-width="1" x1="40" x2="740" y1="130" y2="130"></line>
-<line stroke="#161616" stroke-width="1" x1="40" x2="740" y1="185" y2="185"></line>
-<line stroke="#262626" stroke-width="1" x1="40" x2="740" y1="240" y2="240"></line>
-<line stroke="#262626" stroke-width="1" x1="40" x2="40" y1="20" y2="240"></line>
-<line stroke="#161616" stroke-dasharray="2 2" stroke-width="1" x1="180" x2="180" y1="20" y2="240"></line>
-<line stroke="#161616" stroke-dasharray="2 2" stroke-width="1" x1="330" x2="330" y1="20" y2="240"></line>
-<line stroke="#161616" stroke-dasharray="2 2" stroke-width="1" x1="490" x2="490" y1="20" y2="240"></line>
-<line stroke="#161616" stroke-dasharray="2 2" stroke-width="1" x1="650" x2="650" y1="20" y2="240"></line>
-<!-- Band annotations -->
-<rect fill="#FF6B6B" fill-opacity="0.08" height="215" width="40" x="52" y="25"></rect>
-<text fill="#FF6B6B" font-family="monospace" font-size="9" x="54" y="38">BW DRIFT</text>
-<rect fill="#00FFD1" fill-opacity="0.06" height="215" width="90" x="70" y="25"></rect>
-<text fill="#00FFD1" font-family="monospace" font-size="9" x="80" y="38">QRS PASSBAND (5-15 Hz)</text>
-<line stroke="#FFD93D" stroke-dasharray="3 3" stroke-width="1.5" x1="330" x2="330" y1="25" y2="240"></line>
-<text fill="#FFD93D" font-family="monospace" font-size="9" x="334" y="38">50 Hz MAINS SPIKE (+18.2 dB)</text>
-<!-- Spectrum trace -->
-<path d="M 40,35
-                     C 42,40 45,80 50,110
-                     C 55,140 60,190 70,170
-                     C 75,120 82,65 92,60
-                     C 100,55 108,70 120,130
-                     C 130,170 145,210 160,205
-                     C 175,200 200,215 220,218
-                     C 250,220 280,218 310,222
-                     L 326,224
-                     L 330,48
-                     L 334,224
-                     C 350,225 380,228 410,230
-                     C 440,231 470,232 500,233
-                     C 530,234 560,234 600,235
-                     C 640,236 680,236 740,237" fill="none" stroke="#00FFD1" stroke-width="1.8"></path>
-<!-- Baseline wander low-frequency massive peak -->
-<path d="M 40,240 L 40,35 L 48,100 L 55,160 L 65,190" fill="none" stroke="#FF6B6B" stroke-dasharray="2 1" stroke-width="1.5"></path>
-<!-- Axis labels -->
-<text fill="#666666" font-family="monospace" font-size="9" x="35" y="255">0</text>
-<text fill="#666666" font-family="monospace" font-size="9" x="175" y="255">25</text>
-<text fill="#666666" font-family="monospace" font-size="9" x="325" y="255">50 Hz</text>
-<text fill="#666666" font-family="monospace" font-size="9" x="485" y="255">100</text>
-<text fill="#666666" font-family="monospace" font-size="9" x="645" y="255">150</text>
-<text fill="#666666" font-family="monospace" font-size="9" x="725" y="255">180 Hz</text>
-<text fill="#666666" font-family="monospace" font-size="9" x="5" y="25">+20</text>
-<text fill="#666666" font-family="monospace" font-size="9" x="5" y="80">0 dB</text>
-<text fill="#666666" font-family="monospace" font-size="9" x="5" y="135">-20</text>
-<text fill="#666666" font-family="monospace" font-size="9" x="5" y="190">-40</text>
-<text fill="#666666" font-family="monospace" font-size="9" x="5" y="243">-60</text>
-</svg>
-</div>
+<div class="w-full bg-[#080808] border border-[#1A1A1A] p-2 relative overflow-hidden flex items-center justify-center">
+          <img src="/figures/02_fft_spectrum.png" alt="02_fft_spectrum.png // FFT magnitude spectrum of raw ECG" class="w-full h-auto max-h-[520px] object-contain border border-[#1A1A1A]" loading="lazy" />
+        </div>
 <div class="mt-3 flex flex-wrap items-center justify-between text-[11px] text-[#777777]">
 <div><span>INTEGRATED SPECTRAL LEAKAGE: </span><span class="text-white font-bold">&lt; 0.012%</span></div>
 <div><span>PEAK DOMINANCE: </span><span class="text-[#00FFD1] font-bold">10.25 HZ (VENTRICULAR COMPLEX)</span></div>
@@ -301,70 +248,9 @@
 </div>
 <div class="text-[10px] text-[#666666] tracking-widest hidden sm:block">02_psd_clean_vs_noisy.png</div>
 </div>
-<div class="w-full bg-[#080808] border border-[#1A1A1A] p-3 relative overflow-hidden">
-<svg class="w-full h-56 sm:h-72" preserveaspectratio="none" viewbox="0 0 760 280">
-<!-- Gridlines -->
-<line stroke="#161616" stroke-width="1" x1="50" x2="740" y1="20" y2="20"></line>
-<line stroke="#161616" stroke-width="1" x1="50" x2="740" y1="75" y2="75"></line>
-<line stroke="#161616" stroke-width="1" x1="50" x2="740" y1="130" y2="130"></line>
-<line stroke="#161616" stroke-width="1" x1="50" x2="740" y1="185" y2="185"></line>
-<line stroke="#262626" stroke-width="1" x1="50" x2="740" y1="240" y2="240"></line>
-<line stroke="#262626" stroke-width="1" x1="50" x2="50" y1="20" y2="240"></line>
-<line stroke="#161616" stroke-dasharray="2 2" stroke-width="1" x1="165" x2="165" y1="20" y2="240"></line>
-<line stroke="#161616" stroke-dasharray="2 2" stroke-width="1" x1="320" x2="320" y1="20" y2="240"></line>
-<line stroke="#161616" stroke-dasharray="2 2" stroke-width="1" x1="480" x2="480" y1="20" y2="240"></line>
-<line stroke="#161616" stroke-dasharray="2 2" stroke-width="1" x1="640" x2="640" y1="20" y2="240"></line>
-<!-- Trace 1: Record 100 (Clean - Cyan) -->
-<path d="M 50,110
-                     C 60,115 80,70 100,60
-                     C 120,55 140,90 160,130
-                     C 190,170 230,200 280,215
-                     C 350,225 450,230 550,232
-                     C 650,234 700,235 740,235" fill="none" stroke="#00FFD1" stroke-width="2"></path>
-<!-- Trace 2: Record 105 (EMG - Teal) -->
-<path d="M 50,120
-                     C 65,122 85,80 105,75
-                     C 125,70 145,100 165,135
-                     C 200,160 250,170 300,172
-                     C 380,175 460,178 540,180
-                     C 620,182 680,183 740,185" fill="none" stroke="#4ECDC4" stroke-dasharray="4 2" stroke-width="1.8"></path>
-<!-- Trace 3: Record 108 (Baseline Wander - Red) -->
-<path d="M 50,25
-                     C 60,30 80,75 100,70
-                     C 120,65 145,115 170,150
-                     C 210,185 270,205 340,218
-                     C 420,225 520,229 620,232
-                     C 680,233 720,234 740,235" fill="none" stroke="#FF6B6B" stroke-dasharray="1 1" stroke-width="1.8"></path>
-<!-- Axis labels -->
-<text fill="#666666" font-family="monospace" font-size="9" x="45" y="255">0.1</text>
-<text fill="#666666" font-family="monospace" font-size="9" x="160" y="255">1.0</text>
-<text fill="#666666" font-family="monospace" font-size="9" x="315" y="255">10.0</text>
-<text fill="#666666" font-family="monospace" font-size="9" x="475" y="255">50.0</text>
-<text fill="#666666" font-family="monospace" font-size="9" x="635" y="255">100.0</text>
-<text fill="#666666" font-family="monospace" font-size="9" x="715" y="255">180 Hz</text>
-<text fill="#666666" font-family="monospace" font-size="9" x="5" y="25">+20</text>
-<text fill="#666666" font-family="monospace" font-size="9" x="5" y="80">0 dB</text>
-<text fill="#666666" font-family="monospace" font-size="9" x="5" y="135">-20</text>
-<text fill="#666666" font-family="monospace" font-size="9" x="5" y="190">-40</text>
-<text fill="#666666" font-family="monospace" font-size="9" x="5" y="243">-60</text>
-</svg>
-<!-- Dynamic Legend Inside -->
-<div class="mt-2 pt-2 border-t border-[#1A1A1A] flex flex-wrap gap-5 text-[11px]">
-<div class="flex items-center gap-2">
-<span class="w-3 h-0.5 bg-[#00FFD1]"></span>
-<span class="text-white font-bold">REC 100 [CLEAN SINUS]</span>
-</div>
-<div class="flex items-center gap-2">
-<span class="w-3 h-0.5 bg-[#4ECDC4] border-dashed border-b border-[#4ECDC4]"></span>
-<span class="text-[#4ECDC4] font-bold">REC 105 [EMG NOISE ELEVATION]</span>
-</div>
-<div class="flex items-center gap-2">
-<span class="w-3 h-0.5 bg-[#FF6B6B] border-dotted border-b border-[#FF6B6B]"></span>
-<span class="text-[#FF6B6B] font-bold">REC 108 [SEVERE BASELINE WANDER]</span>
-</div>
-</div>
-</div>
-<div class="mt-3 flex items-center justify-between text-[11px] text-[#777777]">
+<div class="w-full bg-[#080808] border border-[#1A1A1A] p-2 relative overflow-hidden flex items-center justify-center">
+          <img src="/figures/02_psd_clean_vs_noisy.png" alt="02_psd_clean_vs_noisy.png // Welch PSD Clean vs Noisy" class="w-full h-auto max-h-[520px] object-contain border border-[#1A1A1A]" loading="lazy" />
+        </div><div class="mt-3 flex items-center justify-between text-[11px] text-[#777777]">
 <span>METHOD: WELCH AVERAGE PERIODOGRAM</span>
 <span>WINDOW: HANNING (4096-PT) // OVERLAP: 50%</span>
 </div>
@@ -460,73 +346,9 @@
 </div>
 <div class="text-[10px] text-[#666666] tracking-widest hidden sm:block">03_filter_frequency_responses.png</div>
 </div>
-<!-- 4-panel Bode plot grid -->
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-<!-- Panel 1: HPF -->
-<div class="bg-[#080808] border border-[#1F1F1F] p-3">
-<div class="flex justify-between text-[11px] mb-2 font-bold">
-<span class="text-[#FF6B6B]">01 // HPF (0.5 HZ)</span>
-<span class="text-[#777777]">-80 dB @ DC</span>
-</div>
-<svg class="w-full h-28" viewbox="0 0 200 120">
-<line stroke="#222222" x1="20" x2="20" y1="10" y2="105"></line>
-<line stroke="#222222" x1="20" x2="190" y1="105" y2="105"></line>
-<line stroke="#161616" stroke-dasharray="2 2" x1="20" x2="190" y1="30" y2="30"></line>
-<path d="M 20,105 C 30,105 45,95 55,50 C 65,33 80,30 190,30" fill="none" stroke="#FF6B6B" stroke-width="2"></path>
-<circle cx="55" cy="50" fill="#FF6B6B" r="3"></circle>
-<text fill="#FF6B6B" font-size="8" x="50" y="70">0.5 Hz (-3dB)</text>
-</svg>
-<div class="text-[10px] text-[#666666] mt-1 text-center">Baseline wander suppression</div>
-</div>
-<!-- Panel 2: Notch -->
-<div class="bg-[#080808] border border-[#1F1F1F] p-3">
-<div class="flex justify-between text-[11px] mb-2 font-bold">
-<span class="text-[#FFD93D]">02 // NOTCH (50 HZ)</span>
-<span class="text-[#777777]">-42.8 dB NOTCH</span>
-</div>
-<svg class="w-full h-28" viewbox="0 0 200 120">
-<line stroke="#222222" x1="20" x2="20" y1="10" y2="105"></line>
-<line stroke="#222222" x1="20" x2="190" y1="105" y2="105"></line>
-<line stroke="#161616" stroke-dasharray="2 2" x1="20" x2="190" y1="30" y2="30"></line>
-<path d="M 20,30 L 95,30 L 105,102 L 115,30 L 190,30" fill="none" stroke="#FFD93D" stroke-width="2"></path>
-<circle cx="105" cy="102" fill="#FFD93D" r="3"></circle>
-<text fill="#FFD93D" font-size="8" x="75" y="80">f0 = 50 Hz, Q=30</text>
-</svg>
-<div class="text-[10px] text-[#666666] mt-1 text-center">Mains harmonic isolation</div>
-</div>
-<!-- Panel 3: LPF -->
-<div class="bg-[#080808] border border-[#1F1F1F] p-3">
-<div class="flex justify-between text-[11px] mb-2 font-bold">
-<span class="text-[#4ECDC4]">03 // LPF (150 HZ)</span>
-<span class="text-[#777777]">-24 dB/OCT</span>
-</div>
-<svg class="w-full h-28" viewbox="0 0 200 120">
-<line stroke="#222222" x1="20" x2="20" y1="10" y2="105"></line>
-<line stroke="#222222" x1="20" x2="190" y1="105" y2="105"></line>
-<line stroke="#161616" stroke-dasharray="2 2" x1="20" x2="190" y1="30" y2="30"></line>
-<path d="M 20,30 L 120,30 C 145,30 160,50 170,80 C 178,100 185,105 190,105" fill="none" stroke="#4ECDC4" stroke-width="2"></path>
-<circle cx="150" cy="50" fill="#4ECDC4" r="3"></circle>
-<text fill="#4ECDC4" font-size="8" x="110" y="70">150 Hz (-3dB)</text>
-</svg>
-<div class="text-[10px] text-[#666666] mt-1 text-center">EMG muscle suppression</div>
-</div>
-<!-- Panel 4: Pan-Tompkins BP -->
-<div class="bg-[#080808] border border-[#1F1F1F] p-3">
-<div class="flex justify-between text-[11px] mb-2 font-bold">
-<span class="text-[#00FFD1]">04 // QRS BP (5-15 HZ)</span>
-<span class="text-[#777777]">BELL PROFILE</span>
-</div>
-<svg class="w-full h-28" viewbox="0 0 200 120">
-<line stroke="#222222" x1="20" x2="20" y1="10" y2="105"></line>
-<line stroke="#222222" x1="20" x2="190" y1="105" y2="105"></line>
-<line stroke="#161616" stroke-dasharray="2 2" x1="20" x2="190" y1="30" y2="30"></line>
-<path d="M 20,100 C 45,95 65,45 90,30 C 115,30 135,70 180,102" fill="none" stroke="#00FFD1" stroke-width="2"></path>
-<circle cx="90" cy="30" fill="#00FFD1" r="3"></circle>
-<text fill="#00FFD1" font-size="8" x="65" y="45">5-15 Hz PASS</text>
-</svg>
-<div class="text-[10px] text-[#666666] mt-1 text-center">QRS energy maximization</div>
-</div>
-</div>
+<div class="w-full bg-[#080808] border border-[#1A1A1A] p-2 relative overflow-hidden flex items-center justify-center">
+        <img src="/figures/03_filter_frequency_responses.png" alt="03_filter_frequency_responses.png // Bode frequency response of cascaded IIR filters" class="w-full h-auto max-h-[550px] object-contain border border-[#1A1A1A]" loading="lazy" />
+      </div>
 <div class="mt-4 pt-3 border-t border-[#1C1C1C] flex flex-wrap justify-between items-center text-[11px] text-[#888888]">
 <div><span>PHASE LAG COMPENSATOR: </span><span class="text-[#00FFD1] font-bold">TRUE ZERO-PHASE SYMMETRY (FILTFILT)</span></div>
 <div><span>TOTAL DIGITAL ATTENUATION MARGIN: </span><span class="text-white font-bold">&gt; 58.4 DB</span></div>
@@ -545,87 +367,9 @@
 </div>
 <div class="text-[10px] text-[#666666] tracking-widest hidden sm:block">03_raw_vs_filtered_ecg.png</div>
 </div>
-<!-- Raw vs Filtered dual trace comparison SVG -->
-<div class="w-full bg-[#080808] border border-[#1A1A1A] p-4 relative">
-<svg class="w-full h-64 sm:h-80" preserveaspectratio="none" viewbox="0 0 900 240">
-<!-- Background Grid Matrix -->
-<pattern height="18" id="ecgGrid" patternunits="userSpaceOnUse" width="18">
-<path d="M 18 0 L 0 0 0 18" fill="none" stroke="#141414" stroke-width="1"></path>
-</pattern>
-<rect fill="url(#ecgGrid)" height="240" width="900"></rect>
-<!-- Center Division Line -->
-<line stroke="#222222" stroke-width="2" x1="0" x2="900" y1="120" y2="120"></line>
-<!-- TOP TRACE: RAW CORRUPTED ECG -->
-<text fill="#FF6B6B" font-family="monospace" font-size="10" font-weight="bold" x="15" y="24">
-            [TRACE_01] RAW UNFILTERED (SEVERE DRIFT + 50Hz HUM + EMG)
-          </text>
-<path d="M 0,90
-                   Q 40,30 80,75
-                   L 85,80 L 88,40 L 92,105 L 96,75 L 108,82
-                   Q 150,110 200,65
-                   L 205,70 L 208,30 L 212,95 L 216,65 L 228,72
-                   Q 270,40 320,85
-                   L 325,90 L 328,50 L 332,110 L 336,80 L 348,88
-                   Q 390,115 440,55
-                   L 445,60 L 448,20 L 452,85 L 456,58 L 468,64
-                   Q 510,35 560,70
-                   L 565,75 L 568,32 L 572,100 L 576,70 L 588,78
-                   Q 630,95 680,45
-                   L 685,50 L 688,15 L 692,80 L 696,50 L 708,58
-                   Q 750,40 800,80
-                   L 805,85 L 808,42 L 812,108 L 816,78 L 828,85
-                   Q 860,105 900,65" fill="none" opacity="0.85" stroke="#FF6B6B" stroke-width="1.4"></path>
-<!-- High-frequency ripple overlay on top trace -->
-<path d="M 0,90
-                   C 10,93 20,87 30,91 C 40,32 50,28 60,35 C 70,55 80,72 85,80
-                   C 110,84 130,100 150,110 C 170,95 190,75 205,70
-                   C 230,73 250,55 270,40 C 290,60 310,80 325,90
-                   C 350,91 370,105 390,115 C 410,85 430,65 445,60
-                   C 470,63 490,45 510,35 C 530,55 550,65 565,75
-                   C 590,82 610,90 630,95 C 650,70 670,50 685,50
-                   C 710,60 730,50 750,40 C 770,60 790,75 805,85
-                   C 830,90 850,100 870,102 C 885,85 900,65 900,65" fill="none" opacity="0.4" stroke="#FFD93D" stroke-width="0.8"></path>
-<!-- BOTTOM TRACE: FULLY CONDITIONED ECG -->
-<text fill="#00FFD1" font-family="monospace" font-size="10" font-weight="bold" x="15" y="142">
-            [TRACE_02] CASCADED IIR CONDITIONED (ISOELECTRIC STABILIZED // ZERO PHASE DRIFT)
-          </text>
-<line stroke="#1C3833" stroke-dasharray="4 4" stroke-width="1" x1="0" x2="900" y1="190" y2="190"></line>
-<path d="M 0,190
-                   L 70,190 Q 77,185 82,190
-                   L 85,190 L 88,135 L 92,205 L 95,190
-                   Q 105,180 115,190
-                   L 190,190 Q 197,185 202,190
-                   L 205,190 L 208,135 L 212,205 L 215,190
-                   Q 225,180 235,190
-                   L 310,190 Q 317,185 322,190
-                   L 325,190 L 328,135 L 332,205 L 335,190
-                   Q 345,180 355,190
-                   L 430,190 Q 437,185 442,190
-                   L 445,190 L 448,135 L 452,205 L 455,190
-                   Q 465,180 475,190
-                   L 550,190 Q 557,185 562,190
-                   L 565,190 L 568,135 L 572,205 L 575,190
-                   Q 585,180 595,190
-                   L 670,190 Q 677,185 682,190
-                   L 685,190 L 688,135 L 692,205 L 695,190
-                   Q 705,180 715,190
-                   L 790,190 Q 797,185 802,190
-                   L 805,190 L 808,135 L 812,205 L 815,190
-                   Q 825,180 835,190
-                   L 900,190" fill="none" stroke="#00FFD1" stroke-width="1.8"></path>
-<!-- Peak markers on Bottom Trace -->
-<circle cx="88" cy="135" fill="#00FFD1" r="2.5"></circle>
-<circle cx="208" cy="135" fill="#00FFD1" r="2.5"></circle>
-<circle cx="328" cy="135" fill="#00FFD1" r="2.5"></circle>
-<circle cx="448" cy="135" fill="#00FFD1" r="2.5"></circle>
-<circle cx="568" cy="135" fill="#00FFD1" r="2.5"></circle>
-<circle cx="688" cy="135" fill="#00FFD1" r="2.5"></circle>
-<circle cx="808" cy="135" fill="#00FFD1" r="2.5"></circle>
-</svg>
-<div class="mt-2 flex flex-wrap items-center justify-between text-[11px] text-[#777777]">
-<div><span>SAMPLE WINDOW: </span><span class="text-white">3600 SAMPLES (10.0 SECONDS @ 360 HZ)</span></div>
-<div><span>FIDUCIAL LATENCY: </span><span class="text-[#00FFD1] font-bold">0 SAMPLES (PERFECT ALIGNMENT)</span></div>
-</div>
+<div class="w-full bg-[#080808] border border-[#1A1A1A] p-2 relative overflow-hidden flex items-center justify-center">
+        <img src="/figures/03_raw_vs_filtered_ecg.png" alt="03_raw_vs_filtered_ecg.png // Raw vs Filtered ECG time-domain overlay" class="w-full h-auto max-h-[550px] object-contain border border-[#1A1A1A]" loading="lazy" />
+      </div>
 </div>
 </div>
 </section>

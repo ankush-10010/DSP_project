@@ -328,6 +328,34 @@
 </div>
 </div>
 </section>
+
+<!-- SECTION 02.3: RAW ECG DATA ACQUISITION & ANNOTATION INSPECTION -->
+<section class="flex flex-col gap-space-md p-space-lg border-b border-[#222222] bg-[#0E0E0E]">
+  <div class="flex items-center justify-between border-b border-[#222222] pb-2">
+    <div>
+      <div class="font-label-sm text-label-sm tracking-widest text-[#00FFD1] uppercase">&gt; 02.3 // RAW ECG DATA INGESTION &amp; LEAD VERIFICATION</div>
+      <h2 class="font-headline-md text-headline-md font-bold uppercase text-white mt-1">CARDIAC SIGNAL ACQUISITION (MIT-BIH LEAD MLII &amp; V1)</h2>
+    </div>
+    <span class="font-label-sm text-label-sm text-[#00FFD1] border border-[#00FFD1] px-2 py-0.5">360 HZ DUAL-CHANNEL</span>
+  </div>
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-space-md">
+    <div class="bg-[#080808] border border-[#222222] p-space-md flex flex-col justify-between">
+      <div class="font-label-sm text-label-sm text-white font-bold mb-2">01_raw_ecg_channels.png // DUAL LEAD RECORDING</div>
+      <div class="w-full bg-[#050505] border border-[#1A1A1A] p-2 flex items-center justify-center">
+        <img src="/figures/01_raw_ecg_channels.png" alt="Raw ECG channels" class="w-full h-auto max-h-[400px] object-contain border border-[#1A1A1A]" loading="lazy" />
+      </div>
+      <div class="font-body-sm text-[11px] text-[#888888] mt-2 italic">Modified Limb Lead II (MLII) and precordial Lead V1 raw signals demonstrating respiratory wander and baseline drift.</div>
+    </div>
+    <div class="bg-[#080808] border border-[#222222] p-space-md flex flex-col justify-between">
+      <div class="font-label-sm text-label-sm text-white font-bold mb-2">01_raw_ecg_with_annotations.png // CARDIOLOGIST ANNOTATIONS</div>
+      <div class="w-full bg-[#050505] border border-[#1A1A1A] p-2 flex items-center justify-center">
+        <img src="/figures/01_raw_ecg_with_annotations.png" alt="Raw ECG with annotations" class="w-full h-auto max-h-[400px] object-contain border border-[#1A1A1A]" loading="lazy" />
+      </div>
+      <div class="font-body-sm text-[11px] text-[#888888] mt-2 italic">Physician-verified beat labels (Normal 'N', PVC 'V', APC 'A') synchronized to discrete 360 Hz sample positions.</div>
+    </div>
+  </div>
+</section>
+
 <!-- SECTION 5: BOTTOM NAVIGATION CONTROLS -->
 <section class="flex flex-col sm:flex-row items-center justify-between gap-space-md pt-space-md border-t border-[#222222]">
 <a class="w-full sm:w-auto h-12 px-space-lg flex items-center justify-center gap-space-sm border-2 border-[#333333] bg-[#0E0E0E] text-[#888888] hover:text-white hover:border-[#666666] font-label-md text-label-md uppercase tracking-[1.5px] transition-none" href="/">

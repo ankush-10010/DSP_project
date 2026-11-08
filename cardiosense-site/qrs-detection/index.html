@@ -297,99 +297,10 @@
 </div>
 <!-- Oscilloscope Stack Container -->
 <div class="bg-[#0A0A0A] border-2 border-[#242424] p-4 md:p-6 space-y-4">
-<!-- Panel 1: Bandpass Filtered -->
-<div class="border border-[#1F1F1F] bg-[#0E0E0E] p-3">
-<div class="flex justify-between items-center font-label-sm text-[11px] mb-1">
-<span class="text-[#00E5FF] font-bold">PANEL 1 // BANDPASS FILTERED ECG (5 - 15 Hz)</span>
-<span class="text-[#666666] font-mono">GAIN: 1.0x | LEAD: MLII</span>
-</div>
-<svg class="w-full h-20 text-[#00E5FF]" fill="none" preserveaspectratio="none" viewbox="0 0 1000 80">
-<line stroke="#1C1C1C" stroke-dasharray="4 4" stroke-width="1" x1="0" x2="1000" y1="40" y2="40"></line>
-<!-- Realistic bandpass filtered ECG waveform -->
-<path d="M 0 40 Q 30 40 45 37 Q 55 35 65 40 L 75 42 L 85 8 L 95 62 L 105 40 Q 120 40 135 34 Q 145 31 160 40 
-                     L 240 40 Q 255 40 270 37 Q 280 35 290 40 L 300 42 L 310 8 L 320 62 L 330 40 Q 345 40 360 34 Q 370 31 385 40 
-                     L 465 40 Q 480 40 495 37 Q 505 35 515 40 L 525 42 L 535 8 L 545 62 L 555 40 Q 570 40 585 34 Q 595 31 610 40 
-                     L 690 40 Q 705 40 720 37 Q 730 35 740 40 L 750 42 L 760 8 L 770 62 L 780 40 Q 795 40 810 34 Q 820 31 835 40 
-                     L 915 40 Q 930 40 945 37 Q 955 35 965 40 L 975 42 L 985 8 L 995 62 L 1000 40" stroke="currentColor" stroke-width="1.75"></path>
-</svg>
-</div>
-<!-- Panel 2: 5-Point Derivative -->
-<div class="border border-[#1F1F1F] bg-[#0E0E0E] p-3">
-<div class="flex justify-between items-center font-label-sm text-[11px] mb-1">
-<span class="text-white font-bold">PANEL 2 // 5-POINT DERIVATIVE dV/dt (BIPOLAR GRADIENT)</span>
-<span class="text-[#666666] font-mono">NORM: ±1.0 mV/s</span>
-</div>
-<svg class="w-full h-20 text-[#EEEEEE]" fill="none" preserveaspectratio="none" viewbox="0 0 1000 80">
-<line stroke="#1C1C1C" stroke-dasharray="4 4" stroke-width="1" x1="0" x2="1000" y1="40" y2="40"></line>
-<!-- High frequency bipolar spikes at QRS -->
-<path d="M 0 40 L 70 40 L 75 35 L 82 72 L 90 6 L 98 68 L 105 40 L 295 40 L 300 35 L 307 72 L 315 6 L 323 68 L 330 40 
-                     L 520 40 L 525 35 L 532 72 L 540 6 L 548 68 L 555 40 L 745 40 L 750 35 L 757 72 L 765 6 L 773 68 L 780 40 
-                     L 970 40 L 975 35 L 982 72 L 990 6 L 998 68 L 1000 40" stroke="currentColor" stroke-width="1.5"></path>
-</svg>
-</div>
-<!-- Panel 3: Squared Derivative -->
-<div class="border border-[#1F1F1F] bg-[#0E0E0E] p-3">
-<div class="flex justify-between items-center font-label-sm text-[11px] mb-1">
-<span class="text-[#F59E0B] font-bold">PANEL 3 // NON-LINEAR SQUARING ((dV/dt)^2)</span>
-<span class="text-[#666666] font-mono">NON-LINEAR POWER RESPONSE</span>
-</div>
-<svg class="w-full h-20 text-[#F59E0B]" fill="none" preserveaspectratio="none" viewbox="0 0 1000 80">
-<line stroke="#1C1C1C" stroke-width="1" x1="0" x2="1000" y1="70" y2="70"></line>
-<!-- Unipolar sharpened power pulses -->
-<path d="M 0 70 L 78 70 L 83 24 L 88 56 L 93 10 L 98 48 L 104 70 
-                     L 303 70 L 308 24 L 313 56 L 318 10 L 323 48 L 329 70 
-                     L 528 70 L 533 24 L 538 56 L 543 10 L 548 48 L 554 70 
-                     L 753 70 L 758 24 L 763 56 L 768 10 L 773 48 L 779 70 
-                     L 978 70 L 983 24 L 988 56 L 993 10 L 998 48 L 1000 70" stroke="currentColor" stroke-width="1.75"></path>
-</svg>
-</div>
-<!-- Panel 4: Moving Window Integration -->
-<div class="border border-[#1F1F1F] bg-[#0E0E0E] p-3">
-<div class="flex justify-between items-center font-label-sm text-[11px] mb-1">
-<span class="text-[#FFB800] font-bold">PANEL 4 // MOVING-WINDOW INTEGRATOR (W = 150 ms)</span>
-<span class="text-[#666666] font-mono">ENERGY FOOTPRINT SMOOTHED</span>
-</div>
-<svg class="w-full h-20 text-[#FFB800]" fill="none" preserveaspectratio="none" viewbox="0 0 1000 80">
-<line stroke="#1C1C1C" stroke-width="1" x1="0" x2="1000" y1="70" y2="70"></line>
-<!-- Smooth golden unipolar energy envelope -->
-<path d="M 0 70 L 70 70 C 80 70 85 18 90 18 C 95 18 102 70 115 70 
-                     L 295 70 C 305 70 310 18 315 18 C 320 18 327 70 340 70 
-                     L 520 70 C 530 70 535 18 540 18 C 545 18 552 70 565 70 
-                     L 745 70 C 755 70 760 18 765 18 C 770 18 777 70 790 70 
-                     L 970 70 C 980 70 985 18 990 18 C 995 18 1000 70 1000 70" stroke="currentColor" stroke-width="2.2"></path>
-</svg>
-</div>
-<!-- Panel 5: Adaptive Thresholds & Detection -->
-<div class="border border-[#1F1F1F] bg-[#0E0E0E] p-3">
-<div class="flex justify-between items-center font-label-sm text-[11px] mb-1">
-<span class="text-white font-bold">PANEL 5 // DYNAMIC THRESHOLD GATING &amp; CLASSIFICATION</span>
-<div class="flex items-center gap-3 font-mono text-[10px]">
-<span class="text-secondary">-- THR_SIG</span>
-<span class="text-[#DC2626]">··· THR_NOISE</span>
-</div>
-</div>
-<svg class="w-full h-20" fill="none" preserveaspectratio="none" viewbox="0 0 1000 80">
-<!-- THR_SIG line -->
-<line stroke="#4ae176" stroke-dasharray="6 3" stroke-width="1.5" x1="0" x2="1000" y1="36" y2="36"></line>
-<!-- THR_NOISE line -->
-<line stroke="#dc2626" stroke-dasharray="3 3" stroke-width="1.2" x1="0" x2="1000" y1="58" y2="58"></line>
-<!-- Signal envelope again in dimmed tone -->
-<path d="M 0 70 L 70 70 C 80 70 85 18 90 18 C 95 18 102 70 115 70 
-                     L 295 70 C 305 70 310 18 315 18 C 320 18 327 70 340 70 
-                     L 520 70 C 530 70 535 18 540 18 C 545 18 552 70 565 70 
-                     L 745 70 C 755 70 760 18 765 18 C 770 18 777 70 790 70 
-                     L 970 70 C 980 70 985 18 990 18 C 995 18 1000 70 1000 70" opacity="0.6" stroke="#FFB800" stroke-width="1.5"></path>
-<!-- Detection Markers: Green tick badges at detected peaks -->
-<g fill="#4ae176">
-<rect height="6" width="6" x="87" y="10"></rect>
-<rect height="6" width="6" x="312" y="10"></rect>
-<rect height="6" width="6" x="537" y="10"></rect>
-<rect height="6" width="6" x="762" y="10"></rect>
-<rect height="6" width="6" x="987" y="10"></rect>
-</g>
-</svg>
-</div>
-<div class="pt-2 font-body-sm text-[12px] text-[#888888] italic border-t border-[#1C1C1C]">
+      <div class="w-full bg-[#080808] border border-[#1A1A1A] p-2 relative overflow-hidden flex items-center justify-center">
+        <img src="/figures/04_pan_tompkins_stages.png" alt="04_pan_tompkins_stages.png // Pan-Tompkins stages cascade" class="w-full h-auto max-h-[620px] object-contain border border-[#1A1A1A]" loading="lazy" />
+      </div>
+      <div class="pt-2 font-body-sm text-[12px] text-[#888888] italic border-t border-[#1C1C1C]">
           Fig. 4.1 — Pan-Tompkins signal transformation cascade (Record 100). The moving-window integrator envelope (panel 4) transforms complex bipolar QRS waves into unipolar energy hills easily categorized by adaptive thresholds.
         </div>
 </div>
@@ -411,62 +322,9 @@
 <span class="text-secondary font-bold">FP: 0 | FN: 0</span>
 </div>
 </div>
-<!-- High Resolution ECG Strip -->
-<div class="relative w-full h-44 bg-[#080808] border border-[#1C1C1C] overflow-hidden">
-<!-- Fine grid background -->
-<svg class="absolute inset-0 w-full h-full opacity-10" height="100%" width="100%">
-<defs>
-<pattern height="20" id="ecg-grid" patternunits="userSpaceOnUse" width="20">
-<path d="M 20 0 L 0 0 0 20" fill="none" stroke="#FFFFFF" stroke-width="0.5"></path>
-</pattern>
-</defs>
-<rect fill="url(#ecg-grid)" height="100%" width="100%"></rect>
-</svg>
-<!-- Diagnostic SVG ECG Curve with 13 beats & Red Inverted Triangles -->
-<svg class="w-full h-full" fill="none" preserveaspectratio="none" viewbox="0 0 1200 176">
-<!-- Center baseline -->
-<line stroke="#181818" stroke-width="1" x1="0" x2="1200" y1="100" y2="100"></line>
-<!-- ECG Signal Path -->
-<path d="
-              M 0 100 
-              L 15 100 Q 25 94 35 100 L 40 104 L 46 25 L 53 130 L 60 100 Q 75 100 85 86 Q 95 86 105 100
-              L 110 100 Q 120 94 130 100 L 135 104 L 141 25 L 148 130 L 155 100 Q 170 100 180 86 Q 190 86 200 100
-              L 205 100 Q 215 94 225 100 L 230 104 L 236 25 L 243 130 L 250 100 Q 265 100 275 86 Q 285 86 295 100
-              L 300 100 Q 310 94 320 100 L 325 104 L 331 25 L 338 130 L 345 100 Q 360 100 370 86 Q 380 86 390 100
-              L 395 100 Q 405 94 415 100 L 420 104 L 426 25 L 433 130 L 440 100 Q 455 100 465 86 Q 475 86 485 100
-              L 490 100 Q 500 94 510 100 L 515 104 L 521 25 L 528 130 L 535 100 Q 550 100 560 86 Q 570 86 580 100
-              L 585 100 Q 595 94 605 100 L 610 104 L 616 25 L 623 130 L 630 100 Q 645 100 655 86 Q 665 86 675 100
-              L 680 100 Q 690 94 700 100 L 705 104 L 711 25 L 718 130 L 725 100 Q 740 100 750 86 Q 760 86 770 100
-              L 775 100 Q 785 94 795 100 L 800 104 L 806 25 L 813 130 L 820 100 Q 835 100 845 86 Q 855 86 865 100
-              L 870 100 Q 880 94 890 100 L 895 104 L 901 25 L 908 130 L 915 100 Q 930 100 940 86 Q 950 86 960 100
-              L 965 100 Q 975 94 985 100 L 990 104 L 996 25 L 1003 130 L 1010 100 Q 1025 100 1035 86 Q 1045 86 1055 100
-              L 1060 100 Q 1070 94 1080 100 L 1085 104 L 1091 25 L 1098 130 L 1105 100 Q 1120 100 1130 86 Q 1140 86 1150 100
-              L 1155 100 Q 1165 94 1175 100 L 1180 104 L 1186 25 L 1193 130 L 1200 100" stroke="#FFFFFF" stroke-width="1.75"></path>
-<!-- RR Interval Connectors & Annotations -->
-<g opacity="0.7" stroke="#FFB800" stroke-dasharray="2 2" stroke-width="1">
-<line x1="46" x2="141" y1="16" y2="16"></line>
-<line x1="141" x2="236" y1="16" y2="16"></line>
-<line x1="236" x2="331" y1="16" y2="16"></line>
-</g>
-<text fill="#FFB800" font-family="JetBrains Mono" font-size="9" font-weight="bold" x="80" y="12">RR: 790ms</text>
-<text fill="#FFB800" font-family="JetBrains Mono" font-size="9" font-weight="bold" x="175" y="12">RR: 792ms</text>
-<text fill="#FFB800" font-family="JetBrains Mono" font-size="9" font-weight="bold" x="270" y="12">RR: 790ms</text>
-<!-- 13 Detected R-Peak Inverted Triangles (#EF4444) -->
-<polygon fill="#EF4444" points="46,18 42,8 50,8"></polygon>
-<polygon fill="#EF4444" points="141,18 137,8 145,8"></polygon>
-<polygon fill="#EF4444" points="236,18 232,8 240,8"></polygon>
-<polygon fill="#EF4444" points="331,18 327,8 335,8"></polygon>
-<polygon fill="#EF4444" points="426,18 422,8 430,8"></polygon>
-<polygon fill="#EF4444" points="521,18 517,8 525,8"></polygon>
-<polygon fill="#EF4444" points="616,18 612,8 620,8"></polygon>
-<polygon fill="#EF4444" points="711,18 707,8 715,8"></polygon>
-<polygon fill="#EF4444" points="806,18 802,8 810,8"></polygon>
-<polygon fill="#EF4444" points="901,18 897,8 905,8"></polygon>
-<polygon fill="#EF4444" points="996,18 992,8 1000,8"></polygon>
-<polygon fill="#EF4444" points="1091,18 1087,8 1095,8"></polygon>
-<polygon fill="#EF4444" points="1186,18 1182,8 1190,8"></polygon>
-</svg>
-</div>
+<div class="w-full bg-[#080808] border border-[#1A1A1A] p-2 relative overflow-hidden flex items-center justify-center">
+        <img src="/figures/04_detected_r_peaks.png" alt="04_detected_r_peaks.png // Detected R-peaks on filtered ECG" class="w-full h-auto max-h-[550px] object-contain border border-[#1A1A1A]" loading="lazy" />
+      </div>
 <div class="pt-2 font-body-sm text-[12px] text-[#888888] italic border-t border-[#1C1C1C]">
           Fig. 4.2 — Detected R-peaks on Record 100. All 13 cardiac cycles in the window are accurately tagged at the true peak crest with zero false alarms.
         </div>
