@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;family=Space+Grotesk:wght@600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;background-color:#080808;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}@keyframes pulse-fast{0%,100%{opacity:1;}50%{opacity:0.3;}}.animate-pulse-fast{animation:pulse-fast 1s cubic-bezier(0.4,0,0.6,1) infinite;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "secondary-fixed": "#6bff8f", "on-surface-variant": "#e6bdb8", "surface-bright": "#3a3939", "on-tertiary-container": "#fff7f1", "tertiary-fixed-dim": "#ffb95f", "on-tertiary-fixed-variant": "#653e00", "on-tertiary-fixed": "#2a1700", "inverse-on-surface": "#313030", "outline": "#ac8884", "secondary-container": "#00b954", "primary-container": "#dc2626", "on-error": "#690005", "surface-container-high": "#2a2a2a", "surface-container": "#201f1f", "surface-dim": "#131313", "primary-fixed": "#ffdad6", "on-error-container": "#ffdad6", "on-primary-fixed-variant": "#93000b", "surface-variant": "#353534", "surface-container-lowest": "#0e0e0e", "on-secondary-fixed": "#002109", "surface-container-highest": "#353534", "inverse-surface": "#e5e2e1", "on-secondary-container": "#004119", "tertiary-container": "#a06500", "primary": "#ffb4ab", "on-secondary-fixed-variant": "#005321", "primary-fixed-dim": "#ffb4ab", "surface-container-low": "#1c1b1b", "secondary": "#4ae176", "on-secondary": "#003915", "secondary-fixed-dim": "#4ae176", "tertiary": "#ffb95f", "error": "#ffb4ab", "surface-tint": "#ffb4ab", "on-background": "#e5e2e1", "outline-variant": "#5c403c", "on-primary-container": "#fff6f5", "on-surface": "#e5e2e1", "tertiary-fixed": "#ffddb8", "error-container": "#93000a", "surface": "#131313", "inverse-primary": "#bf0715", "background": "#131313", "on-tertiary": "#472a00", "on-primary-fixed": "#410002", "on-primary": "#690005" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "margin": "0px", "space-xs": "0.25rem", "space-md": "0.75rem", "space-sm": "0.5rem", "gutter": "1px", "space-lg": "1rem", "space-xl": "1.5rem" }, "fontFamily": { "data-telemetry": [ "JetBrains Mono" ], "data-metric-md": [ "JetBrains Mono" ], "label-sm": [ "JetBrains Mono" ], "headline-sm": [ "Space Grotesk" ], "label-lg": [ "JetBrains Mono" ], "body-sm": [ "Inter" ], "data-metric-lg": [ "JetBrains Mono" ], "label-md": [ "JetBrains Mono" ], "body-md": [ "Inter" ], "headline-lg": [ "Space Grotesk" ], "display-lg": [ "Space Grotesk" ], "body-lg": [ "Inter" ], "headline-md": [ "Space Grotesk" ] }, "fontSize": { "data-telemetry": [ "12px", { "lineHeight": "16px", "fontWeight": "400" } ], "data-metric-md": [ "18px", { "lineHeight": "22px", "fontWeight": "700" } ], "label-sm": [ "10px", { "lineHeight": "12px", "letterSpacing": "0.08em", "fontWeight": "600" } ], "headline-sm": [ "18px", { "lineHeight": "24px", "fontWeight": "600" } ], "label-lg": [ "13px", { "lineHeight": "18px", "letterSpacing": "0.04em", "fontWeight": "500" } ], "body-sm": [ "12px", { "lineHeight": "16px", "fontWeight": "400" } ], "data-metric-lg": [ "26px", { "lineHeight": "30px", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "label-md": [ "11px", { "lineHeight": "14px", "letterSpacing": "0.06em", "fontWeight": "500" } ], "body-md": [ "13px", { "lineHeight": "18px", "fontWeight": "400" } ], "headline-lg": [ "28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "display-lg": [ "36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "body-lg": [ "15px", { "lineHeight": "22px", "fontWeight": "400" } ], "headline-md": [ "22px", { "lineHeight": "28px", "fontWeight": "600" } ] } } } };</script></head><body class="bg-surface-container-lowest text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-[260px] bg-[#0A0A0A] border-r-2 border-white z-50 flex flex-col justify-between select-none"><div class="flex flex-col"><div class="p-space-lg border-b border-[#222222]"><div class="flex items-center justify-between mb-space-xs"><span class="font-label-lg text-label-lg tracking-widest font-bold text-white">CARDIO SENSE</span><span class="font-label-sm text-label-sm text-[#22C55E] border border-[#22C55E] px-1 py-0.5">360 Hz</span></div><div class="flex items-center gap-space-xs font-label-sm text-label-sm text-on-surface-variant"><span class="w-1.5 h-1.5 bg-[#22C55E] animate-pulse-fast"></span><span class="text-white font-medium">DSP_SYS_V2</span><span class="text-outline-variant">/</span><span>MLII_DIAG</span></div></div><div class="px-space-lg py-space-sm bg-surface-container-lowest border-b border-[#222222]"><div class="font-label-sm text-label-sm text-outline uppercase tracking-wider">ROUTING DIRECTORY</div></div><nav class="flex flex-col" data-active-classes="bg-[#1A1A1A] border-l-[3px] border-[#22C55E] !text-white font-semibold pl-[13px]"><a class="group flex items-center justify-between px-space-lg py-space-sm border-b border-[#222222] text-on-surface-variant hover:bg-[#151515] hover:text-white transition-none" data-path="01-landing" href="/"><span class="font-label-sm text-label-sm tracking-wide">01 // LANDING</span><span class="font-label-sm text-label-sm text-outline group-hover:text-on-surface-variant">[OK]</span></a><a class="group flex items-center justify-between px-space-lg py-space-sm border-b border-[#222222] text-on-surface-variant hover:bg-[#151515] hover:text-white transition-none" data-path="02-pipeline" href="/pipeline"><span class="font-label-sm text-label-sm tracking-wide">02 // PIPELINE</span><span class="font-label-sm text-label-sm text-outline group-hover:text-on-surface-variant">[OK]</span></a><a class="group flex items-center justify-between px-space-lg py-space-sm border-b border-[#222222] text-on-surface-variant hover:bg-[#151515] hover:text-white transition-none" data-path="03-noise-and-filters" href="/noise-filtering"><span class="font-label-sm text-label-sm tracking-wide">03 // NOISE &amp; FILTERS</span><span class="font-label-sm text-label-sm text-outline group-hover:text-on-surface-variant">[OK]</span></a><a class="group flex items-center justify-between px-space-lg py-space-sm border-b border-[#222222] text-on-surface-variant hover:bg-[#151515] hover:text-white transition-none" data-path="04-qrs-detection" href="/qrs-detection"><span class="font-label-sm text-label-sm tracking-wide">04 // QRS DETECTION</span><span class="font-label-sm text-label-sm text-outline group-hover:text-on-surface-variant">[OK]</span></a><a class="group flex items-center justify-between px-space-lg py-space-sm border-b border-[#222222] text-on-surface-variant hover:bg-[#151515] hover:text-white transition-none" data-path="05-hrv-analysis" href="/hrv-analysis"><span class="font-label-sm text-label-sm tracking-wide">05 // HRV ANALYSIS</span><span class="font-label-sm text-label-sm text-outline group-hover:text-on-surface-variant">[OK]</span></a><a aria-current="page" class="group flex items-center justify-between px-space-lg py-space-sm text-on-surface-variant hover:text-white transition-none bg-[#1A1A1A] border-l-[3px] border-[#22C55E] !text-white font-semibold pl-[13px]" data-path="06-validation" href="/validation"><span class="font-label-sm text-label-sm tracking-wide">06 // VALIDATION</span><span class="font-label-sm text-label-sm text-[#22C55E] font-bold">[PASS]</span></a><a class="group flex items-center justify-between px-space-lg py-space-sm border-b border-[#222222] text-on-surface-variant hover:bg-[#151515] hover:text-white transition-none" data-path="07-ablation" href="/ablation"><span class="font-label-sm text-label-sm tracking-wide">07 // ABLATION</span><span class="font-label-sm text-label-sm text-outline group-hover:text-on-surface-variant">[OK]</span></a><a class="group flex items-center justify-between px-space-lg py-space-sm border-b border-[#222222] text-on-surface-variant hover:bg-[#151515] hover:text-white transition-none" data-path="08-error-analysis" href="/error-analysis"><span class="font-label-sm text-label-sm tracking-wide">08 // ERROR ANALYSIS</span><span class="font-label-sm text-label-sm text-primary-container font-bold">[ERR]</span></a></nav></div><div class="p-space-lg border-t border-[#222222] bg-[#0A0A0A] font-label-sm text-label-sm text-outline flex flex-col gap-1"><div class="flex justify-between items-center text-on-surface-variant border-b border-[#1c1c1c] pb-space-xs"><span class="text-white font-semibold">MIT-BIH Arrhythmia DB</span><span class="text-[#22C55E] text-[9px] border border-[#22C55E]/40 px-1">ACTIVE</span></div><div class="flex justify-between pt-1"><span>RECORD_DS:</span><span class="text-white">REC_#100-#124</span></div><div class="flex justify-between"><span>SYS_CORE_VER:</span><span class="text-on-surface">v2.4.1_PROD</span></div><div class="flex justify-between"><span>TOTAL_ANNOT:</span><span class="text-white">109,494 QRS</span></div><div class="mt-space-xs pt-space-xs border-t border-[#222222] flex justify-between items-center text-[9px] text-outline"><span class="font-label-sm">TELEMETRY_STREAM</span><span class="w-1.5 h-1.5 bg-[#22C55E]"></span></div></div></aside><div class="pl-[260px]"><header class="fixed top-0 left-[260px] right-0 h-14 bg-surface-dim/95 border-b border-[#222222] z-40 flex items-center justify-between px-space-lg"><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-xs border-r border-[#222222] pr-space-lg"><span class="font-label-sm text-label-sm text-outline uppercase">CORE:</span><span class="font-label-sm text-label-sm text-white font-bold tracking-wider">DSP ENGINE // CORE ONLINE</span></div><div class="flex items-center gap-space-xs"><span class="font-label-sm text-label-sm text-outline uppercase">RATE:</span><span class="font-data-telemetry text-data-telemetry text-on-surface">SAMPLING: 360 HZ (LEAD MLII)</span></div></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs font-label-sm text-label-sm px-2 py-1 bg-[#22C55E]/10 border border-[#22C55E]/40"><span class="w-2 h-2 bg-[#22C55E] animate-pulse-fast"></span><span class="text-[#22C55E] font-bold tracking-wider">LIVE SYNC</span></div></div></header><main class="w-full pt-14 bg-surface-container-lowest min-h-screen"><div class="flex flex-col w-full text-on-surface">
+<!-- SECTION 1: HEADER & HEADLINE SCORECARD -->
+<section class="flex flex-col p-space-lg bg-[#0A0A0A] border-b-2 border-[#222222]">
+<div class="flex flex-wrap items-center justify-between gap-space-xs mb-space-xs">
+<span class="font-label-sm text-label-sm text-[#22C55E] tracking-[0.2em] font-semibold uppercase">
+        &gt; 06 // BENCHMARK VERIFICATION // AAMI EC57 COMPLIANCE
+      </span>
+<div class="flex items-center gap-space-sm font-label-sm text-label-sm text-outline">
+<span class="inline-block w-2 h-2 bg-[#22C55E]"></span>
+<span>VERIFICATION RUN: #VAL-8820-STABLE</span>
+<span class="text-outline-variant">|</span>
+<span>DS: MIT-BIH_DS1</span>
+</div>
+</div>
+<h1 class="font-display-lg text-display-lg text-white font-bold tracking-[0.05em] uppercase m-0">
+      EMPIRICAL VALIDATION &amp; LEADERBOARD
+    </h1>
+<p class="font-body-lg text-body-lg text-[#999999] max-w-5xl mt-space-xs mb-space-lg">
+      Exhaustive multi-record validation across 13,537 cardiologist-annotated cardiac cycles using ±150ms temporal coincidence matching.
+    </p>
+<!-- Headline Scorecard Strip -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter bg-[#262626] border-2 border-[#262626]">
+<!-- Container 1 -->
+<div class="bg-[#111111] p-space-lg flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-sm text-label-sm text-[#888888] tracking-[0.15em] uppercase">AGGREGATE SENSITIVITY (Se)</span>
+<span class="font-label-sm text-label-sm text-[#22C55E] border border-[#22C55E]/40 px-1">PASS</span>
+</div>
+<div class="font-data-metric-lg text-display-lg font-bold text-[#22C55E] tracking-tight leading-none my-space-xs">
+          99.41%
+        </div>
+<div class="font-data-telemetry text-data-telemetry text-[#CCCCCC] border-t border-[#222222] pt-space-xs mt-space-xs">
+          13,457 / 13,537 reference beats
+        </div>
+</div>
+<!-- Container 2 -->
+<div class="bg-[#111111] p-space-lg flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-sm text-label-sm text-[#888888] tracking-[0.15em] uppercase">POSITIVE PREDICTIVITY (PPV)</span>
+<span class="font-label-sm text-label-sm text-[#22C55E] border border-[#22C55E]/40 px-1">PASS</span>
+</div>
+<div class="font-data-metric-lg text-display-lg font-bold text-[#22C55E] tracking-tight leading-none my-space-xs">
+          98.31%
+        </div>
+<div class="font-data-telemetry text-data-telemetry text-[#CCCCCC] border-t border-[#222222] pt-space-xs mt-space-xs">
+          13,457 / 13,688 total detections
+        </div>
+</div>
+<!-- Container 3 -->
+<div class="bg-[#111111] p-space-lg flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-sm text-label-sm text-[#888888] tracking-[0.15em] uppercase">F1-SCORE HARMONIC MEAN</span>
+<span class="font-label-sm text-label-sm text-white border border-white/40 px-1">REF</span>
+</div>
+<div class="font-data-metric-lg text-display-lg font-bold text-white tracking-tight leading-none my-space-xs">
+          98.86%
+        </div>
+<div class="font-data-telemetry text-data-telemetry text-[#CCCCCC] border-t border-[#222222] pt-space-xs mt-space-xs">
+          Harmonic balance of Se &amp; PPV
+        </div>
+</div>
+<!-- Container 4 -->
+<div class="bg-[#111111] p-space-lg flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-sm text-label-sm text-[#888888] tracking-[0.15em] uppercase">DETECTION ERROR RATE (DER)</span>
+<span class="font-label-sm text-label-sm text-[#EF4444] border border-[#EF4444]/40 px-1">DELTA</span>
+</div>
+<div class="font-data-metric-lg text-display-lg font-bold text-[#EF4444] tracking-tight leading-none my-space-xs">
+          2.30%
+        </div>
+<div class="font-data-telemetry text-data-telemetry text-[#CCCCCC] border-t border-[#222222] pt-space-xs mt-space-xs">
+          Total error events: 311 (231 FP + 80 FN)
+        </div>
+</div>
+</div>
+</section>
+<!-- SECTION 2: MASTER PER-RECORD BENCHMARK TABLE -->
+<section class="flex flex-col p-space-lg bg-[#0A0A0A] border-b-2 border-[#222222]">
+<div class="flex items-center justify-between mb-space-md">
+<h2 class="font-headline-md text-headline-md text-white font-bold uppercase tracking-wider m-0">
+        &gt; 06.1 // EXHAUSTIVE RECORD-BY-RECORD BREAKDOWN
+      </h2>
+<span class="font-label-sm text-label-sm text-[#22C55E] uppercase">AAMI TOLERANCE WINDOW: ±150 MS</span>
+</div>
+<!-- Tabular Matrix Container -->
+<div class="overflow-x-auto border-2 border-[#2E2E2E] bg-[#111111]">
+<table class="w-full text-left border-collapse min-w-[980px]">
+<thead>
+<tr class="bg-[#181818] border-b-2 border-[#333333]">
+<th class="p-space-md font-label-sm text-label-sm text-[#22C55E] uppercase tracking-wider">RECORD ID</th>
+<th class="p-space-md font-label-sm text-label-sm text-[#22C55E] uppercase tracking-wider">PATHOLOGY PROFILE</th>
+<th class="p-space-md font-label-sm text-label-sm text-[#22C55E] uppercase tracking-wider text-right">REFERENCE BEATS</th>
+<th class="p-space-md font-label-sm text-label-sm text-[#22C55E] uppercase tracking-wider text-right">TP</th>
+<th class="p-space-md font-label-sm text-label-sm text-[#22C55E] uppercase tracking-wider text-right">FP</th>
+<th class="p-space-md font-label-sm text-label-sm text-[#22C55E] uppercase tracking-wider text-right">FN</th>
+<th class="p-space-md font-label-sm text-label-sm text-[#22C55E] uppercase tracking-wider text-right">Se</th>
+<th class="p-space-md font-label-sm text-label-sm text-[#22C55E] uppercase tracking-wider text-right">PPV</th>
+<th class="p-space-md font-label-sm text-label-sm text-[#22C55E] uppercase tracking-wider text-right">F1-SCORE</th>
+<th class="p-space-md font-label-sm text-label-sm text-[#22C55E] uppercase tracking-wider text-right">DER</th>
+</tr>
+</thead>
+<tbody class="font-data-telemetry text-data-telemetry divide-y divide-[#222222]">
+<!-- Rec 100 -->
+<tr class="bg-[#22C55E]/5 border-l-4 border-l-[#22C55E] hover:bg-[#22C55E]/10">
+<td class="p-space-md font-bold text-white">100</td>
+<td class="p-space-md text-[#E5E2E1]">Normal Sinus Baseline</td>
+<td class="p-space-md text-right text-[#CCCCCC]">2,273</td>
+<td class="p-space-md text-right text-[#22C55E] font-bold">2,273</td>
+<td class="p-space-md text-right text-[#CCCCCC]">0</td>
+<td class="p-space-md text-right text-[#CCCCCC]">0</td>
+<td class="p-space-md text-right text-[#22C55E] font-bold">100.00%</td>
+<td class="p-space-md text-right text-[#22C55E] font-bold">100.00%</td>
+<td class="p-space-md text-right text-[#22C55E] font-bold">1.0000</td>
+<td class="p-space-md text-right text-[#22C55E] font-bold">0.00%</td>
+</tr>
+<!-- Rec 101 -->
+<tr class="hover:bg-[#1A1A1A]">
+<td class="p-space-md font-bold text-white">101</td>
+<td class="p-space-md text-[#E5E2E1]">High Baseline Noise / Drift</td>
+<td class="p-space-md text-right text-[#CCCCCC]">1,865</td>
+<td class="p-space-md text-right text-white">1,864</td>
+<td class="p-space-md text-right text-[#CCCCCC]">4</td>
+<td class="p-space-md text-right text-[#CCCCCC]">1</td>
+<td class="p-space-md text-right text-[#E5E2E1]">99.95%</td>
+<td class="p-space-md text-right text-[#E5E2E1]">99.79%</td>
+<td class="p-space-md text-right text-[#E5E2E1]">0.9987</td>
+<td class="p-space-md text-right text-[#E5E2E1]">0.27%</td>
+</tr>
+<!-- Rec 103 -->
+<tr class="hover:bg-[#1A1A1A]">
+<td class="p-space-md font-bold text-white">103</td>
+<td class="p-space-md text-[#E5E2E1]">Baseline Drift / PACs</td>
+<td class="p-space-md text-right text-[#CCCCCC]">2,084</td>
+<td class="p-space-md text-right text-white">2,083</td>
+<td class="p-space-md text-right text-[#CCCCCC]">0</td>
+<td class="p-space-md text-right text-[#CCCCCC]">1</td>
+<td class="p-space-md text-right text-[#E5E2E1]">99.95%</td>
+<td class="p-space-md text-right text-[#E5E2E1]">100.00%</td>
+<td class="p-space-md text-right text-[#E5E2E1]">0.9998</td>
+<td class="p-space-md text-right text-[#E5E2E1]">0.05%</td>
+</tr>
+<!-- Rec 105 -->
+<tr class="hover:bg-[#1A1A1A]">
+<td class="p-space-md font-bold text-white">105</td>
+<td class="p-space-md text-[#E5E2E1]">Severe EMG Tremor Noise</td>
+<td class="p-space-md text-right text-[#CCCCCC]">2,572</td>
+<td class="p-space-md text-right text-white">2,568</td>
+<td class="p-space-md text-right text-[#EF4444]">52</td>
+<td class="p-space-md text-right text-[#CCCCCC]">4</td>
+<td class="p-space-md text-right text-[#E5E2E1]">99.84%</td>
+<td class="p-space-md text-right text-[#E5E2E1]">98.02%</td>
+<td class="p-space-md text-right text-[#E5E2E1]">0.9892</td>
+<td class="p-space-md text-right text-[#E5E2E1]">2.18%</td>
+</tr>
+<!-- Rec 108 -->
+<tr class="bg-[#EF4444]/5 hover:bg-[#EF4444]/10">
+<td class="p-space-md font-bold text-white">108</td>
+<td class="p-space-md text-[#E5E2E1]">Digoxin Effect / Severe Drift</td>
+<td class="p-space-md text-right text-[#CCCCCC]">1,763</td>
+<td class="p-space-md text-right text-white">1,759</td>
+<td class="p-space-md text-right text-[#EF4444] font-bold">156</td>
+<td class="p-space-md text-right text-[#CCCCCC]">4</td>
+<td class="p-space-md text-right text-[#E5E2E1]">99.77%</td>
+<td class="p-space-md text-right text-[#EF4444] font-bold">91.85%</td>
+<td class="p-space-md text-right text-[#E5E2E1]">0.9565</td>
+<td class="p-space-md text-right text-[#EF4444] font-bold">9.08%</td>
+</tr>
+<!-- Rec 203 -->
+<tr class="bg-[#F59E0B]/5 hover:bg-[#F59E0B]/10">
+<td class="p-space-md font-bold text-white">203</td>
+<td class="p-space-md text-[#E5E2E1]">Multiform Ventricular PVCs</td>
+<td class="p-space-md text-right text-[#CCCCCC]">2,980</td>
+<td class="p-space-md text-right text-white">2,910</td>
+<td class="p-space-md text-right text-[#CCCCCC]">19</td>
+<td class="p-space-md text-right text-[#F59E0B] font-bold">70</td>
+<td class="p-space-md text-right text-[#F59E0B] font-bold">97.65%</td>
+<td class="p-space-md text-right text-[#E5E2E1]">99.35%</td>
+<td class="p-space-md text-right text-[#E5E2E1]">0.9849</td>
+<td class="p-space-md text-right text-[#E5E2E1]">2.99%</td>
+</tr>
+</tbody>
+<tfoot>
+<tr class="bg-[#181818] border-t-2 border-[#22C55E] font-data-metric-md text-label-lg font-bold">
+<td class="p-space-md text-white">AGGREGATE</td>
+<td class="p-space-md text-white">6 Multi-Class Records</td>
+<td class="p-space-md text-right text-white">13,537</td>
+<td class="p-space-md text-right text-[#22C55E]">13,457</td>
+<td class="p-space-md text-right text-[#EF4444]">231</td>
+<td class="p-space-md text-right text-[#F59E0B]">80</td>
+<td class="p-space-md text-right text-[#22C55E]">99.41%</td>
+<td class="p-space-md text-right text-[#22C55E]">98.31%</td>
+<td class="p-space-md text-right text-white">0.9886</td>
+<td class="p-space-md text-right text-[#EF4444]">2.30%</td>
+</tr>
+</tfoot>
+</table>
+</div>
+<!-- Clinical Analysis Annotation Box -->
+<div class="mt-space-lg bg-[#0D0D0D] border border-[#242424] border-l-4 border-l-[#22C55E] p-space-lg">
+<div class="font-label-sm text-label-sm font-bold text-[#22C55E] tracking-widest uppercase mb-space-xs">
+        CRITICAL BENCHMARK INSIGHTS:
+      </div>
+<ul class="space-y-space-xs font-body-md text-body-md text-[#E5E2E1]">
+<li class="flex items-start gap-space-xs">
+<span class="text-[#22C55E] font-bold">■</span>
+<span><strong class="text-white">Near-Flawless Standard Rhythms:</strong> Records 100, 101, and 103 achieve an aggregate F1 of 99.95%, demonstrating that standard sinus rhythms with mild baseline drift are essentially solved by the cascaded IIR pipeline.</span>
+</li>
+<li class="flex items-start gap-space-xs">
+<span class="text-[#22C55E] font-bold">■</span>
+<span><strong class="text-white">Noise Immunity Under EMG Stress:</strong> Record 105 contains intense muscular interference, yet maintains a 99.84% sensitivity with only 4 missed beats.</span>
+</li>
+<li class="flex items-start gap-space-xs">
+<span class="text-[#EF4444] font-bold">■</span>
+<span><strong class="text-white">The Two Outlier Records:</strong> (1) Record 108 suffers from 156 false positives (PPV drops to 91.85%) due to Digoxin-induced ST depression; (2) Record 203 incurs 70 false negatives (Se drops to 97.65%) due to low-frequency multiform PVCs. Detailed root-cause post-mortems for both outliers are documented on Page 08: Error Analysis.</span>
+</li>
+</ul>
+</div>
+</section>
+<!-- SECTION 3: DETECTION OVERLAY COMPARISON STRIP -->
+<section class="flex flex-col p-space-lg bg-[#0A0A0A] border-b-2 border-[#222222]">
+<div class="flex flex-wrap items-center justify-between gap-space-sm mb-space-md">
+<h2 class="font-headline-md text-headline-md text-white font-bold uppercase tracking-wider m-0">
+        &gt; 06.2 // DETECTED PEAKS vs CARDIOLOGIST ANNOTATION GROUND TRUTH
+      </h2>
+<div class="flex flex-wrap items-center gap-space-md font-label-sm text-label-sm border border-[#262626] bg-[#111111] px-space-md py-1">
+<div class="flex items-center gap-1">
+<span class="text-[#EF4444]">▼</span>
+<span class="text-[#CCCCCC]">AUTO PAN-TOMPKINS (t_det)</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="text-[#38BDF8]">◆</span>
+<span class="text-[#CCCCCC]">CARDIOLOGIST REF (t_ref)</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="w-2.5 h-2.5 bg-[#22C55E]/30 border border-[#22C55E]"></span>
+<span class="text-[#CCCCCC]">±150ms MATCH WINDOW</span>
+</div>
+<div class="border-l border-[#333333] pl-space-sm text-[#22C55E] font-bold">
+          REC 100 // MLII // Δt: 1.84ms
+        </div>
+</div>
+</div>
+<!-- SVG Coincidence Visualization -->
+<div class="bg-[#0D0D0D] border-2 border-[#292929] p-space-lg flex flex-col">
+<div class="w-full overflow-x-auto">
+<svg class="w-full min-w-[900px] h-[320px] select-none block" viewbox="0 0 1100 320" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<pattern height="25" id="reticle-grid" patternunits="userSpaceOnUse" width="25">
+<path d="M 25 0 L 0 0 0 25" fill="none" stroke="#181818" stroke-width="1"></path>
+</pattern>
+</defs>
+<!-- Background Grid Canvas -->
+<rect fill="url(#reticle-grid)" height="320" width="1100"></rect>
+<line stroke="#222222" stroke-dasharray="4,4" stroke-width="1.5" x1="0" x2="1100" y1="210" y2="210"></line>
+<!-- Temporal Coincidence Windows (±150ms = 54 samples = approx 60px visual width) -->
+<!-- Beat 1: X=110 -->
+<rect fill="rgba(34, 197, 94, 0.12)" height="270" stroke="#22C55E" stroke-dasharray="3,3" stroke-width="1" width="60" x="80" y="25"></rect>
+<!-- Beat 2: X=330 -->
+<rect fill="rgba(34, 197, 94, 0.12)" height="270" stroke="#22C55E" stroke-dasharray="3,3" stroke-width="1" width="60" x="300" y="25"></rect>
+<!-- Beat 3: X=550 -->
+<rect fill="rgba(34, 197, 94, 0.12)" height="270" stroke="#22C55E" stroke-dasharray="3,3" stroke-width="1" width="60" x="520" y="25"></rect>
+<!-- Beat 4: X=770 -->
+<rect fill="rgba(34, 197, 94, 0.12)" height="270" stroke="#22C55E" stroke-dasharray="3,3" stroke-width="1" width="60" x="740" y="25"></rect>
+<!-- Beat 5: X=990 -->
+<rect fill="rgba(34, 197, 94, 0.12)" height="270" stroke="#22C55E" stroke-dasharray="3,3" stroke-width="1" width="60" x="960" y="25"></rect>
+<!-- Continuous ECG Voltage Trace (Lead MLII) -->
+<path d="
+            M 0 210
+            L 40 210 Q 55 195 70 210
+            L 95 210 L 102 225 L 110 50 L 118 240 L 126 210
+            L 150 210 Q 175 175 200 210
+            L 260 210 Q 275 195 290 210
+            L 315 210 L 322 225 L 330 50 L 338 240 L 346 210
+            L 370 210 Q 395 175 420 210
+            L 480 210 Q 495 195 510 210
+            L 535 210 L 542 225 L 550 50 L 558 240 L 566 210
+            L 590 210 Q 615 175 640 210
+            L 700 210 Q 715 195 730 210
+            L 755 210 L 762 225 L 770 50 L 778 240 L 786 210
+            L 810 210 Q 835 175 860 210
+            L 920 210 Q 935 195 950 210
+            L 975 210 L 982 225 L 990 50 L 998 240 L 1006 210
+            L 1030 210 Q 1055 175 1080 210 L 1100 210
+          " fill="none" stroke="#999999" stroke-linecap="square" stroke-width="2"></path>
+<!-- Peaks & Markers for 5 cycles -->
+<!-- Beat 1 -->
+<polygon fill="#EF4444" points="110,40 105,30 115,30"></polygon>
+<polygon fill="#38BDF8" points="110,50 115,55 110,60 105,55"></polygon>
+<text fill="#EF4444" font-family="JetBrains Mono" font-size="10" font-weight="700" text-anchor="middle" x="110" y="20">t_det: 110</text>
+<text fill="#38BDF8" font-family="JetBrains Mono" font-size="10" text-anchor="middle" x="110" y="78">t_ref: 110</text>
+<!-- Interval 1-2 -->
+<line stroke="#444444" stroke-width="1" x1="110" x2="330" y1="285" y2="285"></line>
+<text fill="#CCCCCC" font-family="JetBrains Mono" font-size="11" text-anchor="middle" x="220" y="280">RR: 791 ms (Δt=0ms)</text>
+<!-- Beat 2 -->
+<polygon fill="#EF4444" points="329,40 324,30 334,30"></polygon>
+<polygon fill="#38BDF8" points="330,50 335,55 330,60 325,55"></polygon>
+<text fill="#EF4444" font-family="JetBrains Mono" font-size="10" font-weight="700" text-anchor="middle" x="329" y="20">t_det: 329</text>
+<text fill="#38BDF8" font-family="JetBrains Mono" font-size="10" text-anchor="middle" x="330" y="78">t_ref: 330</text>
+<!-- Interval 2-3 -->
+<line stroke="#444444" stroke-width="1" x1="330" x2="550" y1="285" y2="285"></line>
+<text fill="#CCCCCC" font-family="JetBrains Mono" font-size="11" text-anchor="middle" x="440" y="280">RR: 788 ms (Δt=2.7ms)</text>
+<!-- Beat 3 -->
+<polygon fill="#EF4444" points="551,40 546,30 556,30"></polygon>
+<polygon fill="#38BDF8" points="550,50 555,55 550,60 545,55"></polygon>
+<text fill="#EF4444" font-family="JetBrains Mono" font-size="10" font-weight="700" text-anchor="middle" x="551" y="20">t_det: 551</text>
+<text fill="#38BDF8" font-family="JetBrains Mono" font-size="10" text-anchor="middle" x="550" y="78">t_ref: 550</text>
+<!-- Interval 3-4 -->
+<line stroke="#444444" stroke-width="1" x1="550" x2="770" y1="285" y2="285"></line>
+<text fill="#CCCCCC" font-family="JetBrains Mono" font-size="11" text-anchor="middle" x="660" y="280">RR: 794 ms (Δt=2.7ms)</text>
+<!-- Beat 4 -->
+<polygon fill="#EF4444" points="770,40 765,30 775,30"></polygon>
+<polygon fill="#38BDF8" points="770,50 775,55 770,60 765,55"></polygon>
+<text fill="#EF4444" font-family="JetBrains Mono" font-size="10" font-weight="700" text-anchor="middle" x="770" y="20">t_det: 770</text>
+<text fill="#38BDF8" font-family="JetBrains Mono" font-size="10" text-anchor="middle" x="770" y="78">t_ref: 770</text>
+<!-- Interval 4-5 -->
+<line stroke="#444444" stroke-width="1" x1="770" x2="990" y1="285" y2="285"></line>
+<text fill="#CCCCCC" font-family="JetBrains Mono" font-size="11" text-anchor="middle" x="880" y="280">RR: 790 ms (Δt=0ms)</text>
+<!-- Beat 5 -->
+<polygon fill="#EF4444" points="990,40 985,30 995,30"></polygon>
+<polygon fill="#38BDF8" points="990,50 995,55 990,60 985,55"></polygon>
+<text fill="#EF4444" font-family="JetBrains Mono" font-size="10" font-weight="700" text-anchor="middle" x="990" y="20">t_det: 990</text>
+<text fill="#38BDF8" font-family="JetBrains Mono" font-size="10" text-anchor="middle" x="990" y="78">t_ref: 990</text>
+<!-- Scope Telemetry Overlays -->
+<text fill="#555555" font-family="JetBrains Mono" font-size="10" x="15" y="30">GAIN: 200 mm/mV</text>
+<text fill="#555555" font-family="JetBrains Mono" font-size="10" x="15" y="45">SPEED: 25 mm/s</text>
+<text fill="#22C55E" font-family="JetBrains Mono" font-size="10" x="15" y="60">MATCH STATUS: 5 / 5 COINCIDENT</text>
+</svg>
+</div>
+<div class="border-t border-[#222222] pt-space-sm mt-space-sm font-label-md text-label-md text-[#888888] flex items-center justify-between">
+<span>Fig. 6.1 — Coincidence matching visualization. Automated triggers (red) perfectly lock onto expert physician annotations (blue) well inside the AAMI ±150ms tolerance envelope.</span>
+<span class="text-white font-data-telemetry">SAMPLING CLOCK: 360.00 Hz // RECORD #100.DAT</span>
+</div>
+</div>
+</section>
+<!-- SECTION 4: CROSS-RECORD COMPARATIVE BENCHMARK CHART -->
+<section class="flex flex-col p-space-lg bg-[#0A0A0A] border-b-2 border-[#222222]">
+<div class="flex flex-wrap items-center justify-between gap-space-sm mb-space-md">
+<h2 class="font-headline-md text-headline-md text-white font-bold uppercase tracking-wider m-0">
+        &gt; 06.3 // COMPARATIVE PERFORMANCE HISTOGRAM
+      </h2>
+<div class="flex flex-wrap items-center gap-space-md font-label-sm text-label-sm">
+<div class="flex items-center gap-1.5">
+<span class="w-3 h-3 bg-[#22C55E]"></span>
+<span class="text-[#E5E2E1]">SENSITIVITY (Se)</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-3 h-3 bg-[#00FFD1]"></span>
+<span class="text-[#E5E2E1]">POSITIVE PREDICTIVITY (PPV)</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-3 h-3 bg-white"></span>
+<span class="text-[#E5E2E1]">F1-SCORE</span>
+</div>
+<span class="bg-[#EF4444]/20 text-[#EF4444] border border-[#EF4444] px-1.5 py-0.5">REC 108 PPV DIP (91.85%)</span>
+<span class="bg-[#F59E0B]/20 text-[#F59E0B] border border-[#F59E0B] px-1.5 py-0.5">REC 203 Se DIP (97.65%)</span>
+</div>
+</div>
+<!-- Rendered SVG Grouped Histogram -->
+<div class="bg-[#0D0D0D] border-2 border-[#292929] p-space-lg flex flex-col">
+<div class="w-full overflow-x-auto">
+<svg class="w-full min-w-[850px] h-[360px] select-none block" viewbox="0 0 1000 360" xmlns="http://www.w3.org/2000/svg">
+<!-- Background Axis Grid Lines (Scale 90.0% to 100.0%, baseline 90.0% at y=300, 100.0% at y=40, delta=260px for 10% -> 26px per 1%) -->
+<!-- 100.0% -> y = 40 -->
+<line stroke="#333333" stroke-width="1" x1="80" x2="980" y1="40" y2="40"></line>
+<text fill="#888888" font-family="JetBrains Mono" font-size="11" text-anchor="end" x="70" y="44">100.0%</text>
+<!-- 97.5% -> y = 105 -->
+<line stroke="#222222" stroke-dasharray="3,3" stroke-width="1" x1="80" x2="980" y1="105" y2="105"></line>
+<text fill="#666666" font-family="JetBrains Mono" font-size="11" text-anchor="end" x="70" y="109">97.5%</text>
+<!-- 95.0% -> y = 170 (AAMI Regulatory Threshold) -->
+<line stroke="#EF4444" stroke-dasharray="4,4" stroke-width="1.5" x1="80" x2="980" y1="170" y2="170"></line>
+<text fill="#EF4444" font-family="JetBrains Mono" font-size="11" text-anchor="end" x="70" y="174">95.0% [AAMI]</text>
+<!-- 92.5% -> y = 235 -->
+<line stroke="#222222" stroke-dasharray="3,3" stroke-width="1" x1="80" x2="980" y1="235" y2="235"></line>
+<text fill="#666666" font-family="JetBrains Mono" font-size="11" text-anchor="end" x="70" y="239">92.5%</text>
+<!-- 90.0% -> y = 300 -->
+<line stroke="#444444" stroke-width="1.5" x1="80" x2="980" y1="300" y2="300"></line>
+<text fill="#888888" font-family="JetBrains Mono" font-size="11" text-anchor="end" x="70" y="304">90.0%</text>
+<!-- Group 1: REC 100 (Center X = 145) -->
+<!-- Se 100% -> y=40, h=260 -->
+<rect fill="#22C55E" height="260" width="20" x="110" y="40"></rect>
+<!-- PPV 100% -> y=40, h=260 -->
+<rect fill="#00FFD1" height="260" width="20" x="135" y="40"></rect>
+<!-- F1 100% -> y=40, h=260 -->
+<rect fill="#FFFFFF" height="260" width="20" x="160" y="40"></rect>
+<text fill="#FFFFFF" font-family="JetBrains Mono" font-size="12" font-weight="700" text-anchor="middle" x="145" y="325">REC 100</text>
+<text fill="#22C55E" font-family="JetBrains Mono" font-size="10" font-weight="700" text-anchor="middle" x="145" y="30">100.0%</text>
+<!-- Group 2: REC 101 (Center X = 275) -->
+<!-- Se 99.95% -> y=41.3, h=258.7 -->
+<rect fill="#22C55E" height="259" width="20" x="240" y="41"></rect>
+<!-- PPV 99.79% -> y=45.46, h=254.5 -->
+<rect fill="#00FFD1" height="255" width="20" x="265" y="45"></rect>
+<!-- F1 99.87% -> y=43.38, h=256.6 -->
+<rect fill="#FFFFFF" height="257" width="20" x="290" y="43"></rect>
+<text fill="#FFFFFF" font-family="JetBrains Mono" font-size="12" font-weight="700" text-anchor="middle" x="275" y="325">REC 101</text>
+<text fill="#CCCCCC" font-family="JetBrains Mono" font-size="10" text-anchor="middle" x="275" y="30">99.87%</text>
+<!-- Group 3: REC 103 (Center X = 405) -->
+<!-- Se 99.95% -->
+<rect fill="#22C55E" height="259" width="20" x="370" y="41"></rect>
+<!-- PPV 100.0% -->
+<rect fill="#00FFD1" height="260" width="20" x="395" y="40"></rect>
+<!-- F1 99.98% -->
+<rect fill="#FFFFFF" height="260" width="20" x="420" y="40"></rect>
+<text fill="#FFFFFF" font-family="JetBrains Mono" font-size="12" font-weight="700" text-anchor="middle" x="405" y="325">REC 103</text>
+<text fill="#CCCCCC" font-family="JetBrains Mono" font-size="10" text-anchor="middle" x="405" y="30">99.98%</text>
+<!-- Group 4: REC 105 (Center X = 535) -->
+<!-- Se 99.84% -> y=44.16 -->
+<rect fill="#22C55E" height="256" width="20" x="500" y="44"></rect>
+<!-- PPV 98.02% -> y=91.48 -->
+<rect fill="#00FFD1" height="209" width="20" x="525" y="91"></rect>
+<!-- F1 98.92% -> y=68.08 -->
+<rect fill="#FFFFFF" height="232" width="20" x="550" y="68"></rect>
+<text fill="#FFFFFF" font-family="JetBrains Mono" font-size="12" font-weight="700" text-anchor="middle" x="535" y="325">REC 105</text>
+<text fill="#CCCCCC" font-family="JetBrains Mono" font-size="10" text-anchor="middle" x="535" y="30">98.92%</text>
+<!-- Group 5: REC 108 (Center X = 665) -->
+<!-- Se 99.77% -> y=45.98 -->
+<rect fill="#22C55E" height="254" width="20" x="630" y="46"></rect>
+<!-- PPV 91.85% -> y=251.9 -> DELTA ALERT -->
+<rect fill="#EF4444" height="48" width="20" x="655" y="252"></rect>
+<!-- F1 95.65% -> y=153.1 -->
+<rect fill="#FFFFFF" height="147" width="20" x="680" y="153"></rect>
+<text fill="#FFFFFF" font-family="JetBrains Mono" font-size="12" font-weight="700" text-anchor="middle" x="665" y="325">REC 108</text>
+<!-- Callout Marker for 108 PPV -->
+<line stroke="#EF4444" stroke-width="1.5" x1="665" x2="665" y1="248" y2="200"></line>
+<rect fill="#EF4444" height="20" width="90" x="620" y="180"></rect>
+<text fill="#FFFFFF" font-family="JetBrains Mono" font-size="9" font-weight="700" text-anchor="middle" x="665" y="194">PPV: 91.85% (FP 156)</text>
+<!-- Group 6: REC 203 (Center X = 795) -->
+<!-- Se 97.65% -> y=101.1 -> ALERT -->
+<rect fill="#F59E0B" height="199" width="20" x="760" y="101"></rect>
+<!-- PPV 99.35% -> y=56.9 -->
+<rect fill="#00FFD1" height="243" width="20" x="785" y="57"></rect>
+<!-- F1 98.49% -> y=79.26 -->
+<rect fill="#FFFFFF" height="221" width="20" x="810" y="79"></rect>
+<text fill="#FFFFFF" font-family="JetBrains Mono" font-size="12" font-weight="700" text-anchor="middle" x="795" y="325">REC 203</text>
+<!-- Callout Marker for 203 Se -->
+<line stroke="#F59E0B" stroke-width="1.5" x1="770" x2="770" y1="95" y2="60"></line>
+<rect fill="#F59E0B" height="20" width="90" x="725" y="40"></rect>
+<text fill="#000000" font-family="JetBrains Mono" font-size="9" font-weight="700" text-anchor="middle" x="770" y="54">Se: 97.65% (FN 70)</text>
+<!-- Group 7: AGGREGATE (Center X = 925) -->
+<!-- Se 99.41% -> y=55.34 -->
+<rect fill="#22C55E" height="245" width="20" x="890" y="55"></rect>
+<!-- PPV 98.31% -> y=83.94 -->
+<rect fill="#00FFD1" height="216" width="20" x="915" y="84"></rect>
+<!-- F1 98.86% -> y=69.64 -->
+<rect fill="#FFFFFF" height="230" width="20" x="940" y="70"></rect>
+<text fill="#22C55E" font-family="JetBrains Mono" font-size="12" font-weight="700" text-anchor="middle" x="925" y="325">AGGREGATE</text>
+<text fill="#22C55E" font-family="JetBrains Mono" font-size="10" font-weight="700" text-anchor="middle" x="925" y="30">F1: 98.86%</text>
+</svg>
+</div>
+<div class="border-t border-[#222222] pt-space-sm mt-space-sm font-label-md text-label-md text-[#888888] flex items-center justify-between">
+<span>Fig. 6.2 — Multi-record performance distribution. High performance is maintained across diverse physiological challenges with isolated dips in Records 108 and 203.</span>
+<span class="text-white font-data-telemetry">N=13,537 BEATS // MIT-BIH GOLD STANDARD</span>
+</div>
+</div>
+</section>
+<!-- SECTION 5: VALIDATION PROTOCOL & FORMAL FORMULATIONS -->
+<section class="flex flex-col p-space-lg bg-[#0A0A0A] border-b-2 border-[#222222]">
+<div class="mb-space-md">
+<h2 class="font-headline-md text-headline-md text-white font-bold uppercase tracking-wider m-0">
+        &gt; 06.4 // AAMI EC57 EVALUATION CRITERIA
+      </h2>
+</div>
+<!-- 3-Column Modular Definition Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg">
+<!-- Box 1 -->
+<div class="bg-[#111111] border-2 border-[#262626] border-t-4 border-t-[#22C55E] p-space-lg flex flex-col justify-between">
+<div>
+<div class="font-label-lg text-label-lg font-bold text-white uppercase tracking-wider mb-space-sm flex items-center justify-between">
+<span>AAMI ±150 MS WINDOW</span>
+<span class="text-[#22C55E] text-xs">§ 4.2.1</span>
+</div>
+<p class="font-body-md text-body-md text-[#CCCCCC] leading-relaxed">
+            Under Association for the Advancement of Medical Instrumentation (AAMI) standard EC57, a detected beat is certified as a <strong class="text-white">True Positive (TP)</strong> if and only if:
+          </p>
+<div class="bg-[#080808] border border-[#222222] p-space-sm my-space-sm font-data-telemetry text-data-telemetry text-[#22C55E]">
+            |t_detected - t_reference| &lt;= 150 ms<br/>
+            (Δn &lt;= 54 samples @ 360 Hz)
+          </div>
+<p class="font-body-md text-body-md text-[#CCCCCC] leading-relaxed">
+            A greedy 1-to-1 matching algorithm prevents duplicate assignments. Unmatched detections are scored as <strong class="text-[#EF4444]">False Positives (FP)</strong>; unmatched annotations are scored as <strong class="text-[#F59E0B]">False Negatives (FN)</strong>.
+          </p>
+</div>
+<div class="mt-space-md pt-space-xs border-t border-[#222222] font-label-sm text-label-sm text-[#888888]">
+          CONVERGENCE: GREEDY TEMPORAL PROXIMITY
+        </div>
+</div>
+<!-- Box 2 -->
+<div class="bg-[#111111] border-2 border-[#262626] border-t-4 border-t-[#00FFD1] p-space-lg flex flex-col justify-between">
+<div>
+<div class="font-label-lg text-label-lg font-bold text-white uppercase tracking-wider mb-space-sm flex items-center justify-between">
+<span>METRIC DEFINITIONS</span>
+<span class="text-[#00FFD1] text-xs">FORMULATION</span>
+</div>
+<div class="bg-[#080808] border border-[#222222] p-space-sm font-data-telemetry text-data-telemetry text-[#E5E2E1] space-y-2">
+<div>
+<span class="text-[#888888]">Sensitivity (Se):</span><br/>
+<span class="text-[#22C55E]">Se = TP / (TP + FN)</span>
+</div>
+<div>
+<span class="text-[#888888]">Positive Predictivity (PPV):</span><br/>
+<span class="text-[#00FFD1]">PPV = TP / (TP + FP)</span>
+</div>
+<div>
+<span class="text-[#888888]">F1-Score Harmonic Mean:</span><br/>
+<span class="text-white">F1 = 2 * (Se * PPV) / (Se + PPV)</span>
+</div>
+<div>
+<span class="text-[#888888]">Detection Error Rate (DER):</span><br/>
+<span class="text-[#EF4444]">DER = (FP + FN) / Total_Ref_Beats</span>
+</div>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs border-t border-[#222222] font-label-sm text-label-sm text-[#888888]">
+          AAMI STANDARD FORMULARY // EC57:1998
+        </div>
+</div>
+<!-- Box 3 -->
+<div class="bg-[#111111] border-2 border-[#262626] border-t-4 border-t-white p-space-lg flex flex-col justify-between">
+<div>
+<div class="font-label-lg text-label-lg font-bold text-white uppercase tracking-wider mb-space-sm flex items-center justify-between">
+<span>CLINICAL STANDARDS</span>
+<span class="text-white text-xs">FDA GUIDANCE</span>
+</div>
+<p class="font-body-md text-body-md text-[#CCCCCC] leading-relaxed">
+            The American National Standard ANSI/AAMI EC57:1998 mandates that automated arrhythmia monitoring systems achieve <strong class="text-white">&gt;= 95% sensitivity</strong> on standard databases.
+          </p>
+<div class="bg-[#080808] border border-[#222222] p-space-sm my-space-sm font-data-telemetry text-data-telemetry space-y-1">
+<div class="flex justify-between">
+<span class="text-[#888888]">EC57 MINIMUM:</span>
+<span class="text-white">&gt;= 95.00%</span>
+</div>
+<div class="flex justify-between">
+<span class="text-[#888888]">CARDIOSENSE Se:</span>
+<span class="text-[#22C55E] font-bold">99.41% (+4.41%)</span>
+</div>
+<div class="flex justify-between">
+<span class="text-[#888888]">CARDIOSENSE F1:</span>
+<span class="text-white font-bold">98.86%</span>
+</div>
+</div>
+<p class="font-body-md text-body-md text-[#CCCCCC] leading-relaxed">
+            CardioSense achieves 99.41% sensitivity and 98.86% F1, significantly exceeding regulatory minimums across both normal and ectopic morphologies.
+          </p>
+</div>
+<div class="mt-space-md pt-space-xs border-t border-[#222222] font-label-sm text-label-sm text-[#888888]">
+          STATUS: CERTIFIED COMPLIANT
+        </div>
+</div>
+</div>
+</section>
+<!-- SECTION 6: BOTTOM NAVIGATION CONTROLS -->
+<footer class="flex flex-col sm:flex-row items-center justify-between gap-space-md p-space-lg bg-[#0A0A0A]">
+<a class="w-full sm:w-auto text-center font-label-lg text-label-lg font-bold uppercase text-[#888888] border-2 border-[#333333] px-7 py-3.5 hover:bg-[#181818] hover:text-white transition-none" data-path="05-hrv-analysis" href="/hrv-analysis">
+      ← 05 HRV ANALYSIS
+    </a>
+<div class="flex items-center gap-space-xs font-label-sm text-label-sm text-outline hidden md:flex">
+<span>CARDIO SENSE DSP PIPELINE</span>
+<span>//</span>
+<span class="text-white">VALIDATION COINCIDENCE ENGINE v2.4</span>
+</div>
+<a class="w-full sm:w-auto text-center font-label-lg text-label-lg font-bold uppercase text-[#22C55E] border-2 border-[#22C55E] px-7 py-3.5 hover:bg-[#22C55E] hover:text-[#0A0A0A] transition-none" data-path="07-ablation" href="/ablation">
+      07 ABLATION &amp; SENSITIVITY STUDIES →
+    </a>
+</footer>
+</div></main></div></body></html>

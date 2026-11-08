@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500;700&amp;family=Space+Grotesk:wght@600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-bright": "#3a3939", "on-primary": "#690005", "on-tertiary-fixed": "#2a1700", "primary-fixed-dim": "#ffb4ab", "surface-container": "#201f1f", "on-primary-container": "#fff6f5", "surface": "#131313", "tertiary-fixed": "#ffddb8", "on-error-container": "#ffdad6", "secondary": "#4ae176", "tertiary-container": "#a06500", "surface-dim": "#131313", "on-tertiary-container": "#fff7f1", "outline": "#ac8884", "surface-container-highest": "#353534", "tertiary-fixed-dim": "#ffb95f", "primary": "#ffb4ab", "inverse-on-surface": "#313030", "surface-container-high": "#2a2a2a", "background": "#131313", "on-tertiary": "#472a00", "on-primary-fixed": "#410002", "on-secondary-container": "#004119", "outline-variant": "#5c403c", "secondary-container": "#00b954", "surface-variant": "#353534", "on-secondary-fixed": "#002109", "tertiary": "#ffb95f", "inverse-primary": "#bf0715", "secondary-fixed-dim": "#4ae176", "primary-fixed": "#ffdad6", "inverse-surface": "#e5e2e1", "on-primary-fixed-variant": "#93000b", "on-surface": "#e5e2e1", "surface-container-low": "#1c1b1b", "on-error": "#690005", "surface-container-lowest": "#0e0e0e", "on-background": "#e5e2e1", "on-secondary-fixed-variant": "#005321", "error": "#ffb4ab", "error-container": "#93000a", "secondary-fixed": "#6bff8f", "on-tertiary-fixed-variant": "#653e00", "on-secondary": "#003915", "primary-container": "#dc2626", "surface-tint": "#ffb4ab", "on-surface-variant": "#e6bdb8" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "margin": "0px", "space-md": "0.75rem", "space-sm": "0.5rem", "space-xs": "0.25rem", "space-lg": "1rem", "gutter": "1px", "space-xl": "1.5rem" }, "fontFamily": { "body-sm": ["Inter"], "headline-lg": ["Space Grotesk"], "data-metric-lg": ["JetBrains Mono"], "body-lg": ["Inter"], "display-lg": ["Space Grotesk"], "headline-md": ["Space Grotesk"], "label-lg": ["JetBrains Mono"], "data-metric-md": ["JetBrains Mono"], "label-md": ["JetBrains Mono"], "headline-sm": ["Space Grotesk"], "label-sm": ["JetBrains Mono"], "body-md": ["Inter"], "data-telemetry": ["JetBrains Mono"] }, "fontSize": { "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }], "headline-lg": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "data-metric-lg": ["26px", { "lineHeight": "30px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "body-lg": ["15px", { "lineHeight": "22px", "fontWeight": "400" }], "display-lg": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-md": ["22px", { "lineHeight": "28px", "fontWeight": "600" }], "label-lg": ["13px", { "lineHeight": "18px", "letterSpacing": "0.04em", "fontWeight": "500" }], "data-metric-md": ["18px", { "lineHeight": "22px", "fontWeight": "700" }], "label-md": ["11px", { "lineHeight": "14px", "letterSpacing": "0.06em", "fontWeight": "500" }], "headline-sm": ["18px", { "lineHeight": "24px", "fontWeight": "600" }], "label-sm": ["10px", { "lineHeight": "12px", "letterSpacing": "0.08em", "fontWeight": "600" }], "body-md": ["13px", { "lineHeight": "18px", "fontWeight": "400" }], "data-telemetry": ["12px", { "lineHeight": "16px", "fontWeight": "400" }] } } } };</script></head><body class="bg-surface-container-lowest text-on-surface font-body-md text-body-md antialiased min-h-screen selection:bg-[#FF006E] selection:text-white"><aside class="fixed left-0 top-0 h-screen w-[260px] bg-[#0A0A0A] border-r-2 border-white z-50 flex flex-col justify-between hidden md:flex"><div class="flex flex-col"><div class="h-14 px-space-lg flex items-center border-b border-[#333333]"><div class="w-[10px] h-[10px] bg-[#FF006E] mr-space-md shrink-0"></div><span class="font-label-lg text-label-lg font-bold uppercase tracking-[1.5px] text-white">CARDIO SENSE</span></div><nav class="flex flex-col py-space-sm" data-active-classes="border-l-4 border-[#FF006E] bg-[#1A1A1A] text-white"><a aria-current="page" class="h-11 px-space-lg flex items-center font-label-lg tracking-[1.5px] uppercase transition-none border-l-4 border-[#FF006E] bg-[#1A1A1A] text-white" data-path="landing" href="/">01 LANDING</a><a class="h-11 px-space-lg flex items-center font-label-lg text-label-lg tracking-[1.5px] uppercase text-[#888888] hover:text-white hover:bg-[#141414] border-l-4 border-transparent transition-none" data-path="pipeline" href="/pipeline">02 PIPELINE</a><a class="h-11 px-space-lg flex items-center font-label-lg text-label-lg tracking-[1.5px] uppercase text-[#888888] hover:text-white hover:bg-[#141414] border-l-4 border-transparent transition-none" data-path="noise-and-filters" href="/noise-filtering">03 NOISE &amp; FILTERS</a><a class="h-11 px-space-lg flex items-center font-label-lg text-label-lg tracking-[1.5px] uppercase text-[#888888] hover:text-white hover:bg-[#141414] border-l-4 border-transparent transition-none" data-path="qrs-detection" href="/qrs-detection">04 QRS DETECTION</a><a class="h-11 px-space-lg flex items-center font-label-lg text-label-lg tracking-[1.5px] uppercase text-[#888888] hover:text-white hover:bg-[#141414] border-l-4 border-transparent transition-none" data-path="hrv-analysis" href="/hrv-analysis">05 HRV ANALYSIS</a><a class="h-11 px-space-lg flex items-center font-label-lg text-label-lg tracking-[1.5px] uppercase text-[#888888] hover:text-white hover:bg-[#141414] border-l-4 border-transparent transition-none" data-path="validation" href="/validation">06 VALIDATION</a><a class="h-11 px-space-lg flex items-center font-label-lg text-label-lg tracking-[1.5px] uppercase text-[#888888] hover:text-white hover:bg-[#141414] border-l-4 border-transparent transition-none" data-path="ablation" href="/ablation">07 ABLATION</a><a class="h-11 px-space-lg flex items-center font-label-lg text-label-lg tracking-[1.5px] uppercase text-[#888888] hover:text-white hover:bg-[#141414] border-l-4 border-transparent transition-none" data-path="error-analysis" href="/error-analysis">08 ERROR ANALYSIS</a></nav></div><div class="border-t border-[#333333] p-space-lg flex flex-col gap-space-xs bg-[#0A0A0A]"><div class="font-label-sm text-label-sm font-bold uppercase tracking-wider text-white">MIT-BIH Arrhythmia DB</div><div class="font-label-sm text-label-sm text-[#888888]">360 Hz • 48 Records • Lead MLII</div><div class="mt-space-xs"><a class="inline-block font-label-sm text-label-sm text-[#FF006E] hover:underline uppercase tracking-widest" href="https://github.com/ankush-10010/DSP_project" target="_blank" rel="noopener">[SRC_REPO]</a></div><div class="mt-space-xs font-label-sm text-label-sm text-[#555555] uppercase">© 2026 Ankush • DSP Division</div></div></aside><div class="md:pl-[260px] min-h-screen flex flex-col"><header class="fixed top-0 left-0 md:left-[260px] right-0 h-14 bg-[#0A0A0A] border-b border-[#333333] z-40 flex items-center justify-between px-space-lg"><div class="flex items-center gap-space-md md:hidden"><button aria-label="Toggle Navigation" class="text-white flex items-center justify-center p-space-xs" type="button"><span class="material-symbols-outlined text-[20px]">menu</span></button><div class="w-[8px] h-[8px] bg-[#FF006E]"></div><span class="font-label-md text-label-md font-bold uppercase tracking-widest text-white">CARDIO SENSE</span></div><div class="hidden md:flex items-center gap-space-md"><span class="font-label-sm text-label-sm uppercase px-space-xs py-[2px] bg-surface-container border border-surface-bright text-on-surface-variant">DSP ENGINE // CORE ONLINE</span><span class="font-label-sm text-label-sm text-[#888888] uppercase">SAMPLING: 360 HZ (LEAD MLII)</span></div><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-xs text-secondary font-label-sm text-label-sm"><span class="w-2 h-2 rounded-full bg-secondary inline-block animate-pulse"></span><span>LIVE SYNC</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="w-full pt-14 flex-1 bg-surface-container-lowest"><div class="flex flex-col w-full relative bg-[#0A0A0A] text-[#E5E2E1] font-body-lg selection:bg-[#FF006E] selection:text-white overflow-hidden">
+<!-- Scanline & CRT Analog Grain Overlay -->
+<div class="pointer-events-none absolute inset-0 z-30 opacity-40 mix-blend-overlay" style="background: repeating-linear-gradient(0deg, rgba(0,0,0,0.6) 0px, rgba(0,0,0,0.6) 1px, transparent 1px, transparent 2px);"></div>
+<div class="pointer-events-none absolute inset-0 z-30 opacity-20" style="background-image: radial-gradient(#2A2A2A 1px, transparent 1px); background-size: 8px 8px;"></div>
+<!-- ========================================================================= -->
+<!-- SECTION 1: HERO SECTION -->
+<!-- ========================================================================= -->
+<section class="relative min-h-screen flex flex-col justify-between p-6 md:p-12 border-b-4 border-[#222222] bg-[#0A0A0A] overflow-hidden">
+<!-- Background Animated Continuous SVG ECG Waveform -->
+<div class="absolute inset-0 pointer-events-none z-0 flex items-center justify-center opacity-[0.18] overflow-hidden">
+<svg class="w-[200%] h-64 -translate-y-10" preserveaspectratio="none" style="animation: ecgLoop 14s linear infinite;" viewbox="0 0 1600 200">
+<path d="M 0 100 L 120 100 Q 135 90 145 100 T 160 100 L 190 100 L 200 115 L 215 10 L 230 145 L 245 100 L 265 100 Q 285 75 305 100 L 400 100 L 520 100 Q 535 90 545 100 T 560 100 L 590 100 L 600 115 L 615 10 L 630 145 L 645 100 L 665 100 Q 685 75 705 100 L 800 100 L 920 100 Q 935 90 945 100 T 960 100 L 990 100 L 1000 115 L 1015 10 L 1030 145 L 1045 100 L 1065 100 Q 1085 75 1105 100 L 1200 100 L 1320 100 Q 1335 90 1345 100 T 1360 100 L 1390 100 L 1400 115 L 1415 10 L 1430 145 L 1445 100 L 1465 100 Q 1485 75 1505 100 L 1600 100" fill="none" stroke="#FF006E" stroke-linecap="square" stroke-linejoin="miter" stroke-width="2.5"></path>
+</svg>
+<style>
+        @keyframes ecgLoop {
+          0% { transform: translateX(0%); }
+          100% { transform: translateX(-50%); }
+        }
+        @keyframes blinkCursor {
+          0%, 49% { opacity: 1; }
+          50%, 100% { opacity: 0; }
+        }
+        .crt-blink {
+          animation: blinkCursor 0.85s steps(1) infinite;
+        }
+        .chroma-glitch:hover {
+          text-shadow: -3px 0 #FF006E, 3px 0 #4ae176;
+        }
+      </style>
+</div>
+<!-- Hero Content Container -->
+<div class="relative z-10 w-full max-w-[1400px] mx-auto flex flex-col pt-4">
+<!-- Monospace Telemetry Super-Title -->
+<div class="flex items-center gap-3 border-b border-[#222222] pb-4 mb-10 w-full">
+<span class="w-3 h-3 bg-[#FF006E] inline-block shrink-0"></span>
+<span class="font-data-telemetry text-label-lg tracking-[3px] uppercase text-[#888888]">
+          &gt; DIGITAL SIGNAL PROCESSING BENCHMARK // MIT-BIH LEAD MLII
+        </span>
+<span class="text-secondary font-data-metric-md text-[14px] crt-blink ml-1">█</span>
+<span class="ml-auto hidden md:inline-block font-data-telemetry text-label-sm text-[#555555] uppercase tracking-widest">FS = 360 HZ // AAMI EC57</span>
+</div>
+<!-- Main Display Brand Lockup -->
+<div class="flex flex-col items-start select-none">
+<div class="font-headline-lg font-extrabold tracking-tight text-white uppercase text-[68px] sm:text-[96px] md:text-[118px] leading-[0.9] chroma-glitch transition-all duration-75 cursor-default">
+<div>CARDIO</div>
+<div class="relative inline-block mt-1">
+<span>SENSE</span>
+<!-- 6px Hot Pink Underline with precise offset -->
+<div class="w-full h-[6px] bg-[#FF006E] mt-[6px]"></div>
+</div>
+</div>
+<!-- Sub-Heading Tagline -->
+<p class="font-body-lg text-body-lg md:text-[20px] text-[#CCCCCC] font-normal max-w-[780px] mt-8 leading-[1.6]">
+          Automated ECG Signal Conditioning, Vectorized Pan-Tompkins QRS Detection &amp; Autonomic Feature Extraction.
+        </p>
+<!-- Central Hot-Pink Divider Bar -->
+<div class="w-[180px] h-[3px] bg-[#FF006E] my-9 self-start"></div>
+</div>
+<!-- High-Impact Brutalist Telemetry Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-0 w-full mt-4 border-2 border-[#2A2A2A] bg-[#111111]">
+<!-- Module 1 -->
+<div class="p-6 md:py-7 md:px-8 border-b sm:border-b-0 sm:border-r border-[#2A2A2A] flex flex-col justify-between relative group hover:bg-[#161616] transition-none">
+<div class="font-label-sm text-[11px] font-bold text-[#777777] uppercase tracking-[2px] mb-2 flex items-center justify-between">
+<span>BEATS EVALUATED</span>
+<span class="text-[#333333] group-hover:text-[#FF006E]">[01]</span>
+</div>
+<div class="font-data-metric-lg text-[44px] md:text-[46px] font-bold text-[#FF006E] leading-none tracking-tight">
+            13,537
+          </div>
+<div class="font-data-telemetry text-label-sm text-[#555555] mt-3">ANNOTATED MLII SAMPLES</div>
+</div>
+<!-- Module 2 -->
+<div class="p-6 md:py-7 md:px-8 border-b sm:border-b-0 lg:border-r border-[#2A2A2A] flex flex-col justify-between relative group hover:bg-[#161616] transition-none">
+<div class="font-label-sm text-[11px] font-bold text-[#777777] uppercase tracking-[2px] mb-2 flex items-center justify-between">
+<span>SENSITIVITY (Se)</span>
+<span class="text-[#333333] group-hover:text-[#FF006E]">[02]</span>
+</div>
+<div class="font-data-metric-lg text-[44px] md:text-[46px] font-bold text-[#FF006E] leading-none tracking-tight">
+            99.41%
+          </div>
+<div class="font-data-telemetry text-label-sm text-[#555555] mt-3">CONFIDENCE 95% CL</div>
+</div>
+<!-- Module 3 -->
+<div class="p-6 md:py-7 md:px-8 border-b sm:border-b-0 sm:border-r border-[#2A2A2A] flex flex-col justify-between relative group hover:bg-[#161616] transition-none">
+<div class="font-label-sm text-[11px] font-bold text-[#777777] uppercase tracking-[2px] mb-2 flex items-center justify-between">
+<span>F1-SCORE BENCHMARK</span>
+<span class="text-[#333333] group-hover:text-[#FF006E]">[03]</span>
+</div>
+<div class="font-data-metric-lg text-[44px] md:text-[46px] font-bold text-[#FF006E] leading-none tracking-tight">
+            98.86%
+          </div>
+<div class="font-data-telemetry text-label-sm text-[#555555] mt-3">HARMONIC MEAN (P/R)</div>
+</div>
+<!-- Module 4 -->
+<div class="p-6 md:py-7 md:px-8 flex flex-col justify-between relative group hover:bg-[#161616] transition-none">
+<div class="font-label-sm text-[11px] font-bold text-[#777777] uppercase tracking-[2px] mb-2 flex items-center justify-between">
+<span>RUNTIME LATENCY</span>
+<span class="text-[#333333] group-hover:text-[#FF006E]">[04]</span>
+</div>
+<div class="font-data-metric-lg text-[44px] md:text-[46px] font-bold text-[#FF006E] leading-none tracking-tight">
+            58 ms
+          </div>
+<div class="font-data-telemetry text-label-sm text-[#555555] mt-3">30-MIN RECORD PROC</div>
+</div>
+</div>
+</div>
+<!-- Scroll Invitation Footer Indicator -->
+<div class="relative z-10 w-full max-w-[1400px] mx-auto pt-10 pb-2 flex items-center justify-between">
+<a class="inline-flex items-center gap-2 font-data-telemetry text-label-md text-[#888888] hover:text-[#FF006E] uppercase tracking-widest transition-none" href="#overview">
+<span>EXPLORE PIPELINE SPECIFICATIONS [↓]</span>
+<span class="text-[#FF006E] font-bold animate-bounce text-sm">▼</span>
+</a>
+<div class="font-data-telemetry text-label-sm text-[#444444] uppercase hidden sm:block">
+        BUILD // 2026.04-REL-PROD
+      </div>
+</div>
+</section>
+<!-- ========================================================================= -->
+<!-- SECTION 2: SYSTEM SUMMARY & BRUTALIST MISSION BRIEFING -->
+<!-- ========================================================================= -->
+<section class="w-full max-w-[1400px] mx-auto p-6 md:p-12 border-b-2 border-[#222222]" id="overview">
+<!-- Section Header with Hot Pink Left Accent Bar -->
+<div class="flex items-center gap-3 mb-10">
+<div class="w-[4px] h-[24px] bg-[#FF006E] shrink-0"></div>
+<h2 class="font-label-lg text-headline-sm md:text-headline-md font-bold uppercase text-white tracking-wider">
+        &gt; 01.1 // SYSTEM ARCHITECTURE BRIEFING
+      </h2>
+</div>
+<!-- 2 Column Asymmetric Content Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+<!-- Left Column: 60% (7 cols) -->
+<div class="lg:col-span-7 flex flex-col gap-6">
+<p class="font-body-lg text-body-lg text-[#CCCCCC] leading-[1.75]">
+          CardioSense is a comprehensive digital signal processing suite developed to analyze electrocardiographic waveforms with clinical-grade fidelity. Sourced directly from the MIT-BIH Arrhythmia Database at 360 Hz, the pipeline addresses the triad of physiological ECG contamination: low-frequency baseline wander, 50 Hz powerline hum, and broadband electromyographic interference.
+        </p>
+<p class="font-body-lg text-body-lg text-[#A0A0A0] leading-[1.75]">
+          Through a fully vectorized realization of the Pan-Tompkins algorithm, high-pass cascaded IIR filters, and adaptive dual-threshold decision logic, CardioSense achieves 99.41% sensitivity across normal sinus rhythms, ventricular ectopics, and conduction pathologies without manual recalibration.
+        </p>
+<!-- Tech Badges Cluster -->
+<div class="pt-4 flex flex-wrap gap-2">
+<div class="px-3.5 py-1.5 bg-[#111111] border border-[#444444] font-data-telemetry text-label-md text-white tracking-wider uppercase">
+            PYTHON 3.14
+          </div>
+<div class="px-3.5 py-1.5 bg-[#111111] border border-[#444444] font-data-telemetry text-label-md text-white tracking-wider uppercase">
+            SCIPY.SIGNAL
+          </div>
+<div class="px-3.5 py-1.5 bg-[#111111] border border-[#444444] font-data-telemetry text-label-md text-white tracking-wider uppercase">
+            NUMPY VECTORIZED
+          </div>
+<div class="px-3.5 py-1.5 bg-[#111111] border border-[#444444] font-data-telemetry text-label-md text-white tracking-wider uppercase">
+            WFDB NATIVE
+          </div>
+<div class="px-3.5 py-1.5 bg-[#111111] border border-[#444444] font-data-telemetry text-label-md text-white tracking-wider uppercase">
+            MATPLOTLIB AGG
+          </div>
+<div class="px-3.5 py-1.5 bg-[#111111] border border-[#444444] font-data-telemetry text-label-md text-white tracking-wider uppercase">
+            AAMI EC57 ALIGNED
+          </div>
+</div>
+<!-- Telemetry Key-Value Dot-Leader Strip -->
+<div class="mt-4 p-4 bg-[#0F0F0F] border border-[#222222] font-data-telemetry text-label-md text-[#888888] flex flex-col gap-2">
+<div class="flex justify-between items-center">
+<span>LEAD CHANNEL RECORDING</span>
+<span class="text-white">MODIFIED LIMB LEAD II (MLII)</span>
+</div>
+<div class="flex justify-between items-center">
+<span>ADC RESOLUTION</span>
+<span class="text-white">11-BIT / 200 COUNTS/MV</span>
+</div>
+<div class="flex justify-between items-center">
+<span>NYQUIST MARGIN</span>
+<span class="text-[#4ae176]">FN = 180.0 HZ [PASSED]</span>
+</div>
+</div>
+</div>
+<!-- Right Column: 40% (5 cols) Featured Metric Module -->
+<div class="lg:col-span-5 bg-[#0D0D0D] border-[3px] border-[#FF006E] p-8 flex flex-col justify-between shadow-[0_0_24px_rgba(255,0,110,0.15)]">
+<div>
+<!-- Header Badge -->
+<div class="flex items-center justify-between border-b border-[#262626] pb-3 mb-6">
+<span class="font-data-telemetry text-[11px] font-bold text-[#FF006E] uppercase tracking-widest">
+              PRIMARY PERFORMANCE INDEX
+            </span>
+<span class="w-2.5 h-2.5 bg-[#FF006E]"></span>
+</div>
+<!-- Huge Display Metric -->
+<div class="font-data-metric-lg text-[54px] md:text-[62px] font-bold text-white tracking-tight leading-none mb-1">
+            0.0230
+          </div>
+<div class="font-data-telemetry text-label-md text-[#AAAAAA] uppercase tracking-widest font-semibold mb-6">
+            DETECTION ERROR RATE (DER)
+          </div>
+<!-- Breakdown Grid inside card -->
+<div class="grid grid-cols-2 gap-px bg-[#262626] border border-[#262626] mb-6 font-data-telemetry">
+<div class="bg-[#111111] p-3 flex flex-col">
+<span class="text-[10px] text-[#777777] uppercase tracking-wider">True Positives</span>
+<span class="text-label-lg font-bold text-white mt-1">13,457</span>
+</div>
+<div class="bg-[#111111] p-3 flex flex-col">
+<span class="text-[10px] text-[#777777] uppercase tracking-wider">False Positives</span>
+<span class="text-label-lg font-bold text-[#ffb4ab] mt-1">231</span>
+</div>
+<div class="bg-[#111111] p-3 flex flex-col">
+<span class="text-[10px] text-[#777777] uppercase tracking-wider">False Negatives</span>
+<span class="text-label-lg font-bold text-[#ffb4ab] mt-1">80</span>
+</div>
+<div class="bg-[#111111] p-3 flex flex-col">
+<span class="text-[10px] text-[#777777] uppercase tracking-wider">Total Validated</span>
+<span class="text-label-lg font-bold text-[#4ae176] mt-1">13,537</span>
+</div>
+</div>
+</div>
+<!-- Footer Quote -->
+<div class="border-t border-[#222222] pt-4 font-data-telemetry text-label-sm text-[#777777] leading-relaxed italic">
+          "Zero-phase bidirectional filtering guarantees 0.00ms fiducial displacement for clinical timing intervals."
+        </div>
+</div>
+</div>
+</section>
+<!-- ========================================================================= -->
+<!-- SECTION 3: PIPELINE STAGES TEASER MATRIX -->
+<!-- ========================================================================= -->
+<section class="w-full max-w-[1400px] mx-auto p-6 md:p-12 border-b-2 border-[#222222]">
+<!-- Section Header -->
+<div class="flex items-center justify-between mb-10">
+<div class="flex items-center gap-3">
+<div class="w-[4px] h-[24px] bg-[#FF006E] shrink-0"></div>
+<h2 class="font-label-lg text-headline-sm md:text-headline-md font-bold uppercase text-white tracking-wider">
+          &gt; 01.2 // PIPELINE EXECUTION STAGES
+        </h2>
+</div>
+<span class="hidden sm:inline-block font-data-telemetry text-label-sm text-[#666666] uppercase">6 SUB-ROUTINES ACTIVE</span>
+</div>
+<!-- 3x2 Modular Brutalist Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Card 1 -->
+<div class="bg-[#121212] border-2 border-[#262626] p-7 transition-all duration-100 hover:border-[#FF006E] hover:-translate-y-1 group flex flex-col justify-between cursor-default">
+<div>
+<div class="flex items-center justify-between mb-4 font-data-telemetry">
+<span class="text-label-sm font-bold text-[#FF006E] tracking-widest uppercase">STAGE 01</span>
+<span class="text-[11px] text-[#555555] group-hover:text-white">[WFDB_IO]</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-bold uppercase text-white mb-3">
+            DATA INGESTION &amp; AAMI FILTERING
+          </h3>
+<p class="font-body-md text-body-md text-[#999999] leading-relaxed">
+            Parsing binary WFDB 16-bit 212 records, synchronizing MLII leads, and filtering 13,500+ cardiologist-verified beat annotations.
+          </p>
+</div>
+<div class="mt-6 pt-4 border-t border-[#1F1F1F] flex items-center justify-between font-data-telemetry text-label-sm text-[#666666]">
+<span>RECORD: #100 - #234</span>
+<span class="text-secondary font-bold">READY</span>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-[#121212] border-2 border-[#262626] p-7 transition-all duration-100 hover:border-[#FF006E] hover:-translate-y-1 group flex flex-col justify-between cursor-default">
+<div>
+<div class="flex items-center justify-between mb-4 font-data-telemetry">
+<span class="text-label-sm font-bold text-[#FF006E] tracking-widest uppercase">STAGE 02</span>
+<span class="text-[11px] text-[#555555] group-hover:text-white">[SPECTRAL_PSD]</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-bold uppercase text-white mb-3">
+            SPECTRAL NOISE CHARACTERIZATION
+          </h3>
+<p class="font-body-md text-body-md text-[#999999] leading-relaxed">
+            Welch PSD estimation and 4096-point FFT periodograms isolating baseline wander (&lt;0.5Hz) and AC mains hum.
+          </p>
+</div>
+<div class="mt-6 pt-4 border-t border-[#1F1F1F] flex items-center justify-between font-data-telemetry text-label-sm text-[#666666]">
+<span>BW NOTCH: 50.0 HZ</span>
+<span class="text-secondary font-bold">ANALYZED</span>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-[#121212] border-2 border-[#262626] p-7 transition-all duration-100 hover:border-[#FF006E] hover:-translate-y-1 group flex flex-col justify-between cursor-default">
+<div>
+<div class="flex items-center justify-between mb-4 font-data-telemetry">
+<span class="text-label-sm font-bold text-[#FF006E] tracking-widest uppercase">STAGE 03</span>
+<span class="text-[11px] text-[#555555] group-hover:text-white">[IIR_CASCADED]</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-bold uppercase text-white mb-3">
+            CASCADED DIGITAL FILTERING
+          </h3>
+<p class="font-body-md text-body-md text-[#999999] leading-relaxed">
+            Zero-phase 4th-order Butterworth high-pass, 50Hz notch (Q=30), and low-pass anti-aliasing pre-filters.
+          </p>
+</div>
+<div class="mt-6 pt-4 border-t border-[#1F1F1F] flex items-center justify-between font-data-telemetry text-label-sm text-[#666666]">
+<span>PHASE DELAY: 0.00 MS</span>
+<span class="text-secondary font-bold">LOCKED</span>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="bg-[#121212] border-2 border-[#262626] p-7 transition-all duration-100 hover:border-[#FF006E] hover:-translate-y-1 group flex flex-col justify-between cursor-default">
+<div>
+<div class="flex items-center justify-between mb-4 font-data-telemetry">
+<span class="text-label-sm font-bold text-[#FF006E] tracking-widest uppercase">STAGE 04</span>
+<span class="text-[11px] text-[#555555] group-hover:text-white">[PAN_TOMPKINS]</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-bold uppercase text-white mb-3">
+            VECTORIZED PAN-TOMPKINS ENGINE
+          </h3>
+<p class="font-body-md text-body-md text-[#999999] leading-relaxed">
+            5-point differentiator, non-linear squaring operator, 150ms boxcar MWI, and dual running adaptive thresholds.
+          </p>
+</div>
+<div class="mt-6 pt-4 border-t border-[#1F1F1F] flex items-center justify-between font-data-telemetry text-label-sm text-[#666666]">
+<span>MWI WINDOW: 54 SAMPLES</span>
+<span class="text-secondary font-bold">TUNED</span>
+</div>
+</div>
+<!-- Card 5 -->
+<div class="bg-[#121212] border-2 border-[#262626] p-7 transition-all duration-100 hover:border-[#FF006E] hover:-translate-y-1 group flex flex-col justify-between cursor-default">
+<div>
+<div class="flex items-center justify-between mb-4 font-data-telemetry">
+<span class="text-label-sm font-bold text-[#FF006E] tracking-widest uppercase">STAGE 05</span>
+<span class="text-[11px] text-[#555555] group-hover:text-white">[HRV_NONLINEAR]</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-bold uppercase text-white mb-3">
+            HRV &amp; POINCARÉ GEOMETRY
+          </h3>
+<p class="font-body-md text-body-md text-[#999999] leading-relaxed">
+            Time-domain SDNN/RMSSD, spectral LF/HF sympathovagal ratio, and non-linear confidence ellipse fitting (SD1/SD2).
+          </p>
+</div>
+<div class="mt-6 pt-4 border-t border-[#1F1F1F] flex items-center justify-between font-data-telemetry text-label-sm text-[#666666]">
+<span>SDNN: 84.2 MS</span>
+<span class="text-secondary font-bold">EXTRACTED</span>
+</div>
+</div>
+<!-- Card 6 -->
+<div class="bg-[#121212] border-2 border-[#262626] p-7 transition-all duration-100 hover:border-[#FF006E] hover:-translate-y-1 group flex flex-col justify-between cursor-default">
+<div>
+<div class="flex items-center justify-between mb-4 font-data-telemetry">
+<span class="text-label-sm font-bold text-[#FF006E] tracking-widest uppercase">STAGE 06</span>
+<span class="text-[11px] text-[#555555] group-hover:text-white">[FORENSIC_SUITE]</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-bold uppercase text-white mb-3">
+            FORENSIC ERROR &amp; ABLATION SUITE
+          </h3>
+<p class="font-body-md text-body-md text-[#999999] leading-relaxed">
+            Per-beat sensitivity isolation, causal group delay profiling, and drug-induced failure mode diagnostics.
+          </p>
+</div>
+<div class="mt-6 pt-4 border-t border-[#1F1F1F] flex items-center justify-between font-data-telemetry text-label-sm text-[#666666]">
+<span>ABLATION: 12 COMBINATIONS</span>
+<span class="text-secondary font-bold">VERIFIED</span>
+</div>
+</div>
+</div>
+</section>
+<!-- ========================================================================= -->
+<!-- SECTION 4: PRIMARY CALL TO ACTION -->
+<!-- ========================================================================= -->
+<section class="w-full max-w-[1400px] mx-auto p-6 md:p-12">
+<div class="bg-[#141414] border-2 border-[#333333] p-8 md:p-16 flex flex-col items-center text-center relative overflow-hidden">
+<!-- Subtle Brutalist Decorative Grid Lines -->
+<div class="absolute inset-0 pointer-events-none opacity-10" style="background-image: linear-gradient(#FF006E 1px, transparent 1px), linear-gradient(90deg, #FF006E 1px, transparent 1px); background-size: 40px 40px;"></div>
+<span class="font-data-telemetry text-label-sm text-[#FF006E] uppercase tracking-[3px] mb-3">
+        // READY FOR EXECUTION
+      </span>
+<h2 class="font-headline-md md:text-headline-lg font-bold uppercase text-white tracking-wide mb-3">
+        COMMENCE DEEP-DIVE INSPECTION
+      </h2>
+<p class="font-data-telemetry text-body-md md:text-body-lg text-[#888888] max-w-[620px] mb-8">
+        Navigate through the full 6-phase signal transformation and empirical benchmark logs.
+      </p>
+<!-- Brutalist Interactive Button -->
+<a class="inline-flex items-center justify-center px-8 py-4 border-[3px] border-[#FF006E] bg-transparent text-[#FF006E] font-data-telemetry text-label-lg font-bold uppercase tracking-[2px] hover:bg-[#FF006E] hover:text-black transition-none cursor-pointer" href="#pipeline" onclick="window.__navigateToPipeline &amp;&amp; window.__navigateToPipeline(event)">
+        ENTER PIPELINE OVERVIEW →
+      </a>
+<!-- Quick Telemetry Hash -->
+<div class="mt-8 font-data-telemetry text-[11px] text-[#555555] tracking-widest uppercase">
+        SHA-256 VERIFIED: 9a78f230ecba1982b610c11d4e7f308a0d014eb6
+      </div>
+</div>
+</section>
+<!-- ========================================================================= -->
+<!-- SECTION 5: FOOTER -->
+<!-- ========================================================================= -->
+<footer class="w-full bg-[#050505] border-t border-[#222222] py-8 px-6 md:px-12 flex flex-col sm:flex-row items-center justify-between gap-4 font-data-telemetry text-label-sm text-[#555555]">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 bg-[#FF006E]"></span>
+<span>CardioSense DSP Engine // MIT-BIH Arrhythmia Database Benchmark</span>
+</div>
+<div>
+      Designed with Dark Brutalism &amp; Bitmap Precision • 2026
+    </div>
+</footer>
+</div>
+<script>
+  // Simple micro-interaction for smoothly triggering Shell pipeline route if anchor invoked
+  window.__navigateToPipeline = function(e) {
+    var sidebarLink = document.querySelector('nav a[data-path="pipeline"]');
+    if (sidebarLink) {
+      e.preventDefault();
+      sidebarLink.click();
+    }
+  };
+</script></main></div></body></html>

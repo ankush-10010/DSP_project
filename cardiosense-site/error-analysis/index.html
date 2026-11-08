@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;family=Space+Grotesk:wght@600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;background-color:#080808;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}@keyframes pulse-fast{0%,100%{opacity:1;}50%{opacity:0.3;}}.animate-pulse-fast{animation:pulse-fast 1s cubic-bezier(0.4,0,0.6,1) infinite;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "secondary-fixed": "#6bff8f", "on-surface-variant": "#e6bdb8", "surface-bright": "#3a3939", "on-tertiary-container": "#fff7f1", "tertiary-fixed-dim": "#ffb95f", "on-tertiary-fixed-variant": "#653e00", "on-tertiary-fixed": "#2a1700", "inverse-on-surface": "#313030", "outline": "#ac8884", "secondary-container": "#00b954", "primary-container": "#dc2626", "on-error": "#690005", "surface-container-high": "#2a2a2a", "surface-container": "#201f1f", "surface-dim": "#131313", "primary-fixed": "#ffdad6", "on-error-container": "#ffdad6", "on-primary-fixed-variant": "#93000b", "surface-variant": "#353534", "surface-container-lowest": "#0e0e0e", "on-secondary-fixed": "#002109", "surface-container-highest": "#353534", "inverse-surface": "#e5e2e1", "on-secondary-container": "#004119", "tertiary-container": "#a06500", "primary": "#ffb4ab", "on-secondary-fixed-variant": "#005321", "primary-fixed-dim": "#ffb4ab", "surface-container-low": "#1c1b1b", "secondary": "#4ae176", "on-secondary": "#003915", "secondary-fixed-dim": "#4ae176", "tertiary": "#ffb95f", "error": "#ffb4ab", "surface-tint": "#ffb4ab", "on-background": "#e5e2e1", "outline-variant": "#5c403c", "on-primary-container": "#fff6f5", "on-surface": "#e5e2e1", "tertiary-fixed": "#ffddb8", "error-container": "#93000a", "surface": "#131313", "inverse-primary": "#bf0715", "background": "#131313", "on-tertiary": "#472a00", "on-primary-fixed": "#410002", "on-primary": "#690005" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "margin": "0px", "space-xs": "0.25rem", "space-md": "0.75rem", "space-sm": "0.5rem", "gutter": "1px", "space-lg": "1rem", "space-xl": "1.5rem" }, "fontFamily": { "data-telemetry": [ "JetBrains Mono" ], "data-metric-md": [ "JetBrains Mono" ], "label-sm": [ "JetBrains Mono" ], "headline-sm": [ "Space Grotesk" ], "label-lg": [ "JetBrains Mono" ], "body-sm": [ "Inter" ], "data-metric-lg": [ "JetBrains Mono" ], "label-md": [ "JetBrains Mono" ], "body-md": [ "Inter" ], "headline-lg": [ "Space Grotesk" ], "display-lg": [ "Space Grotesk" ], "body-lg": [ "Inter" ], "headline-md": [ "Space Grotesk" ] }, "fontSize": { "data-telemetry": [ "12px", { "lineHeight": "16px", "fontWeight": "400" } ], "data-metric-md": [ "18px", { "lineHeight": "22px", "fontWeight": "700" } ], "label-sm": [ "10px", { "lineHeight": "12px", "letterSpacing": "0.08em", "fontWeight": "600" } ], "headline-sm": [ "18px", { "lineHeight": "24px", "fontWeight": "600" } ], "label-lg": [ "13px", { "lineHeight": "18px", "letterSpacing": "0.04em", "fontWeight": "500" } ], "body-sm": [ "12px", { "lineHeight": "16px", "fontWeight": "400" } ], "data-metric-lg": [ "26px", { "lineHeight": "30px", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "label-md": [ "11px", { "lineHeight": "14px", "letterSpacing": "0.06em", "fontWeight": "500" } ], "body-md": [ "13px", { "lineHeight": "18px", "fontWeight": "400" } ], "headline-lg": [ "28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "display-lg": [ "36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "body-lg": [ "15px", { "lineHeight": "22px", "fontWeight": "400" } ], "headline-md": [ "22px", { "lineHeight": "28px", "fontWeight": "600" } ] } } } };</script></head><body class="bg-surface-container-lowest text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-[270px] bg-surface-dim border-r border-[#222222] z-50 flex flex-col justify-between select-none"><div class="flex flex-col"><div class="p-space-lg border-b border-[#222222]"><div class="flex items-center justify-between mb-space-xs"><span class="font-label-lg text-label-lg tracking-wider font-bold text-on-surface">CARDIOSENSE</span><span class="font-label-sm text-label-sm text-primary-container border border-primary-container px-1 py-0.5">FS:360Hz</span></div><div class="flex items-center gap-space-xs font-label-sm text-label-sm text-on-surface-variant"><span class="w-1.5 h-1.5 bg-primary-container animate-pulse-fast"></span><span>ONLINE</span><span class="text-outline-variant">/</span><span>MIT-BIH_ARR_DB</span></div></div><div class="px-space-lg py-space-sm bg-surface-container-lowest border-b border-[#222222]"><div class="font-label-sm text-label-sm text-outline uppercase tracking-wider">INSTRUMENT WORKFLOW</div></div><nav class="flex flex-col" data-active-classes="bg-primary-container/10 border-l-[3px] border-primary-container text-on-surface font-semibold pl-[13px]"><a class="group flex items-center justify-between px-space-lg py-space-sm border-b border-[#222222] text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-none" data-path="landing-and-overview" href="/"><span class="font-label-sm text-label-sm tracking-wide">01 LANDING &amp; OVERVIEW</span><span class="font-label-sm text-label-sm text-outline group-hover:text-on-surface-variant">[OK]</span></a><a class="group flex items-center justify-between px-space-lg py-space-sm border-b border-[#222222] text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-none" data-path="raw-signals-and-preprocessing" href="/pipeline"><span class="font-label-sm text-label-sm tracking-wide">02 RAW SIGNALS &amp; PREPROCESSING</span><span class="font-label-sm text-label-sm text-outline group-hover:text-on-surface-variant">[OK]</span></a><a class="group flex items-center justify-between px-space-lg py-space-sm border-b border-[#222222] text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-none" data-path="filter-chain-and-bandpass" href="/noise-filtering"><span class="font-label-sm text-label-sm tracking-wide">03 FILTER CHAIN &amp; BANDPASS</span><span class="font-label-sm text-label-sm text-outline group-hover:text-on-surface-variant">[OK]</span></a><a class="group flex items-center justify-between px-space-lg py-space-sm border-b border-[#222222] text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-none" data-path="derivative-and-squaring" href="/qrs-detection"><span class="font-label-sm text-label-sm tracking-wide">04 DERIVATIVE &amp; SQUARING</span><span class="font-label-sm text-label-sm text-outline group-hover:text-on-surface-variant">[OK]</span></a><a class="group flex items-center justify-between px-space-lg py-space-sm border-b border-[#222222] text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-none" data-path="moving-window-integration" href="/hrv-analysis"><span class="font-label-sm text-label-sm tracking-wide">05 MOVING-WINDOW INTEGRATION</span><span class="font-label-sm text-label-sm text-outline group-hover:text-on-surface-variant">[OK]</span></a><a class="group flex items-center justify-between px-space-lg py-space-sm border-b border-[#222222] text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-none" data-path="adaptive-thresholding" href="/ablation"><span class="font-label-sm text-label-sm tracking-wide">06 ADAPTIVE THRESHOLDING</span><span class="font-label-sm text-label-sm text-outline group-hover:text-on-surface-variant">[OK]</span></a><a class="group flex items-center justify-between px-space-lg py-space-sm border-b border-[#222222] text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-none" data-path="validation-and-benchmark" href="/validation"><span class="font-label-sm text-label-sm tracking-wide">07 VALIDATION &amp; BENCHMARK</span><span class="font-label-sm text-label-sm text-outline group-hover:text-on-surface-variant">[OK]</span></a><a aria-current="page" class="group flex items-center justify-between px-space-lg py-space-sm transition-none bg-primary-container/10 border-l-[3px] border-primary-container text-on-surface font-semibold pl-[13px]" data-path="error-analysis" href="/error-analysis"><span class="font-label-sm text-label-sm tracking-wide">08 ERROR ANALYSIS</span><span class="font-label-sm text-label-sm text-primary-container font-bold">[ERR]</span></a></nav></div><div class="p-space-lg border-t border-[#222222] bg-surface-container-lowest font-label-sm text-label-sm text-outline flex flex-col gap-1"><div class="flex justify-between text-on-surface-variant"><span>PIPELINE_STATUS:</span><span class="text-secondary font-bold">ONLINE</span></div><div class="flex justify-between"><span>SYS_CORE_VER:</span><span class="text-on-surface">v2.4.1_PROD</span></div><div class="flex justify-between"><span>DATASET_REF:</span><span class="text-on-surface">MIT-BIH_#100</span></div><div class="mt-space-xs pt-space-xs border-t border-[#222222] flex justify-between items-center text-[9px] text-outline"><span class="font-label-sm">DSP_BUF: 2048 SAMPLES</span><span class="w-1.5 h-1.5 bg-secondary"></span></div></div></aside><div class="pl-[270px]"><header class="fixed top-0 left-[270px] right-0 h-14 bg-surface-dim/95 backdrop-blur-none border-b border-[#222222] z-40 flex items-center justify-between px-space-lg"><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-xs border-r border-[#222222] pr-space-lg"><span class="font-label-sm text-label-sm text-outline uppercase">SYS_RUN_MODE:</span><span class="font-label-sm text-label-sm text-secondary bg-secondary-container/10 px-1 py-0.5 border border-secondary-container">CONTINUOUS_MONITOR</span></div><div class="flex items-center gap-space-xs"><span class="font-label-sm text-label-sm text-outline uppercase">SAMPLE_RATE:</span><span class="font-data-telemetry text-data-telemetry text-on-surface">360.00 Hz</span></div><div class="hidden md:flex items-center gap-space-xs"><span class="font-label-sm text-label-sm text-outline uppercase">LATENCY:</span><span class="font-data-telemetry text-data-telemetry text-on-surface">4.2ms</span></div></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs font-label-sm text-label-sm text-outline mr-space-sm"><span class="w-1.5 h-1.5 bg-secondary"></span><span class="hidden sm:inline">DSP_DSPIC33_SYNCED</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="w-full pt-14 bg-surface-container-lowest min-h-screen"><div class="flex flex-col w-full">
+<!-- FORENSIC HUD STRIP -->
+<div class="w-full bg-[#0a0a0a] border-b border-[#222222] px-6 py-2.5 flex flex-wrap items-center justify-between font-label-sm text-label-sm text-on-surface-variant">
+<div class="flex items-center gap-4">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 bg-[#dc2626] animate-pulse-fast"></span>
+<span class="text-[#dc2626] font-bold tracking-widest">STATE: CRITICAL_FORENSIC_DEEPDIVE</span>
+</div>
+<span class="text-[#333333]">|</span>
+<span>RECORD_SET: [MIT-BIH_#108, #203]</span>
+<span class="text-[#333333]">|</span>
+<span>TOTAL_AUDIT_BEATS: 13,537</span>
+</div>
+<div class="flex items-center gap-4 font-data-telemetry">
+<span class="text-[#ac8884]">ERR_TOTAL: <strong class="text-[#dc2626]">230 (156 FP / 74 FN)</strong></span>
+<span class="text-[#333333]">|</span>
+<span class="text-[#4ae176]">AGG_ACC: 98.30%</span>
+</div>
+</div>
+<div class="p-8 md:p-12 space-y-24 max-w-[1720px] mx-auto w-full">
+<!-- SECTION 1: PAGE HEADER -->
+<header class="flex flex-col gap-4">
+<div class="flex items-center gap-3 font-data-telemetry text-[13px] uppercase tracking-[3px] text-[#888888]">
+<span class="text-[#dc2626] font-bold">&gt;</span>
+<span>08 / ERROR ANALYSIS</span>
+<span class="text-[#333333]">///</span>
+<span class="text-[#666666]">MIT-BIH IRREGULAR MORPHOLOGY VALIDATION</span>
+</div>
+<h1 class="font-headline-lg text-[46px] md:text-[52px] leading-none font-bold tracking-wider text-white uppercase m-0">
+        FAILURE MODE DIAGNOSTICS
+      </h1>
+<p class="font-body-lg text-[17px] text-[#888888] max-w-4xl leading-relaxed m-0">
+        Systematic forensic investigation of false positive generation, false negative mechanisms, and beat-type detection sensitivity across pathological ECG morphologies under deterministic Pan-Tompkins pipeline constraints.
+      </p>
+</header>
+<!-- SECTION 2: FAILURE MODE OVERVIEW (EXECUTIVE SUMMARY) -->
+<section class="space-y-6">
+<div class="flex items-center gap-4">
+<h2 class="font-data-telemetry text-2xl font-bold text-white uppercase tracking-tight m-0">
+          // EXECUTIVE SUMMARY
+        </h2>
+<div class="h-[3px] w-[60px] bg-[#dc2626]"></div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+<!-- CARD 1: FALSE POSITIVE DOMINANCE -->
+<div class="bg-[#111111] border-2 border-[#333333] border-t-4 border-t-[#ef4444] p-8 flex flex-col justify-between relative">
+<div class="space-y-4">
+<div class="flex justify-between items-center">
+<span class="font-data-telemetry text-[11px] tracking-widest text-[#ef4444] font-bold uppercase">FAILURE MODE 1</span>
+<span class="font-data-telemetry text-[10px] bg-[#ef4444]/10 text-[#ef4444] border border-[#ef4444]/30 px-2 py-0.5">OVERSENSING</span>
+</div>
+<h3 class="font-headline-sm text-[20px] font-bold text-white tracking-wide uppercase m-0">
+              FALSE POSITIVES — RECORD 108
+            </h3>
+<div class="border-t border-[#333333] my-4"></div>
+<div class="flex flex-wrap items-baseline gap-8">
+<div>
+<div class="font-data-telemetry text-[36px] font-bold text-[#ef4444] leading-tight">156 FP</div>
+<div class="font-data-telemetry text-[11px] text-[#666666] tracking-wider uppercase">OVER-DETECTIONS</div>
+</div>
+<div class="border-l border-[#262626] pl-8">
+<div class="font-data-telemetry text-[36px] font-bold text-white leading-tight">91.85%</div>
+<div class="font-data-telemetry text-[11px] text-[#666666] tracking-wider uppercase">POSITIVE PREDICTIVE VALUE</div>
+</div>
+</div>
+<p class="font-body-md text-[14px] text-[#aaaaaa] leading-relaxed mt-4">
+              Digitalis-induced ST-T morphology changes create steep pre-systolic deflections that exceed the adaptive signal threshold outside the 200 ms refractory window, causing systematic double-detection of cardiac cycles.
+            </p>
+</div>
+<div class="mt-8 pt-4 border-t border-[#222222] font-data-telemetry text-[12px] text-[#666666] flex items-center justify-between">
+<span>PATIENT METADATA: Female, 87y • Digoxin, Quinaglute</span>
+<span class="text-[#ac8884]">AV block / Sinus arrhythmia</span>
+</div>
+</div>
+<!-- CARD 2: FALSE NEGATIVE DOMINANCE -->
+<div class="bg-[#111111] border-2 border-[#333333] border-t-4 border-t-[#f59e0b] p-8 flex flex-col justify-between relative">
+<div class="space-y-4">
+<div class="flex justify-between items-center">
+<span class="font-data-telemetry text-[11px] tracking-widest text-[#f59e0b] font-bold uppercase">FAILURE MODE 2</span>
+<span class="font-data-telemetry text-[10px] bg-[#f59e0b]/10 text-[#f59e0b] border border-[#f59e0b]/30 px-2 py-0.5">UNDERSENSING</span>
+</div>
+<h3 class="font-headline-sm text-[20px] font-bold text-white tracking-wide uppercase m-0">
+              FALSE NEGATIVES — RECORD 203
+            </h3>
+<div class="border-t border-[#333333] my-4"></div>
+<div class="flex flex-wrap items-baseline gap-8">
+<div>
+<div class="font-data-telemetry text-[36px] font-bold text-[#f59e0b] leading-tight">70 FN</div>
+<div class="font-data-telemetry text-[11px] text-[#666666] tracking-wider uppercase">MISSED COMPLEXES</div>
+</div>
+<div class="border-l border-[#262626] pl-8">
+<div class="font-data-telemetry text-[36px] font-bold text-white leading-tight">97.65%</div>
+<div class="font-data-telemetry text-[11px] text-[#666666] tracking-wider uppercase">SENSITIVITY (Se)</div>
+</div>
+</div>
+<p class="font-body-md text-[14px] text-[#aaaaaa] leading-relaxed mt-4">
+              Wide premature ventricular contractions (PVCs) with energy centered below the 5 Hz bandpass cutoff produce integrated peaks that fail to cross the adaptive threshold. Compensatory pauses are too short to trigger search-back recovery.
+            </p>
+</div>
+<div class="mt-8 pt-4 border-t border-[#222222] font-data-telemetry text-[12px] text-[#666666] flex items-center justify-between">
+<span>PATIENT METADATA: Male, 43y • Coumadin, Digoxin, Heparin</span>
+<span class="text-[#f59e0b]">Multiform PVCs / Axis Shifts</span>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 3: FALSE POSITIVE ANALYSIS — RECORD 108 -->
+<section class="space-y-8">
+<div class="flex flex-col gap-2">
+<h2 class="font-data-telemetry text-2xl font-bold text-[#dc2626] uppercase tracking-tight m-0">
+          // RECORD 108 — FALSE POSITIVE FORENSICS
+        </h2>
+<span class="font-data-telemetry text-xs text-[#666666]">DIGITALIS EFFECT • EXTREME PRE-SYSTOLIC SLOPE ELEVATION</span>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+<!-- Sub-section 3a: Clinical Context -->
+<div class="lg:col-span-6 bg-[#0d0d0d] border border-[#222222] p-6 space-y-4">
+<div class="flex items-center justify-between border-b border-[#222222] pb-3">
+<span class="font-data-telemetry text-sm text-white font-bold tracking-wider uppercase">CLINICAL CONTEXT</span>
+<span class="font-data-telemetry text-[11px] text-[#888888]">PHYS_ID: 108_ARR</span>
+</div>
+<div class="font-data-telemetry text-[12px] space-y-2 text-[#cccccc] leading-loose">
+<div class="flex justify-between"><span>Record</span><span class="text-[#555555]">. . . . . . . . . . . . . . . . . . . . .</span><span class="text-white font-bold">MIT-BIH 108</span></div>
+<div class="flex justify-between"><span>Patient</span><span class="text-[#555555]">. . . . . . . . . . . . . . . . . . . . .</span><span class="text-white">Female, 87 years old</span></div>
+<div class="flex justify-between"><span>Medications</span><span class="text-[#555555]">. . . . . . . . . . . . . . . . . . . . .</span><span class="text-white">Digoxin, Quinaglute</span></div>
+<div class="flex justify-between"><span>Pathology</span><span class="text-[#555555]">. . . . . . . . . . . . . . . . . . . . .</span><span class="text-[#ef4444]">1st-degree AV block (PR &gt; 200 ms)</span></div>
+<div class="flex justify-between"><span>ECG Features</span><span class="text-[#555555]">. . . . . . . . . . . . . . . . . . . . .</span><span class="text-white">Sinus arrhythmia, multiform PVCs</span></div>
+<div class="flex justify-between"><span>Drug Effect</span><span class="text-[#555555]">. . . . . . . . . . . . . . . . . . . . .</span><span class="text-[#f59e0b]">Digoxin ST depression ("scooped")</span></div>
+<div class="flex justify-between"><span>Electrophysiology</span><span class="text-[#555555]">. . . . . . . . . . . . . . . . . . . . .</span><span class="text-white">Biphasic T-waves, prominent P-waves</span></div>
+</div>
+</div>
+<!-- Sub-section 3b: Quantitative Breakdown -->
+<div class="lg:col-span-6 bg-[#111111] border-l-4 border-l-[#ef4444] border border-[#222222] p-6 space-y-4">
+<div class="flex items-center justify-between border-b border-[#222222] pb-3">
+<span class="font-data-telemetry text-sm text-white font-bold tracking-wider uppercase">QUANTITATIVE AUDIT</span>
+<span class="font-data-telemetry text-[11px] text-[#ef4444]">SAMPLE_WINDOW: 30 MIN</span>
+</div>
+<div class="grid grid-cols-2 gap-4 pb-2">
+<div class="bg-[#080808] p-3 border border-[#1f1f1f]">
+<div class="font-data-telemetry text-xs text-[#888888]">REF BEATS</div>
+<div class="font-data-telemetry text-xl font-bold text-white">1,763</div>
+</div>
+<div class="bg-[#080808] p-3 border border-[#1f1f1f]">
+<div class="font-data-telemetry text-xs text-[#888888]">DETECTED PEAKS</div>
+<div class="font-data-telemetry text-xl font-bold text-white">1,915</div>
+</div>
+<div class="bg-[#080808] p-3 border border-[#1f1f1f]">
+<div class="font-data-telemetry text-xs text-[#888888]">TRUE POSITIVES</div>
+<div class="font-data-telemetry text-xl font-bold text-[#4ae176]">1,759 (99.77%)</div>
+</div>
+<div class="bg-[#080808] p-3 border border-[#1f1f1f]">
+<div class="font-data-telemetry text-xs text-[#ef4444]">FALSE POSITIVES</div>
+<div class="font-data-telemetry text-xl font-bold text-[#ef4444]">156</div>
+</div>
+</div>
+<div class="border-t border-[#222222] pt-3 font-data-telemetry text-xs space-y-2">
+<div class="text-[#888888] font-bold uppercase tracking-wider">FP CLASSIFICATION TOPOLOGY:</div>
+<div class="flex items-center justify-between text-[#cccccc]">
+<span>• Pre-systolic Oversensing: <strong class="text-[#ef4444]">150 FPs (96.2%)</strong></span>
+<span class="text-[#888888]">Cluster @ Δt ≈ -214 ms</span>
+</div>
+<div class="flex items-center justify-between text-[#cccccc]">
+<span>• T-wave Oversensing: <strong class="text-[#f59e0b]">6 FPs (3.8%)</strong></span>
+<span class="text-[#888888]">Delay: 180–350 ms</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Sub-section 3c: Diagnostic Visualization -->
+<div class="flex flex-col space-y-3">
+<div class="w-full h-[460px] bg-[#0d0d0d] border-2 border-dashed border-[#333333] hover:border-[#dc2626] transition-colors flex flex-col items-center justify-between p-6 relative overflow-hidden group">
+<!-- Background Grid Overlay -->
+<div class="absolute inset-0 opacity-20 pointer-events-none" style="background-image: linear-gradient(to right, #222 1px, transparent 1px), linear-gradient(to bottom, #222 1px, transparent 1px); background-size: 20px 20px;"></div>
+<div class="w-full flex justify-between items-center z-10">
+<span class="font-data-telemetry text-[14px] font-bold text-white bg-[#1a1a1a] px-4 py-2 border border-[#444444]">
+              07_error_analysis_108_false_positives.png
+            </span>
+<div class="flex gap-2">
+<span class="font-data-telemetry text-[11px] bg-[#ef4444]/20 text-[#ef4444] border border-[#ef4444] px-2 py-1">DOUBLE-DETECTION TRIGGERED</span>
+<span class="font-data-telemetry text-[11px] bg-[#222] text-[#888] px-2 py-1">Δt = 216.7 ms</span>
+</div>
+</div>
+<!-- Vector Signal Trace -->
+<div class="w-full h-64 z-10 flex items-center justify-center">
+<svg class="w-full h-full" fill="none" viewbox="0 0 1000 240" xmlns="http://www.w3.org/2000/svg">
+<!-- Reference Graticules -->
+<line stroke="#1f1f1f" stroke-dasharray="4 4" x1="0" x2="1000" y1="60" y2="60"></line>
+<line stroke="#262626" x1="0" x2="1000" y1="120" y2="120"></line>
+<line stroke="#1f1f1f" stroke-dasharray="4 4" x1="0" x2="1000" y1="180" y2="180"></line>
+<line stroke="#dc2626" stroke-dasharray="2 2" stroke-opacity="0.3" x1="420" x2="420" y1="0" y2="240"></line>
+<line stroke="#4ae176" stroke-dasharray="2 2" stroke-opacity="0.3" x1="580" x2="580" y1="0" y2="240"></line>
+<!-- Raw ECG Scooped ST Lead (Greenish Grey) -->
+<path d="M 50 120 Q 90 120 120 115 T 160 120 L 220 120 Q 240 100 255 120 L 290 120 Q 340 125 380 120 L 400 120 L 420 70 L 440 190 L 460 110 L 520 135 Q 550 145 580 120 L 640 120 Q 670 100 690 120 L 730 120 L 750 72 L 770 195 L 790 112 L 850 135 L 950 120" stroke="#888888" stroke-width="1.5"></path>
+<!-- MWI Energy Envelope (Cyan/White) -->
+<path d="M 50 200 L 350 200 Q 400 200 415 155 Q 425 125 435 155 Q 445 190 460 200 L 520 200 Q 560 200 575 110 Q 585 80 595 110 Q 610 190 630 200 L 700 200 Q 740 200 755 150 Q 765 120 775 150 L 950 200" stroke="#e5e2e1" stroke-width="2"></path>
+<!-- Threshold Line THR_SIG -->
+<line stroke="#dc2626" stroke-dasharray="6 4" stroke-width="1.5" x1="50" x2="950" y1="160" y2="160"></line>
+<text fill="#dc2626" font-family="JetBrains Mono" font-size="10" x="60" y="152">THR_SIG (0.00010)</text>
+<!-- Annotation: False Detection at Pre-systolic Peak -->
+<circle cx="425" cy="125" fill="#dc2626" r="4"></circle>
+<line stroke="#dc2626" stroke-width="1.5" x1="425" x2="425" y1="125" y2="40"></line>
+<rect fill="#131313" height="24" stroke="#dc2626" stroke-width="1" width="120" x="365" y="20"></rect>
+<text fill="#ef4444" font-family="JetBrains Mono" font-size="11" font-weight="bold" x="375" y="36">✕ FP: PRE-SYSTOLIC</text>
+<!-- Refractory Window Blanking (200ms) -->
+<rect fill="#dc2626" fill-opacity="0.2" height="15" stroke="#dc2626" stroke-width="1" width="100" x="425" y="190"></rect>
+<text fill="#ffdad6" font-family="JetBrains Mono" font-size="9" x="430" y="201">200ms BLANKING</text>
+<!-- Annotation: True QRS Peak Detection -->
+<circle cx="585" cy="80" fill="#4ae176" r="4"></circle>
+<line stroke="#4ae176" stroke-width="1.5" x1="585" x2="585" y1="80" y2="35"></line>
+<rect fill="#131313" height="24" stroke="#4ae176" stroke-width="1" width="105" x="535" y="15"></rect>
+<text fill="#4ae176" font-family="JetBrains Mono" font-size="11" font-weight="bold" x="545" y="31">✓ TP: TRUE R-PEAK</text>
+<!-- Temporal delta indicator -->
+<line stroke="#f59e0b" stroke-dasharray="2 2" stroke-width="1" x1="425" x2="585" y1="100" y2="100"></line>
+<text fill="#f59e0b" font-family="JetBrains Mono" font-size="10" x="470" y="95">Δt = 216.7 ms &gt; 200 ms</text>
+</svg>
+</div>
+<div class="z-10 font-data-telemetry text-[11px] text-[#666666] flex gap-6">
+<span>CH1: MLII RAW [DIGOXIN SCOOP]</span>
+<span>CH2: BANDPASS 5-15Hz</span>
+<span>CH3: DERIVATIVE² INTEGRATION</span>
+</div>
+</div>
+<p class="font-data-telemetry text-[13px] text-[#777777] text-center m-0 max-w-4xl mx-auto">
+          Fig. 8.1 — 6-second diagnostic window (Record 108, t = 1674–1680s). The digitalis-induced pre-systolic deflection generates a secondary energy peak in the integrated signal that clears the adaptive threshold after the 200 ms refractory blanking expires, causing systematic double-detection.
+        </p>
+</div>
+<!-- Sub-section 3d: Mechanism Explanation -->
+<div class="space-y-4">
+<h3 class="font-data-telemetry text-[16px] font-bold text-white uppercase tracking-wider m-0">
+          MATHEMATICAL MECHANISM OF FAILURE
+        </h3>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+<div class="bg-[#0d0d0d] border border-[#262626] border-l-2 border-l-[#ef4444] p-5 space-y-2">
+<div class="font-data-telemetry text-xs text-[#ef4444] font-bold">01 // WAVEFORM TRANSIENT</div>
+<div class="font-body-sm text-xs text-[#aaaaaa] leading-relaxed">
+              ECG displays a positive pre-systolic deflection at +0.225 mV (t = 1674.52s) that plunges -1.04 mV into a deep negative QS complex at -0.815 mV (t = 1674.75s).
+            </div>
+</div>
+<div class="bg-[#0d0d0d] border border-[#262626] border-l-2 border-l-[#ef4444] p-5 space-y-2">
+<div class="font-data-telemetry text-xs text-[#ef4444] font-bold">02 // DERIVATIVE BIFURCATION</div>
+<div class="font-body-sm text-xs text-[#aaaaaa] leading-relaxed">
+              The 5-point derivative filter produces two large negative extrema during this descent: one from pre-systolic slope and one from the sharp QRS downstroke.
+            </div>
+</div>
+<div class="bg-[#0d0d0d] border border-[#262626] border-l-2 border-l-[#ef4444] p-5 space-y-2">
+<div class="font-data-telemetry text-xs text-[#ef4444] font-bold">03 // BLANKING VIOLATION</div>
+<div class="font-body-sm text-xs text-[#aaaaaa] leading-relaxed">
+              Temporal distance between deflection and QS trough is 78 samples = 216.7 ms. Because 216.7 ms &gt; 200.0 ms (72-sample limit), dual peaks register.
+            </div>
+</div>
+<div class="bg-[#0d0d0d] border border-[#262626] border-l-2 border-l-[#ef4444] p-5 space-y-2">
+<div class="font-data-telemetry text-xs text-[#ef4444] font-bold">04 // THRESHOLD PENETRATION</div>
+<div class="font-body-sm text-xs text-[#aaaaaa] leading-relaxed">
+              Prior small complexes dragged SPKI to ~0.0003, setting THR_SIG ≈ 0.00010. Pre-systolic peak hits 0.00014 &gt; THR_SIG, forcing false positive classification.
+            </div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 4: FALSE NEGATIVE ANALYSIS — RECORD 203 -->
+<section class="space-y-8">
+<div class="flex flex-col gap-2">
+<h2 class="font-data-telemetry text-2xl font-bold text-[#f59e0b] uppercase tracking-tight m-0">
+          // RECORD 203 — FALSE NEGATIVE FORENSICS
+        </h2>
+<span class="font-data-telemetry text-xs text-[#666666]">WIDE PVC MORPHOLOGY • PASSBAND FREQUENCY MISMATCH</span>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+<!-- Sub-section 4a: Clinical Context -->
+<div class="lg:col-span-6 bg-[#0d0d0d] border border-[#222222] p-6 space-y-4">
+<div class="flex items-center justify-between border-b border-[#222222] pb-3">
+<span class="font-data-telemetry text-sm text-white font-bold tracking-wider uppercase">CLINICAL CONTEXT</span>
+<span class="font-data-telemetry text-[11px] text-[#888888]">PHYS_ID: 203_ARR</span>
+</div>
+<div class="font-data-telemetry text-[12px] space-y-2 text-[#cccccc] leading-loose">
+<div class="flex justify-between"><span>Record</span><span class="text-[#555555]">. . . . . . . . . . . . . . . . . . . . .</span><span class="text-white font-bold">MIT-BIH 203</span></div>
+<div class="flex justify-between"><span>Patient</span><span class="text-[#555555]">. . . . . . . . . . . . . . . . . . . . .</span><span class="text-white">Male, 43 years old</span></div>
+<div class="flex justify-between"><span>Medications</span><span class="text-[#555555]">. . . . . . . . . . . . . . . . . . . . .</span><span class="text-white">Coumadin, Digoxin, Heparin, Lasix</span></div>
+<div class="flex justify-between"><span>Pathology</span><span class="text-[#555555]">. . . . . . . . . . . . . . . . . . . . .</span><span class="text-[#f59e0b]">Multiform PVCs, axis shifts</span></div>
+<div class="flex justify-between"><span>ECG Features</span><span class="text-[#555555]">. . . . . . . . . . . . . . . . . . . . .</span><span class="text-white">Intense EMG noise, baseline drift</span></div>
+<div class="flex justify-between"><span>Electrophysiology</span><span class="text-[#555555]">. . . . . . . . . . . . . . . . . . . . .</span><span class="text-[#f59e0b]">Conduction 0.3-1.0 m/s (vs 2.0-4.0)</span></div>
+<div class="flex justify-between"><span>QRS Duration</span><span class="text-[#555555]">. . . . . . . . . . . . . . . . . . . . .</span><span class="text-white">&gt; 140 ms (broad notched morphology)</span></div>
+</div>
+</div>
+<!-- Sub-section 4b: Quantitative Breakdown -->
+<div class="lg:col-span-6 bg-[#111111] border-l-4 border-l-[#f59e0b] border border-[#222222] p-6 space-y-4">
+<div class="flex items-center justify-between border-b border-[#222222] pb-3">
+<span class="font-data-telemetry text-sm text-white font-bold tracking-wider uppercase">QUANTITATIVE AUDIT</span>
+<span class="font-data-telemetry text-[11px] text-[#f59e0b]">SAMPLE_WINDOW: 30 MIN</span>
+</div>
+<div class="grid grid-cols-2 gap-4 pb-2">
+<div class="bg-[#080808] p-3 border border-[#1f1f1f]">
+<div class="font-data-telemetry text-xs text-[#888888]">REF BEATS</div>
+<div class="font-data-telemetry text-xl font-bold text-white">2,980</div>
+</div>
+<div class="bg-[#080808] p-3 border border-[#1f1f1f]">
+<div class="font-data-telemetry text-xs text-[#888888]">DETECTED PEAKS</div>
+<div class="font-data-telemetry text-xl font-bold text-white">2,929</div>
+</div>
+<div class="bg-[#080808] p-3 border border-[#1f1f1f]">
+<div class="font-data-telemetry text-xs text-[#888888]">TRUE POSITIVES</div>
+<div class="font-data-telemetry text-xl font-bold text-white">2,910 (97.65%)</div>
+</div>
+<div class="bg-[#080808] p-3 border border-[#1f1f1f]">
+<div class="font-data-telemetry text-xs text-[#f59e0b]">FALSE NEGATIVES</div>
+<div class="font-data-telemetry text-xl font-bold text-[#f59e0b]">70 (22 PVCs)</div>
+</div>
+</div>
+<div class="border-t border-[#222222] pt-3 font-data-telemetry text-xs space-y-2">
+<div class="text-[#888888] font-bold uppercase tracking-wider">FN BEAT-TYPE BREAKDOWN:</div>
+<div class="flex items-center justify-between text-[#cccccc]">
+<span>• Normal Sinus (N): <strong class="text-[#f59e0b]">45 missed (64.3%)</strong></span>
+<span class="text-[#888888]">Sudden amplitude decay</span>
+</div>
+<div class="flex items-center justify-between text-[#cccccc]">
+<span>• PVCs (V): <strong class="text-[#ef4444]">22 missed (31.4%)</strong></span>
+<span class="text-[#888888]">4.37% of total PVC volume</span>
+</div>
+<div class="flex items-center justify-between text-[#cccccc]">
+<span>• Unclassifiable (Q): <strong>3 missed (4.3%)</strong></span>
+<span class="text-[#888888]">Low signal-to-noise</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Sub-section 4c: Diagnostic Visualization -->
+<div class="flex flex-col space-y-3">
+<div class="w-full h-[460px] bg-[#0d0d0d] border-2 border-dashed border-[#333333] hover:border-[#f59e0b] transition-colors flex flex-col items-center justify-between p-6 relative overflow-hidden group">
+<div class="absolute inset-0 opacity-20 pointer-events-none" style="background-image: linear-gradient(to right, #222 1px, transparent 1px), linear-gradient(to bottom, #222 1px, transparent 1px); background-size: 20px 20px;"></div>
+<div class="w-full flex justify-between items-center z-10">
+<span class="font-data-telemetry text-[14px] font-bold text-white bg-[#1a1a1a] px-4 py-2 border border-[#444444]">
+              07_error_analysis_203_false_negatives.png
+            </span>
+<div class="flex gap-2">
+<span class="font-data-telemetry text-[11px] bg-[#f59e0b]/20 text-[#f59e0b] border border-[#f59e0b] px-2 py-1">ENERGY ATTENUATION: 8.6× DROP</span>
+<span class="font-data-telemetry text-[11px] bg-[#222] text-[#888] px-2 py-1">0.000966 &lt; THR 0.0015</span>
+</div>
+</div>
+<!-- Vector Signal Trace -->
+<div class="w-full h-64 z-10 flex items-center justify-center">
+<svg class="w-full h-full" fill="none" viewbox="0 0 1000 240" xmlns="http://www.w3.org/2000/svg">
+<line stroke="#222222" x1="0" x2="1000" y1="120" y2="120"></line>
+<!-- Normal Beat 1 -->
+<path d="M 50 120 L 150 120 L 160 135 L 175 40 L 190 150 L 205 120 L 260 120" stroke="#4ae176" stroke-width="1.5"></path>
+<!-- Missed Wide PVC at t = 10.703s -->
+<path d="M 380 120 C 410 120 420 180 460 180 C 500 180 520 60 550 60 C 570 60 590 120 620 120" stroke="#f59e0b" stroke-width="2"></path>
+<!-- Normal Beat 2 -->
+<path d="M 720 120 L 780 120 L 790 135 L 805 45 L 820 150 L 835 120 L 900 120" stroke="#4ae176" stroke-width="1.5"></path>
+<!-- MWI Integrated Trace -->
+<path d="M 50 210 L 160 210 Q 175 90 190 210 L 400 210 Q 480 210 520 168 Q 560 210 650 210 L 790 210 Q 805 95 820 210 L 950 210" stroke="#e5e2e1" stroke-width="2"></path>
+<!-- Threshold Line -->
+<line stroke="#ef4444" stroke-dasharray="6 4" stroke-width="1.5" x1="50" x2="950" y1="145" y2="145"></line>
+<text fill="#ef4444" font-family="JetBrains Mono" font-size="10" x="60" y="137">THR_SIG = 0.0015</text>
+<!-- Failed Trigger Callout -->
+<circle cx="520" cy="168" fill="#f59e0b" r="4"></circle>
+<line stroke="#f59e0b" stroke-width="1.5" x1="520" x2="520" y1="168" y2="110"></line>
+<rect fill="#131313" height="24" stroke="#f59e0b" stroke-width="1" width="160" x="440" y="85"></rect>
+<text fill="#f59e0b" font-family="JetBrains Mono" font-size="11" font-weight="bold" x="450" y="101">⚠ MISSED PVC: PEAK &lt; THR</text>
+<!-- Search back threshold -->
+<line stroke="#666666" stroke-dasharray="2 2" stroke-width="1" x1="380" x2="680" y1="180" y2="180"></line>
+<text fill="#888888" font-family="JetBrains Mono" font-size="9" x="400" y="195">SEARCH-BACK NOT FIRED (0.775s &lt; 0.913s LIMIT)</text>
+</svg>
+</div>
+<div class="z-10 font-data-telemetry text-[11px] text-[#666666] flex gap-6">
+<span>PVC INTEGRATED PEAK: 0.000966</span>
+<span>BANDPASS ATTENUATION: 63% PASSIVE CUTOFF</span>
+<span>dV/dt DROP: 2.9×</span>
+</div>
+</div>
+<p class="font-data-telemetry text-[13px] text-[#777777] text-center m-0 max-w-4xl mx-auto">
+          Fig. 8.2 — 6-second diagnostic window (Record 203, t = 8–14s). The wide PVC at t = 10.703s is attenuated 8.6× through the filter chain, producing an integrated peak (0.000966) below the adaptive threshold (0.0015). Search-back fails because the 0.775s inter-beat interval is below the 0.913s trigger.
+        </p>
+</div>
+<!-- Sub-section 4d: Comparative Energy Table -->
+<div class="space-y-3">
+<div class="flex items-center justify-between">
+<h3 class="font-data-telemetry text-sm font-bold text-white uppercase tracking-wider m-0">
+            STAGE-BY-STAGE ENERGY ATTENUATION AUDIT
+          </h3>
+<span class="font-data-telemetry text-xs text-[#888888]">BANDPASS (5–15Hz) FREQUENCY SENSITIVITY</span>
+</div>
+<div class="overflow-x-auto border border-[#222222]">
+<table class="w-full text-left font-data-telemetry text-xs border-collapse">
+<thead>
+<tr class="bg-[#111111] border-b border-[#222222] text-[#888888]">
+<th class="p-3 border-r border-[#222222]">PROCESSING STAGE</th>
+<th class="p-3 border-r border-[#222222]">NORMAL BEAT (DET)</th>
+<th class="p-3 border-r border-[#222222] text-[#f59e0b]">MISSED PVC (S:3853)</th>
+<th class="p-3 border-r border-[#222222]">DETECTED PVC (S:4540)</th>
+<th class="p-3">MECHANISM OF ACTION</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-[#222222] bg-[#080808]">
+<tr>
+<td class="p-3 text-white font-medium border-r border-[#222222]">Raw Peak-to-Peak</td>
+<td class="p-3 border-r border-[#222222]">2.200 mV</td>
+<td class="p-3 text-[#f59e0b] border-r border-[#222222]">0.995 mV</td>
+<td class="p-3 border-r border-[#222222]">1.605 mV</td>
+<td class="p-3 text-[#888888]">Low ectopic baseline amplitude</td>
+</tr>
+<tr>
+<td class="p-3 text-white font-medium border-r border-[#222222]">Filtered (5-15 Hz)</td>
+<td class="p-3 border-r border-[#222222]">1.575 mV</td>
+<td class="p-3 text-[#f59e0b] border-r border-[#222222]">0.577 mV</td>
+<td class="p-3 border-r border-[#222222]">1.123 mV</td>
+<td class="p-3 text-[#888888]">Energy below 5 Hz passband rejected</td>
+</tr>
+<tr>
+<td class="p-3 text-white font-medium border-r border-[#222222]">Max Derivative |y_der|</td>
+<td class="p-3 border-r border-[#222222]">0.1398</td>
+<td class="p-3 text-[#f59e0b] border-r border-[#222222]">0.0478</td>
+<td class="p-3 border-r border-[#222222]">0.1055</td>
+<td class="p-3 text-[#888888]">Slow myocardial dV/dt (2.9× drop)</td>
+</tr>
+<tr class="bg-[#160b0b]">
+<td class="p-3 text-white font-medium border-r border-[#222222]">Derivative Squared y²</td>
+<td class="p-3 border-r border-[#222222]">0.01955</td>
+<td class="p-3 text-[#ef4444] font-bold border-r border-[#222222]">0.00228</td>
+<td class="p-3 border-r border-[#222222]">0.01112</td>
+<td class="p-3 text-[#ef4444]">Quadratic penalty (8.6× drop)</td>
+</tr>
+<tr class="bg-[#160b0b]">
+<td class="p-3 text-white font-medium border-r border-[#222222]">Integrated Energy (MWI)</td>
+<td class="p-3 border-r border-[#222222]">0.00633</td>
+<td class="p-3 text-[#ef4444] font-bold border-r border-[#222222]">0.000966</td>
+<td class="p-3 border-r border-[#222222]">0.00318</td>
+<td class="p-3 text-[#ef4444]">Falls completely below active threshold</td>
+</tr>
+<tr class="bg-[#1a110a]">
+<td class="p-3 text-white font-medium border-r border-[#222222]">Detection Threshold</td>
+<td class="p-3 border-r border-[#222222]">THR ≈ 0.0015</td>
+<td class="p-3 text-[#f59e0b] border-r border-[#222222]">THR ≈ 0.0015</td>
+<td class="p-3 border-r border-[#222222]">THR ≈ 0.0015</td>
+<td class="p-3 text-[#f59e0b] font-bold">0.000966 &lt; 0.0015 → COMPLEX DROPPED</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Sub-section 4e: Search-Back Failure Explanation -->
+<div class="bg-[#0d0d0d] border-l-4 border-l-[#f59e0b] border border-[#222222] p-6 space-y-3">
+<div class="flex items-center gap-2">
+<span class="font-data-telemetry text-sm font-bold text-white uppercase tracking-wider">WHY SEARCH-BACK FAILED DETERMINISTICALLY:</span>
+</div>
+<div class="font-data-telemetry text-xs text-[#cccccc] space-y-1.5 leading-relaxed">
+<p class="m-0">Search-back triggers exclusively when: <code class="text-white bg-[#1a1a1a] px-1 py-0.5 border border-[#333]">t_interval &gt; 1.66 × RR_avg</code></p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
+<div class="space-y-1 text-[#888888]">
+<div>• Current local RR_avg ≈ <span class="text-white">0.55s</span> (~109 BPM tachycardia baseline)</div>
+<div>• Search-back activation threshold: <span class="text-white">1.66 × 0.55s ≈ 0.913s</span> (328 samples)</div>
+</div>
+<div class="space-y-1 text-[#888888]">
+<div>• Measured interval between detected beats: <span class="text-[#f59e0b]">0.775s (10.314s to 11.089s)</span></div>
+<div>• State decision: <span class="text-[#ef4444]">0.775s &lt; 0.913s → SEARCH-BACK WAS NEVER INVOKED</span></div>
+</div>
+</div>
+<p class="pt-2 text-[#888888] border-t border-[#222222] m-0">
+            Crucial Diagnostic Finding: The missed PVC's integrated energy (0.000966) actually exceeded the secondary search-back threshold <code class="text-white">THR_SB (0.5 × 0.0015 = 0.00075)</code>. The complex was lost entirely due to premature refractory interval resolution rather than absolute energy absence.
+          </p>
+</div>
+</div>
+</section>
+<!-- SECTION 5: BEAT-TYPE SENSITIVITY ANALYSIS -->
+<section class="space-y-8">
+<div class="flex flex-col gap-2">
+<h2 class="font-data-telemetry text-2xl font-bold text-[#dc2626] uppercase tracking-tight m-0">
+          // BEAT-TYPE DETECTION SENSITIVITY
+        </h2>
+<span class="font-data-telemetry text-xs text-[#666666]">FULL COHORT BENCHMARK (13,537 ANNOTATED MORPHOLOGIES)</span>
+</div>
+<p class="font-body-md text-sm text-[#888888] max-w-4xl leading-relaxed m-0">
+        Clinical sensitivity is not uniform across beat classes. Wide-complex ventricular ectopy suffers an intrinsic detection degradation compared to supraventricular events due to spectral leakage outside the classic Pan-Tompkins 5–15 Hz bandpass envelope.
+      </p>
+<!-- Full-width Data Table -->
+<div class="overflow-x-auto border border-[#222222]">
+<table class="w-full text-left font-data-telemetry text-xs border-collapse">
+<thead>
+<tr class="bg-[#111111] border-b border-[#222222] text-[#888888]">
+<th class="p-3 border-r border-[#222222]">SYMBOL</th>
+<th class="p-3 border-r border-[#222222]">BEAT NAME</th>
+<th class="p-3 border-r border-[#222222]">CLINICAL CATEGORY</th>
+<th class="p-3 border-r border-[#222222] text-right">TOTAL</th>
+<th class="p-3 border-r border-[#222222] text-right">TP</th>
+<th class="p-3 border-r border-[#222222] text-right">FN</th>
+<th class="p-3 text-right">SENSITIVITY</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-[#222222] bg-[#080808]">
+<tr>
+<td class="p-3 text-white font-bold border-r border-[#222222]">N</td>
+<td class="p-3 border-r border-[#222222]">Normal sinus beat</td>
+<td class="p-3 text-[#888888] border-r border-[#222222]">Normal Sinus</td>
+<td class="p-3 text-right border-r border-[#222222]">12,975</td>
+<td class="p-3 text-right border-r border-[#222222]">12,921</td>
+<td class="p-3 text-right border-r border-[#222222]">54</td>
+<td class="p-3 text-right text-[#4ae176] font-bold">99.58%</td>
+</tr>
+<tr class="bg-[#1a110a]">
+<td class="p-3 text-[#f59e0b] font-bold border-r border-[#222222]">V</td>
+<td class="p-3 text-white border-r border-[#222222]">Premature ventricular contraction</td>
+<td class="p-3 text-[#f59e0b] border-r border-[#222222]">Ventricular Ectopic (PVC)</td>
+<td class="p-3 text-right border-r border-[#222222]">503</td>
+<td class="p-3 text-right border-r border-[#222222]">481</td>
+<td class="p-3 text-right text-[#ef4444] font-bold border-r border-[#222222]">22</td>
+<td class="p-3 text-right text-[#f59e0b] font-bold">95.63%</td>
+</tr>
+<tr>
+<td class="p-3 text-white font-bold border-r border-[#222222]">A</td>
+<td class="p-3 border-r border-[#222222]">Atrial premature beat</td>
+<td class="p-3 text-[#888888] border-r border-[#222222]">Atrial Ectopic (APC)</td>
+<td class="p-3 text-right border-r border-[#222222]">42</td>
+<td class="p-3 text-right border-r border-[#222222]">42</td>
+<td class="p-3 text-right border-r border-[#222222]">0</td>
+<td class="p-3 text-right text-[#4ae176] font-bold">100.00%</td>
+</tr>
+<tr class="bg-[#1c0d0d]">
+<td class="p-3 text-[#ef4444] font-bold border-r border-[#222222]">Q</td>
+<td class="p-3 text-white border-r border-[#222222]">Unclassifiable beat</td>
+<td class="p-3 text-[#ef4444] border-r border-[#222222]">Unclassifiable</td>
+<td class="p-3 text-right border-r border-[#222222]">11</td>
+<td class="p-3 text-right border-r border-[#222222]">7</td>
+<td class="p-3 text-right text-[#ef4444] font-bold border-r border-[#222222]">4</td>
+<td class="p-3 text-right text-[#ef4444] font-bold">63.64%</td>
+</tr>
+<tr>
+<td class="p-3 text-white font-bold border-r border-[#222222]">F</td>
+<td class="p-3 border-r border-[#222222]">Fusion (ventricular + normal)</td>
+<td class="p-3 text-[#888888] border-r border-[#222222]">Fusion Beat</td>
+<td class="p-3 text-right border-r border-[#222222]">3</td>
+<td class="p-3 text-right border-r border-[#222222]">3</td>
+<td class="p-3 text-right border-r border-[#222222]">0</td>
+<td class="p-3 text-right text-[#4ae176] font-bold">100.00%</td>
+</tr>
+<tr>
+<td class="p-3 text-white font-bold border-r border-[#222222]">a</td>
+<td class="p-3 border-r border-[#222222]">Aberrated atrial premature</td>
+<td class="p-3 text-[#888888] border-r border-[#222222]">Atrial Ectopic (APC)</td>
+<td class="p-3 text-right border-r border-[#222222]">2</td>
+<td class="p-3 text-right border-r border-[#222222]">2</td>
+<td class="p-3 text-right border-r border-[#222222]">0</td>
+<td class="p-3 text-right text-[#4ae176] font-bold">100.00%</td>
+</tr>
+<tr>
+<td class="p-3 text-white font-bold border-r border-[#222222]">j</td>
+<td class="p-3 border-r border-[#222222]">Junctional escape beat</td>
+<td class="p-3 text-[#888888] border-r border-[#222222]">Escape Beat</td>
+<td class="p-3 text-right border-r border-[#222222]">1</td>
+<td class="p-3 text-right border-r border-[#222222]">1</td>
+<td class="p-3 text-right border-r border-[#222222]">0</td>
+<td class="p-3 text-right text-[#4ae176] font-bold">100.00%</td>
+</tr>
+<tr class="bg-[#111111] font-bold">
+<td class="p-3 text-[#4ae176] border-r border-[#222222]">ALL</td>
+<td class="p-3 text-white border-r border-[#222222]">All Beat Classes Combined</td>
+<td class="p-3 text-[#888888] border-r border-[#222222]">Aggregate Benchmark</td>
+<td class="p-3 text-right border-r border-[#222222]">13,537</td>
+<td class="p-3 text-right border-r border-[#222222]">13,457</td>
+<td class="p-3 text-right text-[#ef4444] border-r border-[#222222]">80</td>
+<td class="p-3 text-right text-[#4ae176]">99.41%</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- IMAGE PLACEHOLDER 3 / Bar Chart Graphic -->
+<div class="flex flex-col space-y-3">
+<div class="w-full h-[380px] bg-[#0d0d0d] border-2 border-dashed border-[#333333] hover:border-[#dc2626] transition-colors flex flex-col items-center justify-between p-6 relative overflow-hidden group">
+<div class="w-full flex justify-between items-center z-10">
+<span class="font-data-telemetry text-[14px] font-bold text-white bg-[#1a1a1a] px-4 py-2 border border-[#444444]">
+              07_beat_type_performance.png
+            </span>
+<span class="font-data-telemetry text-xs text-[#888888]">DELTA (N vs V): -3.95% SENSITIVITY LOSS</span>
+</div>
+<!-- Horizontal Bar Chart Vector -->
+<div class="w-full max-w-4xl z-10 space-y-4 my-auto">
+<!-- Normal Sinus -->
+<div class="space-y-1">
+<div class="flex justify-between font-data-telemetry text-xs">
+<span class="text-white font-bold">N (NORMAL SINUS) — n=12,975</span>
+<span class="text-[#4ae176] font-bold">99.58%</span>
+</div>
+<div class="w-full h-5 bg-[#141414] border border-[#262626]">
+<div class="h-full bg-[#4ae176]" style="width: 99.58%;"></div>
+</div>
+</div>
+<!-- APC -->
+<div class="space-y-1">
+<div class="flex justify-between font-data-telemetry text-xs">
+<span class="text-white font-bold">A (ATRIAL PREMATURE) — n=42</span>
+<span class="text-[#4ae176] font-bold">100.00%</span>
+</div>
+<div class="w-full h-5 bg-[#141414] border border-[#262626]">
+<div class="h-full bg-[#4ae176]" style="width: 100%;"></div>
+</div>
+</div>
+<!-- PVC -->
+<div class="space-y-1">
+<div class="flex justify-between font-data-telemetry text-xs">
+<span class="text-white font-bold">V (PREMATURE VENTRICULAR) — n=503</span>
+<span class="text-[#f59e0b] font-bold">95.63% (MISS GAP: 4.37%)</span>
+</div>
+<div class="w-full h-5 bg-[#141414] border border-[#262626]">
+<div class="h-full bg-[#f59e0b]" style="width: 95.63%;"></div>
+</div>
+</div>
+<!-- Unclassifiable -->
+<div class="space-y-1">
+<div class="flex justify-between font-data-telemetry text-xs">
+<span class="text-white font-bold">Q (UNCLASSIFIABLE) — n=11</span>
+<span class="text-[#ef4444] font-bold">63.64%</span>
+</div>
+<div class="w-full h-5 bg-[#141414] border border-[#262626]">
+<div class="h-full bg-[#ef4444]" style="width: 63.64%;"></div>
+</div>
+</div>
+</div>
+<div class="z-10 font-data-telemetry text-[11px] text-[#666666]">
+            STATISTICAL REPRODUCTIBILITY: p &lt; 0.001 SIGNIFICANT PERFORMANCE BIAS
+          </div>
+</div>
+<p class="font-data-telemetry text-[13px] text-[#777777] text-center m-0 max-w-4xl mx-auto">
+          Fig. 8.3 — Beat-type sensitivity comparison. The 3.95% gap between Normal (99.58%) and PVC (95.63%) detection reflects the fundamental bandwidth mismatch between the 5-15 Hz Pan-Tompkins bandpass and the low-frequency energy content of wide ventricular ectopics.
+        </p>
+</div>
+</section>
+<!-- SECTION 6: PHYSIOLOGICAL EXPLANATION -->
+<section class="space-y-6">
+<div class="flex items-center gap-4">
+<h2 class="font-data-telemetry text-2xl font-bold text-white uppercase tracking-tight m-0">
+          // WHY PVCs ARE HARDER TO DETECT
+        </h2>
+<div class="h-[3px] w-[60px] bg-[#dc2626]"></div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+<div class="lg:col-span-7 font-body-md text-sm text-[#aaaaaa] space-y-4 leading-relaxed">
+<p class="m-0">
+            The Pan-Tompkins algorithm relies on an explicit physiological assumption: that depolarization proceeds through the high-velocity His-Purkinje specialized conduction system. Normal supraventricular depolarizations (and Atrial Premature Contractions) depolarize the ventricles at 2.0 to 4.0 meters per second, generating tight, narrow QRS complexes (&lt;100 ms duration) with steep spectral energy concentrated exactly in the 8–16 Hz band.
+          </p>
+<p class="m-0">
+            Conversely, Premature Ventricular Contractions originate directly in ventricular myocardium, bypassing the Purkinje network. Electrical wavefronts propagate cell-to-cell via gap junctions at a sluggish velocity of only 0.3 to 1.0 m/s. This broadens the complex (&gt;140 ms) and shifts dominant frequency downward into the 1–4 Hz band.
+          </p>
+<p class="m-0">
+            Because the 5–15 Hz bandpass filter violently attenuates energy below 5 Hz, the true derivative slope <code class="text-white">dV/dt</code> of a PVC is suppressed up to 3-fold. When fed into the non-linear squaring operator, this amplitude drop is squared into an 8- to 10-fold reduction in integrated energy, plunging the peak beneath the running adaptive signal threshold.
+          </p>
+</div>
+<!-- Right Comparison Card -->
+<div class="lg:col-span-5 bg-[#111111] border border-[#333333] p-6 space-y-4">
+<div class="font-data-telemetry text-xs font-bold text-white uppercase tracking-wider border-b border-[#222222] pb-2">
+            ELECTROPHYSIOLOGICAL CONDUCTION COMPARISON
+          </div>
+<div class="space-y-3 font-data-telemetry text-xs">
+<div class="bg-[#080808] p-3 border-l-2 border-l-[#4ae176]">
+<div class="text-[#4ae176] font-bold">ATRIAL PREMATURE BEATS (APC) — 100% SENSITIVITY</div>
+<div class="text-[#888888] mt-1 space-y-0.5">
+<div>• Pathway: His-Purkinje Fast System</div>
+<div>• Velocity: 2.0 – 4.0 m/s</div>
+<div>• Complex Width: &lt; 100 ms (Narrow)</div>
+<div>• Peak Spectrum: 8 – 16 Hz (Optimal passband)</div>
+</div>
+</div>
+<div class="bg-[#080808] p-3 border-l-2 border-l-[#f59e0b]">
+<div class="text-[#f59e0b] font-bold">VENTRICULAR ECTOPICS (PVC) — 95.63% SENSITIVITY</div>
+<div class="text-[#888888] mt-1 space-y-0.5">
+<div>• Pathway: Myocyte-to-Myocyte Slow Junctions</div>
+<div>• Velocity: 0.3 – 1.0 m/s</div>
+<div>• Complex Width: &gt; 140 ms (Broad / Notched)</div>
+<div>• Peak Spectrum: 1 – 4 Hz (Severe filter rejection)</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 7: CLINICAL RISK IMPLICATIONS -->
+<section class="space-y-6">
+<div class="flex items-center gap-4">
+<h2 class="font-data-telemetry text-2xl font-bold text-[#dc2626] uppercase tracking-tight m-0">
+          // CLINICAL IMPLICATIONS
+        </h2>
+<div class="h-[3px] w-[60px] bg-[#dc2626]"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- RISKS OF FALSE POSITIVES -->
+<div class="bg-[#111111] border border-[#262626] border-t-4 border-t-[#ef4444] p-7 space-y-4">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-sm text-base font-bold text-white uppercase tracking-wider m-0">
+              RISKS OF FALSE POSITIVES (OVERSENSING)
+            </h3>
+<span class="font-data-telemetry text-[11px] text-[#ef4444]">SEVERITY: HIGH</span>
+</div>
+<ul class="font-body-sm text-xs text-[#aaaaaa] space-y-3 pl-4 list-decimal leading-relaxed">
+<li>
+<strong class="text-white">FALSE TACHYCARDIA ALARMS:</strong> Double-counting ST-T or prominent pre-systolic deflections artificially doubles the calculated instantaneous heart rate (e.g., reporting 140 BPM instead of a true 70 BPM sinus rhythm), triggering urgent hemodynamic alerts.
+            </li>
+<li>
+<strong class="text-white">CLINICAL ALARM FATIGUE:</strong> ICU audits demonstrate that &gt;85% of telemetry alarms are non-actionable false positives. Persistent oversensing degrades nursing alertness, directly delaying interventions during true emergencies.
+            </li>
+<li>
+<strong class="text-white">INAPPROPRIATE ICD DISCHARGES:</strong> In implantable cardioverter-defibrillator logic, double-sensing rapid depolarization transients misclassifies stable rhythm as ventricular fibrillation, delivering agonizing 30–40 joule shocks to conscious patients.
+            </li>
+</ul>
+</div>
+<!-- RISKS OF FALSE NEGATIVES -->
+<div class="bg-[#111111] border border-[#262626] border-t-4 border-t-[#f59e0b] p-7 space-y-4">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-sm text-base font-bold text-white uppercase tracking-wider m-0">
+              RISKS OF FALSE NEGATIVES (UNDERSENSING)
+            </h3>
+<span class="font-data-telemetry text-[11px] text-[#f59e0b]">SEVERITY: CRITICAL</span>
+</div>
+<ul class="font-body-sm text-xs text-[#aaaaaa] space-y-3 pl-4 list-decimal leading-relaxed">
+<li>
+<strong class="text-white">UNDERESTIMATED PVC BURDEN:</strong> Missed ectopics undercount premature ventricular burden, obscuring PVC-induced cardiomyopathy indications where clinical intervention requires &gt;10% to 15% 24-hour ectopic prevalence.
+            </li>
+<li>
+<strong class="text-white">UNDETECTED LETHAL RUNS:</strong> Failure to recognize low-amplitude polymorphic ventricular beats allows couplets, triplets, or runs of non-sustained ventricular tachycardia (NSVT) to pass unnoticed before degenerating into fatal VF.
+            </li>
+<li>
+<strong class="text-white">DISTORTED HRV BIOMARKERS:</strong> Dropping normal or ectopic intervals artificially creates massive instantaneous RR pauses, completely corrupting autonomic HRV metrics (SDNN, RMSSD, LF/HF spectral ratio).
+            </li>
+</ul>
+</div>
+</div>
+</section>
+<!-- SECTION 8: PROPOSED ENGINEERING MITIGATIONS -->
+<section class="space-y-6">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-4">
+<h2 class="font-data-telemetry text-2xl font-bold text-white uppercase tracking-tight m-0">
+            // PROPOSED DSP ENHANCEMENTS
+          </h2>
+<div class="h-[3px] w-[60px] bg-[#dc2626]"></div>
+</div>
+<span class="font-data-telemetry text-xs text-[#888888]">NEXT-GEN FIRMWARE ARCHITECTURE</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- MITIGATION 1 -->
+<div class="bg-[#111111] border border-[#333333] border-l-4 border-l-[#dc2626] p-6 space-y-3">
+<div class="flex justify-between items-center">
+<span class="font-data-telemetry text-xs font-bold text-[#dc2626]">01 // SPATIAL VECTOR FUSION</span>
+<span class="font-data-telemetry text-[10px] bg-[#222] text-[#aaa] px-2 py-0.5">MULTI-LEAD</span>
+</div>
+<h3 class="font-headline-sm text-sm font-bold text-white uppercase m-0">MULTI-LEAD ENERGY INTEGRATION</h3>
+<div class="font-data-telemetry text-xs bg-[#080808] p-2 text-[#4ae176] border border-[#1f1f1f]">
+            v[n] = √((dMLII/dt)² + (dV1/dt)²)
+          </div>
+<p class="font-body-sm text-xs text-[#aaaaaa] leading-relaxed m-0">
+            Simultaneously process orthogonal leads. Because spatial axis shifts weaken signal in one plane while augmenting it in the other, multi-lead velocity prevents unilateral PVC dropout.
+          </p>
+</div>
+<!-- MITIGATION 2 -->
+<div class="bg-[#111111] border border-[#333333] border-l-4 border-l-[#dc2626] p-6 space-y-3">
+<div class="flex justify-between items-center">
+<span class="font-data-telemetry text-xs font-bold text-[#dc2626]">02 // DWT MULTI-RESOLUTION</span>
+<span class="font-data-telemetry text-[10px] bg-[#222] text-[#aaa] px-2 py-0.5">SUB-BAND DSP</span>
+</div>
+<h3 class="font-headline-sm text-sm font-bold text-white uppercase m-0">WAVELET TRANSFORM FILTER BANK</h3>
+<div class="font-data-telemetry text-xs bg-[#080808] p-2 text-[#4ae176] border border-[#1f1f1f]">
+            DWT Daubechies db4: Scale 2² (11-22Hz) + Scale 2⁴ (2.8-5.5Hz)
+          </div>
+<p class="font-body-sm text-xs text-[#aaaaaa] leading-relaxed m-0">
+            Replace fixed Butterworth/FIR bandpass with multi-scale wavelet decomposition. Combining higher and lower octaves captures narrow normal beats alongside broad slow-conduction ectopy.
+          </p>
+</div>
+<!-- MITIGATION 3 -->
+<div class="bg-[#111111] border border-[#333333] border-l-4 border-l-[#dc2626] p-6 space-y-3">
+<div class="flex justify-between items-center">
+<span class="font-data-telemetry text-xs font-bold text-[#dc2626]">03 // DYNAMIC BLANKING</span>
+<span class="font-data-telemetry text-[10px] bg-[#222] text-[#aaa] px-2 py-0.5">ADAPTIVE TIMING</span>
+</div>
+<h3 class="font-headline-sm text-sm font-bold text-white uppercase m-0">HEART-RATE ADAPTIVE REFRACTORY</h3>
+<div class="font-data-telemetry text-xs bg-[#080808] p-2 text-[#4ae176] border border-[#1f1f1f]">
+            τ_ref = max(180ms, min(280ms, 0.35 × RR_avg))
+          </div>
+<p class="font-body-sm text-xs text-[#aaaaaa] leading-relaxed m-0">
+            A static 200 ms lockout causes oversensing in bradycardia and block. Scaling blanking window relative to instantaneous RR eliminates pre-systolic false triggers like those in Record 108.
+          </p>
+</div>
+<!-- MITIGATION 4 -->
+<div class="bg-[#111111] border border-[#333333] border-l-4 border-l-[#dc2626] p-6 space-y-3">
+<div class="flex justify-between items-center">
+<span class="font-data-telemetry text-xs font-bold text-[#dc2626]">04 // T-WAVE DISCRIMINATION</span>
+<span class="font-data-telemetry text-[10px] bg-[#222] text-[#aaa] px-2 py-0.5">SLOPE GATING</span>
+</div>
+<h3 class="font-headline-sm text-sm font-bold text-white uppercase m-0">SLOPE &amp; FREQUENCY SPECTRAL GATING</h3>
+<div class="font-data-telemetry text-xs bg-[#080808] p-2 text-[#4ae176] border border-[#1f1f1f]">
+            route_NPKI if: slope &lt; 0.5 × QRS_slope AND centroid &lt; 7Hz
+          </div>
+<p class="font-body-sm text-xs text-[#aaaaaa] leading-relaxed m-0">
+            Perform spectral centroid confirmation on candidate peaks arriving within 360 ms. If power spectrum concentrates in lower ST-T frequencies, the candidate is routed directly into noise tracking.
+          </p>
+</div>
+</div>
+</section>
+<!-- SECTION 9: FINAL PROJECT SUMMARY -->
+<section class="w-full bg-[#050505] py-16 border-y border-[#222222] flex flex-col items-center text-center space-y-8">
+<div class="space-y-3 max-w-2xl">
+<span class="font-data-telemetry text-xs text-[#dc2626] tracking-widest uppercase font-bold">[ENGINEERING VALIDATION MILESTONE]</span>
+<h2 class="font-data-telemetry text-3xl md:text-4xl font-bold tracking-widest text-white uppercase m-0">
+          CARDIOSENSE — PROJECT COMPLETE
+        </h2>
+</div>
+<div class="h-[2px] w-32 bg-[#dc2626]"></div>
+<!-- 4 Summary Stats -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-16 w-full max-w-4xl px-4">
+<div class="flex flex-col items-center">
+<span class="font-data-telemetry text-3xl md:text-4xl font-bold text-white">13,537</span>
+<span class="font-data-telemetry text-[11px] text-[#666666] tracking-wider uppercase mt-1">BEATS ANALYZED</span>
+</div>
+<div class="flex flex-col items-center">
+<span class="font-data-telemetry text-3xl md:text-4xl font-bold text-[#4ae176]">99.41%</span>
+<span class="font-data-telemetry text-[11px] text-[#666666] tracking-wider uppercase mt-1">SENSITIVITY</span>
+</div>
+<div class="flex flex-col items-center">
+<span class="font-data-telemetry text-3xl md:text-4xl font-bold text-white">98.86%</span>
+<span class="font-data-telemetry text-[11px] text-[#666666] tracking-wider uppercase mt-1">F1-SCORE</span>
+</div>
+<div class="flex flex-col items-center">
+<span class="font-data-telemetry text-3xl md:text-4xl font-bold text-[#4ae176]">28/28</span>
+<span class="font-data-telemetry text-[11px] text-[#666666] tracking-wider uppercase mt-1">TESTS PASSING</span>
+</div>
+</div>
+<div class="font-data-telemetry text-xs text-[#555555]">
+        Pipeline Core: Built with Python • NumPy • SciPy • WFDB Native Parser
+      </div>
+<div class="pt-4">
+<a class="inline-flex items-center gap-2 font-data-telemetry text-xs font-bold uppercase tracking-wider text-[#dc2626] border-2 border-[#dc2626] px-8 py-3.5 hover:bg-[#dc2626] hover:text-black transition-colors" href="/ablation">
+          ← BACK TO LANDING &amp; OVERVIEW
+        </a>
+</div>
+</section>
+<!-- SECTION 10: FOOTER -->
+<footer class="w-full pt-8 pb-4 border-t border-[#222222] flex flex-col sm:flex-row justify-between items-center gap-4 font-data-telemetry text-xs text-[#555555]">
+<div>
+        CardioSense © 2026 • CLINICAL BRUTALIST SIGNAL PROCESSING BENCHMARK
+      </div>
+<div class="flex items-center gap-4">
+<span>MIT-BIH Arrhythmia Database</span>
+<span>•</span>
+<span>Sampling: 360 Hz</span>
+<span>•</span>
+<span class="text-[#4ae176]">PIPELINE_COMPLETE</span>
+</div>
+</footer>
+</div>
+</div></main></div></body></html>
