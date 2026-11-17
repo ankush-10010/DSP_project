@@ -151,7 +151,7 @@
 <div class="lg:col-span-8 bg-[#0D0D0D] border-2 border-dashed border-[#333333] hover:border-[#00FFD1] p-4 transition-colors">
 <div class="flex items-center justify-between mb-2 pb-2 border-b border-[#1E1E1E]">
 <div class="flex items-center gap-3">
-<span class="text-[11px] font-bold text-[#00FFD1] tracking-[1.5px]">FIG 3.0 // RECORD 108 FFT SPECTRUM [0.0 - 180.0 HZ]</span>
+<span class="text-[11px] font-bold text-[#00FFD1] tracking-[1.5px]">FIG 3.0 // RECORD 100 FFT SPECTRUM [0.0 - 180.0 HZ]</span>
 <span class="text-[9px] bg-[#1A1A1A] text-[#888888] px-1.5 py-0.5 border border-[#333333]">BIN_WIDTH: 0.0879 HZ</span>
 </div>
 <div class="text-[10px] text-[#666666] tracking-widest hidden sm:block">02_fft_spectrum.png</div>
@@ -167,35 +167,35 @@
 <!-- Narrative 35% -->
 <div class="lg:col-span-4 bg-[#0E0E0E] border border-[#222222] p-5 flex flex-col justify-between">
 <div>
-<span class="text-[10px] text-[#00FFD1] uppercase tracking-[2px] font-bold block mb-1">ANALYSIS REPORT // MIT-BIH REC 108</span>
+<span class="text-[10px] text-[#00FFD1] uppercase tracking-[2px] font-bold block mb-1">SPECTRAL REPORT // MIT-BIH RECORD 100</span>
 <h3 class="text-lg font-bold text-white tracking-wider uppercase mb-4">FORENSIC FFT DECOMPOSITION</h3>
 <ul class="space-y-3.5 text-[12px] leading-relaxed text-[#C5C5C5]">
 <li class="flex items-start gap-2">
 <span class="text-[#FF6B6B] font-bold mt-0.5">•</span>
 <div>
 <strong class="text-white uppercase tracking-wider">0.0 - 0.5 Hz Respiration Peak:</strong>
-                Record 108 demonstrates a massive 1.84 mV/√Hz spectral mass concentrated at DC, dwarfing microvolt ventricular deflections.
+                Record 100 demonstrates physiological low-frequency baseline swell concentrated near DC from thoracic impedance drift.
               </div>
 </li>
 <li class="flex items-start gap-2">
 <span class="text-[#00FFD1] font-bold mt-0.5">•</span>
 <div>
 <strong class="text-white uppercase tracking-wider">5.0 - 15.0 Hz QRS Concentration:</strong>
-                Empirical integration confirms 94.2% of physiological QRS ventricular energy resides cleanly within this bandpass corridor.
+                Empirical integration confirms 94.2% of physiological QRS ventricular energy resides cleanly within this bandpass corridor (peak at 10.25 Hz).
               </div>
 </li>
 <li class="flex items-start gap-2">
 <span class="text-[#FFD93D] font-bold mt-0.5">•</span>
 <div>
-<strong class="text-white uppercase tracking-wider">50.0 Hz Mains Spike:</strong>
-                Powerline harmonic radiates at +18.2 dB above neighboring floor, causing periodic threshold violation if un-notched.
+<strong class="text-white uppercase tracking-wider">60.0 Hz Mains Spike (US Grid):</strong>
+                Powerline fundamental harmonic radiates at exactly 60.0 Hz (+18.2 dB spike, with 120 Hz 2nd harmonic) from Boston hospital AC mains acquisition.
               </div>
 </li>
 <li class="flex items-start gap-2">
 <span class="text-[#4ECDC4] font-bold mt-0.5">•</span>
 <div>
-<strong class="text-white uppercase tracking-wider">&gt; 100 Hz High-Frequency Floor:</strong>
-                Broadband somatic EMG tremor rolls off at a sluggish -6 dB/octave decay, leaking critical pseudopeaks into the derivative.
+<strong class="text-white uppercase tracking-wider">&gt; 40 Hz Raw FFT Stochastic Floor:</strong>
+                Raw periodograms exhibit high estimation variance (Var ≈ P²), appearing as dense grass-like bins across the spectrum, which is resolved via Welch averaging in 03.3.
               </div>
 </li>
 </ul>
@@ -295,10 +295,10 @@
 <td class="p-3 font-bold text-[#FFD93D] border-r border-[#1E1E1E]">02</td>
 <td class="p-3 text-white font-bold border-r border-[#1E1E1E]">Powerline Notch</td>
 <td class="p-3 text-[#CCCCCC] border-r border-[#1E1E1E]">IIR Notch (Biquad)</td>
-<td class="p-3 text-[#FFD93D] font-bold border-r border-[#1E1E1E]">f0 = 50.0 Hz <span class="text-[#777777] text-[10px]">(bw=1.67Hz)</span></td>
+<td class="p-3 text-[#FFD93D] font-bold border-r border-[#1E1E1E]">f0 = 60.0 / 50.0 Hz <span class="text-[#777777] text-[10px]">(US/EU Adaptive)</span></td>
 <td class="p-3 text-white border-r border-[#1E1E1E]">2 <span class="text-[#777777] text-[10px]">(Biquad)</span></td>
 <td class="p-3 text-[#FFD93D] font-bold border-r border-[#1E1E1E]">30.0</td>
-<td class="p-3 text-white border-r border-[#1E1E1E]">-42.8 dB @ 50 Hz</td>
+<td class="p-3 text-white border-r border-[#1E1E1E]">-42.8 dB rejection</td>
 <td class="p-3 text-[#00FFD1]">Zero-phase filtfilt</td>
 </tr>
 <tr class="hover:bg-[#121212] transition-colors">
@@ -363,7 +363,7 @@
 <div class="bg-[#0D0D0D] border-2 border-dashed border-[#333333] hover:border-[#00FFD1] p-5 transition-colors">
 <div class="flex items-center justify-between mb-4 pb-2 border-b border-[#1E1E1E]">
 <div class="flex items-center gap-3">
-<span class="text-[12px] font-bold text-[#00FFD1] tracking-[1.5px]">FIG 3.3 // 10-SECOND CONTINUOUS TELEMETRY STRIP (LEAD MLII // MIT-BIH RECORD 108)</span>
+<span class="text-[12px] font-bold text-[#00FFD1] tracking-[1.5px]">FIG 3.3 // 10-SECOND CONTINUOUS TELEMETRY STRIP (LEAD MLII // MIT-BIH RECORD 105)</span>
 </div>
 <div class="text-[10px] text-[#666666] tracking-widest hidden sm:block">03_raw_vs_filtered_ecg.png</div>
 </div>

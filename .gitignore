@@ -11,3 +11,6 @@ data/
 # Python cache
 __pycache__/
 *.pyc
+
+# Raw website generation artifacts
+website/
