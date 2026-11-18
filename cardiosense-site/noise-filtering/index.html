@@ -16,7 +16,7 @@
       NOISE AUDIT &amp; DIGITAL FILTER DESIGN
     </h1>
 <p class="font-body-md text-body-md text-[#999999] mt-2 max-w-4xl tracking-normal">
-      Frequency-domain noise isolation (FFT/PSD) and zero-phase cascaded IIR filter realization for clinical ECG sanitization. Deterministic validation on 360 Hz Lead MLII acquisitions.
+      Frequency-domain noise isolation (FFT) and zero-phase cascaded IIR filter realization for clinical ECG sanitization. Deterministic validation on 360 Hz Lead MLII acquisitions.
     </p>
 <!-- Telemetry Indicator Bar -->
 <div class="mt-6 border border-[#333333] bg-[#0E0E0E] px-5 py-3 flex flex-wrap items-center justify-between gap-4 text-[12px] tracking-[1.5px] uppercase">
@@ -26,8 +26,8 @@
 </div>
 <div class="h-3 w-[1px] bg-[#333333] hidden md:block"></div>
 <div class="flex items-center gap-2">
-<span class="text-[#666666]">WELCH OVERLAP:</span>
-<span class="text-white font-bold">50% [HANNING]</span>
+<span class="text-[#666666]">FFT RESOLUTION:</span>
+<span class="text-white font-bold">0.088 HZ</span>
 </div>
 <div class="h-3 w-[1px] bg-[#333333] hidden md:block"></div>
 <div class="flex items-center gap-2">
@@ -195,7 +195,7 @@
 <span class="text-[#4ECDC4] font-bold mt-0.5">•</span>
 <div>
 <strong class="text-white uppercase tracking-wider">&gt; 40 Hz Raw FFT Stochastic Floor:</strong>
-                Raw periodograms exhibit high estimation variance (Var ≈ P²), appearing as dense grass-like bins across the spectrum, which is resolved via Welch averaging in 03.3.
+                Raw periodograms exhibit high estimation variance (Var ≈ P²), appearing as high-frequency floor across the spectrum, which is cleanly rejected by the cascaded 40.0 Hz low-pass filter.
               </div>
 </li>
 </ul>
@@ -207,61 +207,11 @@
 </div>
 </div>
 </section>
-<!-- SECTION 4: WELCH POWER SPECTRAL DENSITY (PSD) BENCHMARK -->
-<section class="p-6 md:p-8 border-b-2 border-[#2A2A2A] bg-[#0A0A0A]">
-<h2 class="text-lg md:text-[22px] font-bold text-white tracking-[2px] uppercase mb-6">
-      &gt; 03.3 // POWER SPECTRAL DENSITY: CLEAN vs PATHOLOGICAL
-    </h2>
-<div class="grid grid-cols-1 lg:grid-cols-12 gap-7">
-<!-- Narrative 35% -->
-<div class="lg:col-span-4 bg-[#0E0E0E] border border-[#222222] p-5 flex flex-col justify-between order-2 lg:order-1">
-<div>
-<span class="text-[10px] text-[#00FFD1] uppercase tracking-[2px] font-bold block mb-1">COMPARATIVE PSD METRICS</span>
-<h3 class="text-lg font-bold text-white tracking-wider uppercase mb-4">WELCH PERIODOGRAM INTERPRETATION</h3>
-<div class="space-y-3.5 text-[12px] leading-relaxed text-[#C5C5C5]">
-<p>
-              Modified Welch periodogram averaged over 4096-sample windows with 50% overlap. Provides robust variance reduction over raw periodogram, isolating true stochastic noise floors from physiological transients:
-            </p>
-<div class="p-2.5 bg-[#080808] border-l-2 border-[#00FFD1] text-[11px]">
-<strong class="text-white block uppercase">Record 100 (Clean Sinus Rhythm):</strong>
-              Noise floor sits quiescent at <span class="text-[#00FFD1] font-bold">-62.4 dB/Hz</span> beyond 40 Hz. Minimal respiratory DC displacement.
-            </div>
-<div class="p-2.5 bg-[#080808] border-l-2 border-[#4ECDC4] text-[11px]">
-<strong class="text-white block uppercase">Record 105 (Electrode Motion Artifact &amp; Baseline Drift):</strong>
-High-grade motion artifact produces an empirical <span class="text-[#4ECDC4] font-bold">+12.1 dB low-frequency surge</span> across the 0–5 Hz band (reaching 10⁻¹ V²/Hz), while converging to the standard ~10⁻⁷ V²/Hz hardware floor beyond 100 Hz alongside Record 100.
-</div>
-<div class="p-2.5 bg-[#080808] border-l-2 border-[#FF6B6B] text-[11px]">
-<strong class="text-white block uppercase">Record 108 (Severe Baseline Drift):</strong>
-              Low-frequency respiratory swell produces an anomalous <span class="text-[#FF6B6B] font-bold">+14.2 dB/Hz</span> low-end bulge from Digoxin-induced dysrhythmia.
-            </div>
-</div>
-</div>
-<div class="mt-4 pt-3 border-t border-[#1C1C1C] text-[10px] text-[#777777] uppercase tracking-wider">
-          METHOD: SCIPY.SIGNAL.WELCH // DETREND: CONSTANT // SCALING: DENSITY
-        </div>
-</div>
-<!-- Graphic Display 65% -->
-<div class="lg:col-span-8 bg-[#0D0D0D] border-2 border-dashed border-[#333333] hover:border-[#00FFD1] p-4 transition-colors order-1 lg:order-2">
-<div class="flex items-center justify-between mb-2 pb-2 border-b border-[#1E1E1E]">
-<div class="flex items-center gap-3">
-<span class="text-[11px] font-bold text-[#00FFD1] tracking-[1.5px]">FIG 3.1 // CROSS-RECORD WELCH PSD COMPARISON (LOG-POWER)</span>
-</div>
-<div class="text-[10px] text-[#666666] tracking-widest hidden sm:block">02_psd_clean_vs_noisy.png</div>
-</div>
-<div class="w-full bg-[#080808] border border-[#1A1A1A] p-2 relative overflow-hidden flex items-center justify-center">
-          <img src="/figures/02_psd_clean_vs_noisy.png" alt="02_psd_clean_vs_noisy.png // Welch PSD Clean vs Noisy" class="w-full h-auto max-h-[520px] object-contain border border-[#1A1A1A]" loading="lazy" />
-        </div><div class="mt-3 flex items-center justify-between text-[11px] text-[#777777]">
-<span>METHOD: WELCH AVERAGE PERIODOGRAM</span>
-<span>WINDOW: HANNING (4096-PT) // OVERLAP: 50%</span>
-</div>
-</div>
-</div>
-</section>
-<!-- SECTION 5: FOUR-STAGE DIGITAL FILTER SPECIFICATIONS -->
+<!-- SECTION 4: FOUR-STAGE DIGITAL FILTER SPECIFICATIONS -->
 <section class="p-6 md:p-8 border-b-2 border-[#2A2A2A] bg-[#0A0A0A]">
 <div class="flex items-center justify-between mb-6">
 <h2 class="text-lg md:text-[22px] font-bold text-white tracking-[2px] uppercase">
-        &gt; 03.4 // FILTER DESIGN COEFFICIENTS &amp; TRANSFER METRICS
+        &gt; 03.3 // FILTER DESIGN COEFFICIENTS &amp; TRANSFER METRICS
       </h2>
 <span class="text-[11px] text-[#00FFD1] uppercase tracking-[2px]">[CASCADED IIR PIPELINE]</span>
 </div>
@@ -343,15 +293,15 @@ High-grade motion artifact produces an empirical <span class="text-[#4ECDC4] fon
       </p>
 </div>
 </section>
-<!-- SECTION 6: BODE FREQUENCY RESPONSES & TRANSIENTS -->
+<!-- SECTION 5: BODE FREQUENCY RESPONSES & TRANSIENTS -->
 <section class="p-6 md:p-8 border-b-2 border-[#2A2A2A] bg-[#0A0A0A]">
 <h2 class="text-lg md:text-[22px] font-bold text-white tracking-[2px] uppercase mb-6">
-      &gt; 03.5 // BODE MAGNITUDE PROFILES
+      &gt; 03.4 // BODE MAGNITUDE PROFILES
     </h2>
 <div class="bg-[#0D0D0D] border-2 border-dashed border-[#333333] hover:border-[#00FFD1] p-5 transition-colors">
 <div class="flex items-center justify-between mb-4 pb-2 border-b border-[#1E1E1E]">
 <div class="flex items-center gap-3">
-<span class="text-[12px] font-bold text-[#00FFD1] tracking-[1.5px]">FIG 3.2 // CASCADED IIR TRANSFER FUNCTIONS | H(f) ATTENUATION CHARTS</span>
+<span class="text-[12px] font-bold text-[#00FFD1] tracking-[1.5px]">FIG 3.1 // CASCADED IIR TRANSFER FUNCTIONS | H(f) ATTENUATION CHARTS</span>
 </div>
 <div class="text-[10px] text-[#666666] tracking-widest hidden sm:block">03_filter_frequency_responses.png</div>
 </div>
@@ -364,15 +314,15 @@ High-grade motion artifact produces an empirical <span class="text-[#4ECDC4] fon
 </div>
 </div>
 </section>
-<!-- SECTION 7: TIME-DOMAIN CONDITIONING (BEFORE & AFTER) -->
+<!-- SECTION 6: TIME-DOMAIN CONDITIONING (BEFORE & AFTER) -->
 <section class="p-6 md:p-8 border-b-2 border-[#2A2A2A] bg-[#0A0A0A]">
 <h2 class="text-lg md:text-[22px] font-bold text-white tracking-[2px] uppercase mb-6">
-      &gt; 03.6 // TIME-DOMAIN SIGNAL SANITIZATION
+      &gt; 03.5 // TIME-DOMAIN SIGNAL SANITIZATION
     </h2>
 <div class="bg-[#0D0D0D] border-2 border-dashed border-[#333333] hover:border-[#00FFD1] p-5 transition-colors">
 <div class="flex items-center justify-between mb-4 pb-2 border-b border-[#1E1E1E]">
 <div class="flex items-center gap-3">
-<span class="text-[12px] font-bold text-[#00FFD1] tracking-[1.5px]">FIG 3.3 // 10-SECOND CONTINUOUS TELEMETRY STRIP (LEAD MLII // MIT-BIH RECORD 105)</span>
+<span class="text-[12px] font-bold text-[#00FFD1] tracking-[1.5px]">FIG 3.2 // 10-SECOND CONTINUOUS TELEMETRY STRIP (LEAD MLII // MIT-BIH RECORD 105)</span>
 </div>
 <div class="text-[10px] text-[#666666] tracking-widest hidden sm:block">03_raw_vs_filtered_ecg.png</div>
 </div>
@@ -382,7 +332,7 @@ High-grade motion artifact produces an empirical <span class="text-[#4ECDC4] fon
 </div>
 </div>
 </section>
-<!-- SECTION 8: FILTER PERFORMANCE HIGHLIGHTS -->
+<!-- SECTION 7: FILTER PERFORMANCE HIGHLIGHTS -->
 <section class="p-6 md:p-8 border-b-2 border-[#2A2A2A] bg-[#0A0A0A]">
 <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
 <!-- Stat Box 1 -->
@@ -441,7 +391,7 @@ High-grade motion artifact produces an empirical <span class="text-[#4ECDC4] fon
 </div>
 </div>
 </section>
-<!-- SECTION 9: NAVIGATION CONTROLS -->
+<!-- SECTION 8: NAVIGATION CONTROLS -->
 <section class="p-6 md:p-8 bg-[#0A0A0A] flex flex-col sm:flex-row items-center justify-between gap-4">
 <a class="w-full sm:w-auto px-6 py-4 border-2 border-[#333333] hover:border-white text-[#888888] hover:text-white uppercase tracking-[2px] text-[12px] font-bold flex items-center justify-center gap-3 transition-colors" href="/pipeline">
 <span>← 02 PIPELINE ARCHITECTURE</span>

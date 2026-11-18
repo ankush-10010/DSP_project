@@ -83,7 +83,7 @@
 <span class="font-label-sm text-label-sm text-[#555555]">02/06</span>
 </div>
 <h3 class="font-headline-sm text-headline-sm uppercase text-white font-bold">NOISE ANALYSIS</h3>
-<div class="font-label-md text-label-md text-[#00FFD1] border-b border-[#222222] pb-space-xs">FFT &amp; Welch PSD</div>
+<div class="font-label-md text-label-md text-[#00FFD1] border-b border-[#222222] pb-space-xs">FFT Spectral Analysis</div>
 <p class="font-body-sm text-body-sm text-[#A0A0A0]">
               Computes 4096-point discrete periodograms. Maps baseline drift (&lt;0.5 Hz), powerline notch (60 Hz), and EMG floor.
             </p>
@@ -312,7 +312,7 @@
 ├── src/
 │   ├── __init__.py
 │   ├── data_loader.py        <span class="text-[#00FFD1]"># WFDB binary decoding &amp; AAMI map</span>
-│   ├── noise_analysis.py     <span class="text-[#00FFD1]"># FFT, Welch PSD, SNR estimation</span>
+│   ├── noise_analysis.py     <span class="text-[#00FFD1]"># FFT Spectrum, SNR estimation</span>
 │   ├── filters.py            <span class="text-[#00FFD1]"># Cascaded IIR zero-phase filters</span>
 │   ├── pan_tompkins.py       <span class="text-[#00FFD1]"># QRS detector &amp; adaptive thresholds</span>
 │   ├── feature_extraction.py <span class="text-[#00FFD1]"># Time/Freq HRV &amp; Poincaré SD1/SD2</span>
