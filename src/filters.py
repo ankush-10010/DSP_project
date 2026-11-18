@@ -275,8 +275,8 @@ def ecg_filter_pipeline(
     signal: np.ndarray,
     fs: float,
     hp_cutoff: float = 0.5,
-    notch_freq: float = 50.0,
-    lp_cutoff: float = 150.0,
+    notch_freq: float = 60.0,
+    lp_cutoff: float = 40.0,
     use_fir: bool = False,
 ) -> np.ndarray:
     """Full ECG filtering chain: high-pass → notch → low-pass.
@@ -294,10 +294,10 @@ def ecg_filter_pipeline(
     hp_cutoff : float, optional
         High-pass cut-off in Hz (default 0.5).
     notch_freq : float, optional
-        Notch centre frequency in Hz (default 50.0 for European mains;
-        use 60.0 for North America).
+        Notch centre frequency in Hz (default 60.0 for US mains;
+        use 50.0 for European mains).
     lp_cutoff : float, optional
-        Low-pass cut-off in Hz (default 150.0).
+        Low-pass cut-off in Hz (default 40.0).
     use_fir : bool, optional
         If *True*, use FIR filters for the high-pass and low-pass
         stages instead of IIR Butterworth filters (default *False*).

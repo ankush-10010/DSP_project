@@ -85,7 +85,7 @@
 <h3 class="font-headline-sm text-headline-sm uppercase text-white font-bold">NOISE ANALYSIS</h3>
 <div class="font-label-md text-label-md text-[#00FFD1] border-b border-[#222222] pb-space-xs">FFT &amp; Welch PSD</div>
 <p class="font-body-sm text-body-sm text-[#A0A0A0]">
-              Computes 4096-point discrete periodograms. Maps baseline drift (&lt;0.5 Hz), powerline notch (50 Hz), and EMG floor.
+              Computes 4096-point discrete periodograms. Maps baseline drift (&lt;0.5 Hz), powerline notch (60 Hz), and EMG floor.
             </p>
 </div>
 <div class="mt-space-md pt-space-xs border-t border-[#222222] flex items-center justify-between font-label-sm text-label-sm text-[#666666]">
@@ -103,7 +103,7 @@
 <h3 class="font-headline-sm text-headline-sm uppercase text-white font-bold">DIGITAL FILTERS</h3>
 <div class="font-label-md text-label-md text-[#00FFD1] border-b border-[#222222] pb-space-xs">IIR Cascaded Chain</div>
 <p class="font-body-sm text-body-sm text-[#A0A0A0]">
-              4th-order HP Butterworth (0.5 Hz), 2nd-order 50 Hz IIR notch (Q=30), and 4th-order LP Butterworth (150 Hz).
+              4th-order HP Butterworth (0.5 Hz), 2nd-order 60 Hz IIR notch (Q=30), and 4th-order LP Butterworth (40 Hz).
             </p>
 </div>
 <div class="mt-space-md pt-space-xs border-t border-[#222222] flex items-center justify-between font-label-sm text-label-sm text-[#666666]">
@@ -274,11 +274,11 @@
 </div>
 <div class="py-[6px] flex justify-between items-center">
 <span class="text-[#888888]">POWERLINE_NOTCH</span>
-<span class="text-white">60.0 Hz / 50.0 Hz (2nd-order IIR, Q=30)</span>
+<span class="text-white">60.0 Hz (2nd-order IIR, Q=30)</span>
 </div>
 <div class="py-[6px] flex justify-between items-center">
 <span class="text-[#888888]">LOWPASS_CUTOFF</span>
-<span class="text-white">150.0 Hz (4th-order Butterworth)</span>
+<span class="text-white">40.0 Hz (4th-order Butterworth)</span>
 </div>
 <div class="py-[6px] flex justify-between items-center">
 <span class="text-[#888888]">PAN_TOMPKINS_BP</span>
